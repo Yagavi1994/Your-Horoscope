@@ -57,7 +57,7 @@ def main():
     """
     Run all functions
     """
-    print(f"Thank you {name.upper()} for your inputs.\n\nThe prediction for your zodiac sign {zodiac_2.upper()} for the day you chose is as follows.\n")
+    print(f"Thank you {name.upper()} for your inputs.\n\nThe prediction for your zodiac sign {zodiac_2.upper()} for {day.upper()} is as follows.\n")
     horoscope_text = horoscope(zodiac_1, day)
     print(horoscope_text)
 
