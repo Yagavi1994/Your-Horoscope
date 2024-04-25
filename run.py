@@ -1,35 +1,40 @@
 import requests 
 from bs4 import BeautifulSoup 
 
-
 def horoscope(zodiac_sign: int, day: str) -> str: 
-	url = ( 
-		"https://www.horoscope.com/us/horoscopes/general/"
-		f"horoscope-general-daily-{day}.aspx?sign={zodiac_sign}"
-	) 
-	soup = BeautifulSoup(requests.get(url).content, 
-						"html.parser") 
-
-	# print(soup.find("div", class_="main-horoscope").p.text) 
-	return soup.find("div", class_="main-horoscope").p.text 
-
+    url = ( 
+        "https://www.horoscope.com/us/horoscopes/general/"
+        f"horoscope-general-daily-{day}.aspx?sign={zodiac_sign}"
+    ) 
+    soup = BeautifulSoup(requests.get(url).content, "html.parser") 
+    return soup.find("div", class_="main-horoscope").p.text 
 
 if __name__ == "__main__": 
-	dic = {'Aries': 1, 'Taurus': 2, 'Gemini': 3, 
-		'Cancer': 4, 'Leo': 5, 'Virgo': 6, 
-		'Libra': 7, 'Scorpio': 8, 'Sagittarius': 9, 
-		'Capricorn': 10, 'Aquarius': 11, 'Pisces': 12} 
-	
-	print('Choose your zodiac sign from below list : \n', 
-		'[Aries,Taurus,Gemini,Cancer,Leo,Virgo,Libra,Scorpio,Sagittarius,Capricorn,Aquarius,Pisces]') 
+    zodiac_dict = {
+        '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, 
+        '7': 7, '8': 8, '9': 9, '10': 10, '11': 11, '12': 12
+    }
+    
+    day_dict = {
+        '1': "yesterday", '2': "today", '3': "tomorrow"
+    }
+    
+    print('\nChoose the number of your zodiac sign from below list : \n',
+          "1. Aries (Mar 21 - Apr 19) \n", "2. Taurus (Apr 20 - May 20) \n", 
+          "3. Gemini (May 21 - Jun 20) \n", "4. Cancer (Jun 21 - Jul 22)\n", 
+          "5. Leo (Jul 23 - Aug 22) \n", "6. Virgo (Aug 23 - Sep 22) \n", 
+          "7. Libra (Sep 23 - Oct 22) \n", "8. Scorpio (Oct 23 - Nov 21) \n", 
+          "9. Sagittarius (Nov 22 - Dec 21) \n", "10. Capricorn (Dec 22 - Jan 19) \n", 
+          "11. Aquarius (Jan 20 - Feb 18) \n", "12. Pisces (Feb 19 - Mar 20)\n")
+    
+    zodiac_sign = zodiac_dict[input("Input your zodiac sign number :")]
+    
+    print("\nOn which day you want to know your horoscope ?\n",
+          "\n1. Yesterday\n", "\n2. Today\n", "\n3. Tomorrow\n") 
+    
+    day = day_dict[input("Input the number of the day : ")]
+    print("\n")
 
-	zodiac_sign = dic[input("Input your zodiac sign : ")] 
-	print("On which day you want to know your horoscope ?\n", 
-		"Yesterday\n", "Today\n", "Tomorrow\n") 
-
-	day = input("Input the day : ").lower() 
-	horoscope_text = horoscope(zodiac_sign, day) 
-	print(horoscope_text) 
-
-
-
+    horoscope_text = horoscope(zodiac_sign, day)
+    
+    print(horoscope_text)
