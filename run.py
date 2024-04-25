@@ -39,16 +39,34 @@ def get_zodiac_1(input):
         '7': 7, '8': 8, '9': 9, '10': 10, '11': 11, '12': 12
     }
 
-    
     zodiac_1 = zodiac_dict[input]
-
+    
     return zodiac_1
 
-    # if validate_data_for_zodiac(zodiac_sign):
-    #     pass
+
+    # if validate_data_for_zodiac(input):
+        
 
     # else:
     #     return None
+
+def validate_data_for_zodiac_1(value):
+    """
+    Inside the try, checks whether the value is integer.
+    Raises ValueError if input cannot be converted into int,
+    or if the value is not between 1 to 3.
+    """
+    try:
+        [int(value)]
+        if 1 <= int(value) <= 12:
+            return True
+        else:
+            raise ValueError
+
+    except ValueError:
+        print(f"Invalid data: Enter a number between 1 to 12, please try again.\n")
+        return False
+
 
 def get_zodiac_2(input):
     # Zodiac dictionary to use for string literals
@@ -83,23 +101,6 @@ def get_day_input():
         return day
     else:
         return None
-
-def validate_data_for_zodiac(value):
-    """
-    Inside the try, checks whether the value is integer.
-    Raises ValueError if input cannot be converted into int,
-    or if the value is not between 1 to 3.
-    """
-    try:
-        [int(value)]
-        if 1 <= int(value) <= 12:
-            return True
-        else:
-            raise ValueError
-
-    except ValueError:
-        print(f"Invalid data: Enter a number between 1 to 12, please try again.\n")
-        return False
 
 
 def validate_data_for_day(value):
