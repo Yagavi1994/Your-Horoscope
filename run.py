@@ -36,9 +36,9 @@ if __name__ == "__main__":
         "\n9. Sagittarius (Nov 22 - Dec 21) \n", "\n10. Capricorn (Dec 22 - Jan 19) \n", 
         "\n11. Aquarius (Jan 20 - Feb 18) \n", "\n12. Pisces (Feb 19 - Mar 20)\n")
     
-    name = input("Please enter your name: ")
+    name = input("Please enter your name: \n")
     
-    zodiac_sign = input("\nInput your zodiac sign number: ")
+    zodiac_sign = input("\nInput your zodiac sign number: \n")
 
     zodiac_1 = zodiac_dict[zodiac_sign]
 
@@ -48,7 +48,7 @@ if __name__ == "__main__":
     print("\nOn which day you want to know your horoscope ?\n",
         "\n1. Yesterday\n", "\n2. Today\n", "\n3. Tomorrow\n") 
     
-    day = day_dict[input("Input the number of the day: ")]
+    day = day_dict[input("Input the number of the day: \n")]
     print("\n")
 
 
