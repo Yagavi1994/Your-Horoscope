@@ -12,7 +12,7 @@ def horoscope(zodiac_sign: int, day: int) -> str:
 
 if __name__ == "__main__":
 
-    print("\nWelcome to Your Horoscope \n")
+    print("\nWelcome to 'Your Horoscope' \n")
 
     zodiac_dict = {
         '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, 
@@ -57,7 +57,7 @@ def main():
     """
     Run all functions
     """
-    print(f"Thank you {name} for your inputs. It seems like you are a {zodiac_2}\n")
+    print(f"Thank you {name.upper()} for your inputs.\n\nThe prediction for your zodiac sign {zodiac_2.upper()} for the day you chose is as follows.\n")
     horoscope_text = horoscope(zodiac_1, day)
     print(horoscope_text)
 
