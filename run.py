@@ -53,10 +53,34 @@ def get_day_input():
     print("\nOn which day you want to know your horoscope ?\n",
         "\n1. Yesterday\n", "\n2. Today\n", "\n3. Tomorrow\n") 
     
-    day = day_dict[input("Input the number of the day: \n")]
+    day_input = input("Input the number of the day: \n")
     print("\n")
 
-    return day
+    if validate_data(day_input):
+        day = day_dict[day_input]
+        print(f"You have selected {day}")
+        return day
+    else:
+        return None
+
+
+def validate_data(value):
+    """
+    Inside the try, checks whether the value is integer.
+    Raises ValueError if input cannot be converted into int,
+    or if the value is not between 1 to 3.
+    """
+    try:
+        [int(value)]
+        if 1 <= int(value) <= 3:
+            return True
+        else:
+            raise ValueError(
+                f"Enter a number between 1 to 3, you provided {value}"
+            )
+    except ValueError as e:
+        print(f"Invalid data: {e}, please try again.\n")
+        return False
 
 
 
@@ -65,7 +89,9 @@ def main():
     Run all functions
     """
     inputs = get_zodiac_input()
-    day = get_day_input()
+    day = None
+    while day is None:
+        day = get_day_input()
     print(f"Thank you {inputs[0].upper()} for your inputs.\n\nThe prediction for your zodiac sign {inputs[2].upper()} for {day.upper()} is as follows.\n")
     horoscope_text = horoscope(inputs[1], day)
     print(horoscope_text)
