@@ -33,6 +33,11 @@ def get_zodiac_1(input):
         return None
 
 def validate_data_for_zodiac_1(value):
+    """
+    Inside the try, checks whether the value is integer.
+    Raises ValueError if input cannot be converted into int,
+    or if the value is not between 1 to 12.
+    """
     try:
         int_value = int(value)
         if 1 <= int_value <= 12:
@@ -54,9 +59,9 @@ def get_zodiac_2(input):
     return zodiac_dict_2.get(input, "Invalid zodiac sign")
 
 def get_day_input():
-     """
-     Gets user input of day 
-     """
+    """
+    Gets user input of day 
+    """
     day_dict = {
         '1': "yesterday", '2': "today", '3': "tomorrow"
     }
@@ -69,11 +74,11 @@ def get_day_input():
         return None
 
 def validate_data_for_day(value):
-     """
-     Inside the try, checks whether the value is integer.
-     Raises ValueError if input cannot be converted into int,
-     or if the value is not between 1 to 3.
-     """
+    """
+    Inside the try, checks whether the value is integer.
+    Raises ValueError if input cannot be converted into int,
+    or if the value is not between 1 to 3.
+    """
     try:
         int_value = int(value)
         if 1 <= int_value <= 3:
@@ -89,20 +94,20 @@ def main():
     Runs all functions
     """
 
-    print('\nChoose the number of your zodiac sign from below list : \n',
+    zodiac_sign = None
+    while zodiac_sign is None:
+        print('\nChoose the number of your zodiac sign from below list : \n',
         "\n1. Aries (Mar 21 - Apr 19) \n", "\n2. Taurus (Apr 20 - May 20) \n", 
         "\n3. Gemini (May 21 - Jun 20) \n", "\n4. Cancer (Jun 21 - Jul 22)\n", 
         "\n5. Leo (Jul 23 - Aug 22) \n", "\n6. Virgo (Aug 23 - Sep 22) \n", 
         "\n7. Libra (Sep 23 - Oct 22) \n", "\n8. Scorpio (Oct 23 - Nov 21) \n", 
         "\n9. Sagittarius (Nov 22 - Dec 21) \n", "\n10. Capricorn (Dec 22 - Jan 19) \n", 
         "\n11. Aquarius (Jan 20 - Feb 18) \n", "\n12. Pisces (Feb 19 - Mar 20)\n")
-
-    zodiac_sign = None
-    while zodiac_sign is None:
         zodiac_sign = input("\nInput your zodiac sign number: \n")
         zodiac_1 = get_zodiac_1(zodiac_sign)
         if zodiac_1 is None:
-            main()
+            zodiac_sign = None
+        
     
     zodiac_2 = get_zodiac_2(zodiac_sign)
 
@@ -110,8 +115,6 @@ def main():
     while day is None:
          # Loops if invalid data is entered for day.
         day = get_day_input()
-        if day is None:
-            print("Please enter a valid day number.")
 
     print(f"\nThank you {name.upper()} for your inputs.\n\nThe prediction for your zodiac sign {zodiac_2.upper()} for {day.upper()} is as follows.\n")
     horoscope_text = horoscope(zodiac_1, day)
