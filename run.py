@@ -17,11 +17,16 @@ def horoscope(zodiac_sign: int, day: str) -> str:
 
 
 def get_name():
-
     print("\nWelcome to 'Your Horoscope' \n")
-    name = input("Please enter your name: \n")
 
-    return name
+    while True:
+        name = input("Please enter your name: \n").strip()  # Using strip() to remove any leading/trailing whitespaces
+        if name:
+            return name
+        else:
+            print("Invalid input: Name cannot be left blank. Please enter a valid name.\n")
+
+    
 
 def get_zodiac_1(input):
 
