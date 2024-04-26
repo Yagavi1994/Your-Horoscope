@@ -26,7 +26,7 @@ print(Fore.MAGENTA + Style.BRIGHT + title)
 def get_name():
 
     while True:
-        name = input(Fore.BLUE + "Please enter your name: \n").strip()  # Using strip() to remove any leading/trailing whitespaces
+        name = input(Fore.BLUE + "\nPlease enter your name: \n").strip()  # Using strip() to remove any leading/trailing whitespaces
         if name:
             return name
         else:
@@ -105,6 +105,22 @@ def validate_data_for_day(value):
         print(Fore.RED + f'\nInvalid data: "Please enter a number between 1 and 3."')
         return False
 
+def replay():
+
+    replay = input(Fore.GREEN + "\nEnter 'Y' to play again and 'N' to exit: \n")
+    if replay.lower() == 'y':
+        main()
+        return
+
+    elif replay.lower() == 'n':
+        print(Fore.CYAN + "\nThank you for using 'Your Horoscope'. Hope you enjoyed.\n")
+        return
+
+    else:
+        print(Fore.RED + "\nInvalid input: Please enter either 'Y' or 'N'")
+        replay()
+        
+
 def main():
     """
     Runs all functions
@@ -138,8 +154,11 @@ def main():
     print(Fore.GREEN + f"\nThank you {name.upper()} for your inputs.\n\nThe prediction for your zodiac sign {zodiac_2.upper()} for {day.upper()} is as follows.\n")
     horoscope_text = horoscope(zodiac_1, day)
     print(Fore.MAGENTA + horoscope_text)
+
+    replay()
     
 
 if __name__ == "__main__":
     main()
+    
 
