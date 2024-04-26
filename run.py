@@ -1,7 +1,8 @@
 # #Import necessary modules
 # #The basic concept of the code is learnt from "https://www.geeksforgeeks.org/how-to-check-horoscope-using-python/"
 import requests 
-from bs4 import BeautifulSoup 
+from bs4 import BeautifulSoup
+import pyfiglet
 
 def horoscope(zodiac_sign: int, day: str) -> str:
 
@@ -15,9 +16,10 @@ def horoscope(zodiac_sign: int, day: str) -> str:
     soup = BeautifulSoup(requests.get(url).content, "html.parser")
     return soup.find("div", class_="main-horoscope").p.text 
 
+title = pyfiglet.figlet_format("Your Horoscope", font="slant")
+print(title)
 
 def get_name():
-    print("\nWelcome to 'Your Horoscope' \n")
 
     while True:
         name = input("Please enter your name: \n").strip()  # Using strip() to remove any leading/trailing whitespaces
