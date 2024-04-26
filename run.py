@@ -3,6 +3,10 @@
 import requests 
 from bs4 import BeautifulSoup
 import pyfiglet
+from colorama import init, Fore, Back, Style
+from termcolor import colored
+
+init(autoreset=True)  # Automatically reset the style to default after each print!
 
 def horoscope(zodiac_sign: int, day: str) -> str:
 
@@ -17,12 +21,12 @@ def horoscope(zodiac_sign: int, day: str) -> str:
     return soup.find("div", class_="main-horoscope").p.text 
 
 title = pyfiglet.figlet_format("Your Horoscope", font="slant")
-print(title)
+print(Fore.MAGENTA + Style.BRIGHT + title)
 
 def get_name():
 
     while True:
-        name = input("Please enter your name: \n").strip()  # Using strip() to remove any leading/trailing whitespaces
+        name = input(Fore.BLUE + "Please enter your name: \n").strip()  # Using strip() to remove any leading/trailing whitespaces
         if name:
             return name
         else:
@@ -56,7 +60,7 @@ def validate_data_for_zodiac_1(value):
         else:
             raise ValueError
     except ValueError:
-        print(f'\nInvalid data: "Please enter a number between 1 and 12."')
+        print(Fore.RED + f'\nInvalid data: "Please enter a number between 1 and 12."')
         return False
 
 def get_zodiac_2(input):
@@ -78,7 +82,8 @@ def get_day_input():
     }
     print("\nOn which day you want to know your horoscope ?\n",
         "\n1. Yesterday\n", "\n2. Today\n", "\n3. Tomorrow\n")
-    day_input = input("Input the number of the day: \n")
+
+    day_input = input(Fore.BLUE + "Input the number of the day: \n")
     if validate_data_for_day(day_input):
         return day_dict[day_input]
     else:
@@ -97,7 +102,7 @@ def validate_data_for_day(value):
         else:
             raise ValueError
     except ValueError:
-        print(f'\nInvalid data: "Please enter a number between 1 and 3."')
+        print(Fore.RED + f'\nInvalid data: "Please enter a number between 1 and 3."')
         return False
 
 def main():
@@ -115,7 +120,9 @@ def main():
         "\n7. Libra (Sep 23 - Oct 22) \n", "\n8. Scorpio (Oct 23 - Nov 21) \n", 
         "\n9. Sagittarius (Nov 22 - Dec 21) \n", "\n10. Capricorn (Dec 22 - Jan 19) \n", 
         "\n11. Aquarius (Jan 20 - Feb 18) \n", "\n12. Pisces (Feb 19 - Mar 20)\n")
-        zodiac_sign = input("\nInput your zodiac sign number: \n")
+
+        zodiac_sign = input(Fore.BLUE + "\nInput your zodiac sign number: \n")
+
         zodiac_1 = get_zodiac_1(zodiac_sign)
         if zodiac_1 is None:
             zodiac_sign = None
@@ -128,9 +135,9 @@ def main():
          # Loops if invalid data is entered for day.
         day = get_day_input()
 
-    print(f"\nThank you {name.upper()} for your inputs.\n\nThe prediction for your zodiac sign {zodiac_2.upper()} for {day.upper()} is as follows.\n")
+    print(Fore.GREEN + f"\nThank you {name.upper()} for your inputs.\n\nThe prediction for your zodiac sign {zodiac_2.upper()} for {day.upper()} is as follows.\n")
     horoscope_text = horoscope(zodiac_1, day)
-    print(horoscope_text)
+    print(Fore.MAGENTA + horoscope_text)
     
 
 if __name__ == "__main__":
