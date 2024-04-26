@@ -24,7 +24,7 @@ def get_name():
         if name:
             return name
         else:
-            print("Invalid input: Name cannot be left blank. Please enter a valid name.\n")
+            print('Invalid input: "Name cannot be left blank. Please enter a valid name."\n')
 
     
 
@@ -54,7 +54,7 @@ def validate_data_for_zodiac_1(value):
         else:
             raise ValueError
     except ValueError:
-        print(f"\nInvalid data: Please enter a number between 1 and 12.")
+        print(f'\nInvalid data: "Please enter a number between 1 and 12."')
         return False
 
 def get_zodiac_2(input):
@@ -95,7 +95,7 @@ def validate_data_for_day(value):
         else:
             raise ValueError
     except ValueError:
-        print(f"\nInvalid data: Please enter a number between 1 and 3.")
+        print(f'\nInvalid data: "Please enter a number between 1 and 3."')
         return False
 
 def main():
