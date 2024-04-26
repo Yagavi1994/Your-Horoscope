@@ -16,8 +16,12 @@ def horoscope(zodiac_sign: int, day: str) -> str:
     return soup.find("div", class_="main-horoscope").p.text 
 
 
-print("\nWelcome to 'Your Horoscope' \n")
-name = input("Please enter your name: \n")
+def get_name():
+
+    print("\nWelcome to 'Your Horoscope' \n")
+    name = input("Please enter your name: \n")
+
+    return name
 
 def get_zodiac_1(input):
 
@@ -84,8 +88,8 @@ def validate_data_for_day(value):
         if 1 <= int_value <= 3:
             return True
         else:
-            raise ValueError("")
-    except ValueError as e:
+            raise ValueError
+    except ValueError:
         print(f"\nInvalid data: Please enter a number between 1 and 3.")
         return False
 
@@ -94,6 +98,7 @@ def main():
     Runs all functions
     """
 
+    name = get_name()
     zodiac_sign = None
     while zodiac_sign is None:
         print('\nChoose the number of your zodiac sign from below list : \n',
