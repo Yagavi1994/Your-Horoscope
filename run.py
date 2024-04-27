@@ -69,6 +69,29 @@ def get_name():
         else:
             print(Fore.RED + Style.BRIGHT + 'Invalid input: "Name cannot be left blank. Please enter a valid name."\n')
 
+def read_horoscope():
+
+    while True:
+
+        play_game = text_effect("\nDo you want to know your horoscope prediction: Y/N")
+        play = input("\n")
+        if play.lower() == 'y':
+            print('\nChoose the number of your zodiac sign from below list : \n',
+        "\n1. Aries (Mar 21 - Apr 19) \n", "\n2. Taurus (Apr 20 - May 20) \n", 
+        "\n3. Gemini (May 21 - Jun 20) \n", "\n4. Cancer (Jun 21 - Jul 22)\n", 
+        "\n5. Leo (Jul 23 - Aug 22) \n", "\n6. Virgo (Aug 23 - Sep 22) \n", 
+        "\n7. Libra (Sep 23 - Oct 22) \n", "\n8. Scorpio (Oct 23 - Nov 21) \n", 
+        "\n9. Sagittarius (Nov 22 - Dec 21) \n", "\n10. Capricorn (Dec 22 - Jan 19) \n", 
+        "\n11. Aquarius (Jan 20 - Feb 18) \n", "\n12. Pisces (Feb 19 - Mar 20)\n") 
+        return
+
+        elif play.lower() == 'n':
+            print(Fore.CYAN + Style.BRIGHT + '\nThank you for using "Your Horoscope". Hope you enjoyed.\n')
+            return
+
+        else:
+            print(Fore.RED + Style.BRIGHT + "\nInvalid input: Please enter either 'Y' or 'N'")
+
     
 
 def get_zodiac_1(input):
@@ -273,13 +296,9 @@ def main():
 
     print(Fore.BLUE + Style.BRIGHT + f"Hello {name}!")
 
-    print('\nChoose the number of your zodiac sign from below list : \n',
-        "\n1. Aries (Mar 21 - Apr 19) \n", "\n2. Taurus (Apr 20 - May 20) \n", 
-        "\n3. Gemini (May 21 - Jun 20) \n", "\n4. Cancer (Jun 21 - Jul 22)\n", 
-        "\n5. Leo (Jul 23 - Aug 22) \n", "\n6. Virgo (Aug 23 - Sep 22) \n", 
-        "\n7. Libra (Sep 23 - Oct 22) \n", "\n8. Scorpio (Oct 23 - Nov 21) \n", 
-        "\n9. Sagittarius (Nov 22 - Dec 21) \n", "\n10. Capricorn (Dec 22 - Jan 19) \n", 
-        "\n11. Aquarius (Jan 20 - Feb 18) \n", "\n12. Pisces (Feb 19 - Mar 20)\n")
+    read_horoscope()
+
+    clear_terminal()
 
     zodiac_sign = None
     while zodiac_sign is None:
