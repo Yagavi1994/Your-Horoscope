@@ -105,6 +105,108 @@ def validate_data_for_day(value):
         print(Fore.RED + Style.BRIGHT + f'\nInvalid data: "Please enter a number between 1 and 3."\n')
         return False
 
+def zodiac_characteristics(input):
+    """
+    Function to print zodiac's characteristics above prediction.
+    """
+    zodiac_number = int(input)
+    if zodiac_number == 1:
+        print(Fore.CYAN + Style.BRIGHT + "Aries are amazing! Their name says it all:\n"
+                  "A for assertive\n"
+                  "R for refreshing\n"
+                  "I for independent\n"
+                  "E for energetic\n"
+                  "S for sexy\n")
+        return
+    elif zodiac_number == 2:
+        print(Fore.CYAN + Style.BRIGHT + "Taurus are powerful! Their characteristics include:\n"
+            "T for trustworthy\n"
+            "A for artistic\n"
+            "U for unyielding\n"
+            "R for reliable\n"
+            "S for sensual\n")
+        return
+    elif zodiac_number == 3:
+        print(Fore.CYAN + Style.BRIGHT + "Gemini are great communicators! Their traits are:\n"
+            "G for gregarious\n"
+            "E for energetic\n"
+            "M for mentally active\n"
+            "I for imaginative\n"
+            "N for nonconformist\n")
+        return
+    elif zodiac_number == 4:
+        print(Fore.CYAN + Style.BRIGHT + "Cancer are caring! Their name reflects:\n"
+            "C for compassionate\n"
+            "A for adaptable\n"
+            "N for nurturing\n"
+            "C for cautious\n"
+            "E for empathetic\n")
+        return
+    elif zodiac_number == 5:
+        print(Fore.CYAN + Style.BRIGHT + "Leo are luminous! They shine with:\n"
+            "L for loyal\n"
+            "E for energetic\n"
+            "O for outgoing\n")
+        return
+    elif zodiac_number == 6:
+        print(Fore.CYAN + Style.BRIGHT + "Virgo are virtuous! Their virtues include:\n"
+            "V for virtuous\n"
+            "I for intelligent\n"
+            "R for realistic\n"
+            "G for grounded\n"
+            "O for organized\n")
+        return
+    elif zodiac_number == 7:
+        print(Fore.CYAN + Style.BRIGHT + "Libra are balanced! They are known for:\n"
+            "L for lovable\n"
+            "I for idealistic\n"
+            "B for balanced\n"
+            "R for reasonable\n"
+            "A for aesthetic\n")
+        return
+    elif zodiac_number == 8:
+        print(Fore.CYAN + Style.BRIGHT + "Scorpio are strong! Their strengths are:\n"
+            "S for strategic\n"
+            "C for charismatic\n"
+            "O for observant\n"
+            "R for resilient\n"
+            "P for passionate\n")
+        return
+    elif zodiac_number == 9:
+        print(Fore.CYAN + Style.BRIGHT + "Sagittarius are adventurous! Their traits are:\n"
+            "S for spontaneous\n"
+            "A for adventurous\n"
+            "G for generous\n"
+            "I for inspirational\n"
+            "T for truthful\n")
+        return
+    elif zodiac_number == 10:
+        print(Fore.CYAN + Style.BRIGHT + "Capricorn are capable! They excel in:\n"
+            "C for competent\n"
+            "A for ambitious\n"
+            "P for practical\n"
+            "R for resilient\n"
+            "I for intelligent\n")
+        return
+    elif zodiac_number == 11:
+        print(Fore.CYAN + Style.BRIGHT + "Aquarius are analytical! Known for:\n"
+            "A for analytical\n"
+            "Q for quirky\n"
+            "U for unorthodox\n"
+            "A for assertive\n"
+            "R for revolutionary\n")
+        return
+    elif zodiac_number == 12:
+        print(Fore.CYAN + Style.BRIGHT + "Pisces are profound! They are:\n"
+            "P for passionate\n"
+            "I for intuitive\n"
+            "S for spiritual\n"
+            "C for compassionate\n"
+            "E for empathetic\n")
+        return
+
+
+
 def replay():
 
     while True:
@@ -141,7 +243,7 @@ def main():
 
     zodiac_sign = None
     while zodiac_sign is None:
-        
+        # Loops if invalid data is entered for day.
         zodiac_sign = input(Fore.BLUE + "\nInput your zodiac sign number: \n")
 
         zodiac_1 = get_zodiac_1(zodiac_sign)
@@ -156,10 +258,11 @@ def main():
 
     day = None
     while day is None:
-         # Loops if invalid data is entered for day.
+        # Loops if invalid data is entered for day.
         day = get_day_input()
 
     print(Fore.GREEN + f"\nThank you {name.upper()} for your inputs.\n\nThe prediction for your zodiac sign {zodiac_2.upper()} for {day.upper()} is as follows.\n")
+    zodiac_characteristics(zodiac_sign)
     horoscope_text = horoscope(zodiac_1, day)
     print(Fore.MAGENTA + Style.BRIGHT + horoscope_text)
 
