@@ -30,7 +30,7 @@ def get_name():
         if name:
             return name
         else:
-            print('Invalid input: "Name cannot be left blank. Please enter a valid name."\n')
+            print(Fore.RED + Style.BRIGHT + 'Invalid input: "Name cannot be left blank. Please enter a valid name."\n')
 
     
 
@@ -60,7 +60,7 @@ def validate_data_for_zodiac_1(value):
         else:
             raise ValueError
     except ValueError:
-        print(Fore.RED + f'\nInvalid data: "Please enter a number between 1 and 12."')
+        print(Fore.RED + Style.BRIGHT + f'\nInvalid data: "Please enter a number between 1 and 12."')
         return False
 
 def get_zodiac_2(input):
@@ -80,8 +80,6 @@ def get_day_input():
     day_dict = {
         '1': "yesterday", '2': "today", '3': "tomorrow"
     }
-    print("\nOn which day you want to know your horoscope ?\n",
-        "\n1. Yesterday\n", "\n2. Today\n", "\n3. Tomorrow\n")
 
     day_input = input(Fore.BLUE + "Input the number of the day: \n")
     if validate_data_for_day(day_input):
@@ -102,7 +100,7 @@ def validate_data_for_day(value):
         else:
             raise ValueError
     except ValueError:
-        print(Fore.RED + f'\nInvalid data: "Please enter a number between 1 and 3."')
+        print(Fore.RED + Style.BRIGHT + f'\nInvalid data: "Please enter a number between 1 and 3."\n')
         return False
 
 def replay():
@@ -113,11 +111,11 @@ def replay():
         return
 
     elif replay.lower() == 'n':
-        print(Fore.CYAN + "\nThank you for using 'Your Horoscope'. Hope you enjoyed.\n")
+        print(Fore.CYAN + Style.BRIGHT + "\nThank you for using 'Your Horoscope'. Hope you enjoyed.\n")
         return
 
     else:
-        print(Fore.RED + "\nInvalid input: Please enter either 'Y' or 'N'")
+        print(Fore.RED + Style.BRIGHT + "\nInvalid input: Please enter either 'Y' or 'N'")
         replay()
         
 
@@ -127,9 +125,8 @@ def main():
     """
 
     name = get_name()
-    zodiac_sign = None
-    while zodiac_sign is None:
-        print('\nChoose the number of your zodiac sign from below list : \n',
+
+    print('\nChoose the number of your zodiac sign from below list : \n',
         "\n1. Aries (Mar 21 - Apr 19) \n", "\n2. Taurus (Apr 20 - May 20) \n", 
         "\n3. Gemini (May 21 - Jun 20) \n", "\n4. Cancer (Jun 21 - Jul 22)\n", 
         "\n5. Leo (Jul 23 - Aug 22) \n", "\n6. Virgo (Aug 23 - Sep 22) \n", 
@@ -137,6 +134,9 @@ def main():
         "\n9. Sagittarius (Nov 22 - Dec 21) \n", "\n10. Capricorn (Dec 22 - Jan 19) \n", 
         "\n11. Aquarius (Jan 20 - Feb 18) \n", "\n12. Pisces (Feb 19 - Mar 20)\n")
 
+    zodiac_sign = None
+    while zodiac_sign is None:
+        
         zodiac_sign = input(Fore.BLUE + "\nInput your zodiac sign number: \n")
 
         zodiac_1 = get_zodiac_1(zodiac_sign)
@@ -146,6 +146,9 @@ def main():
     
     zodiac_2 = get_zodiac_2(zodiac_sign)
 
+    print("\nOn which day you want to know your horoscope ?\n",
+        "\n1. Yesterday\n", "\n2. Today\n", "\n3. Tomorrow\n")
+
     day = None
     while day is None:
          # Loops if invalid data is entered for day.
@@ -153,7 +156,7 @@ def main():
 
     print(Fore.GREEN + f"\nThank you {name.upper()} for your inputs.\n\nThe prediction for your zodiac sign {zodiac_2.upper()} for {day.upper()} is as follows.\n")
     horoscope_text = horoscope(zodiac_1, day)
-    print(Fore.MAGENTA + horoscope_text)
+    print(Fore.MAGENTA + Style.BRIGHT + horoscope_text)
 
     replay()
     
