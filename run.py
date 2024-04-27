@@ -28,7 +28,7 @@ def get_name():
     Get user input of their name and prompts if invalid input is given.
     """
     while True:
-        name = input(Fore.BLUE + "\nPlease enter your name: \n").strip()  # Using strip() to remove any leading/trailing whitespaces
+        name = input(Fore.BLUE + Style.BRIGHT + "\nPlease enter your name: \n").strip()  # Using strip() to remove any leading/trailing whitespaces
         if name:
             return name
         else:
@@ -83,7 +83,7 @@ def get_day_input():
         '1': "yesterday", '2': "today", '3': "tomorrow"
     }
 
-    day_input = input(Fore.BLUE + "Input the number of the day: \n")
+    day_input = input(Fore.BLUE + Style.BRIGHT + "Input the number of the day: \n")
     if validate_data_for_day(day_input):
         return day_dict[day_input]
     else:
@@ -244,7 +244,7 @@ def main():
     zodiac_sign = None
     while zodiac_sign is None:
         # Loops if invalid data is entered for day.
-        zodiac_sign = input(Fore.BLUE + "\nInput your zodiac sign number: \n")
+        zodiac_sign = input(Fore.BLUE + Style.BRIGHT + "\nInput your zodiac sign number: \n")
 
         zodiac_1 = get_zodiac_1(zodiac_sign)
         if zodiac_1 is None:
