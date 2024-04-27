@@ -24,7 +24,9 @@ title = pyfiglet.figlet_format("Your Horoscope", font="slant")
 print(Fore.MAGENTA + Style.BRIGHT + title)
 
 def get_name():
-
+    """
+    Get user input of their name and prompts if invalid input is given.
+    """
     while True:
         name = input(Fore.BLUE + "\nPlease enter your name: \n").strip()  # Using strip() to remove any leading/trailing whitespaces
         if name:
@@ -161,10 +163,7 @@ def main():
     horoscope_text = horoscope(zodiac_1, day)
     print(Fore.MAGENTA + Style.BRIGHT + horoscope_text)
 
-    while True:
-        user_wants_to_continue = replay()
-        if not user_wants_to_continue:
-            break 
+    replay()
     
 
 if __name__ == "__main__":
