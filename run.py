@@ -261,7 +261,7 @@ def main():
         # Loops if invalid data is entered for day.
         day = get_day_input()
 
-    print(Fore.GREEN + f"\nThank you {name.upper()} for your inputs.\n\nThe prediction for your zodiac sign {zodiac_2.upper()} for {day.upper()} is as follows.\n")
+    print(Fore.GREEN + Style.BRIGHT + f"\nThank you {name.upper()} for your inputs.\n\nThe prediction for your zodiac sign {zodiac_2.upper()} for {day.upper()} is as follows.\n")
     zodiac_characteristics(zodiac_sign)
     horoscope_text = horoscope(zodiac_1, day)
     print(Fore.MAGENTA + Style.BRIGHT + horoscope_text)
