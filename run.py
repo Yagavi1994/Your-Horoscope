@@ -5,6 +5,10 @@ from bs4 import BeautifulSoup
 import pyfiglet
 from colorama import init, Fore, Back, Style
 from termcolor import colored
+import sys
+import os 
+import time
+
 
 init(autoreset=True)  # Automatically reset the style to default after each print!
 
@@ -23,12 +27,43 @@ def horoscope(zodiac_sign: int, day: str) -> str:
 title = pyfiglet.figlet_format("Your Horoscope", font="slant")
 print(Fore.MAGENTA + Style.BRIGHT + title)
 
+def text_effect_fast(text):
+    """
+
+    Create a fast typing effect to improve user experience.
+    """
+    for letter in text:
+        sys.stdout.write(letter)  
+        sys.stdout.flush()        
+        time.sleep(0.01)         
+        if letter == "\n":
+            time.sleep(0.1)       
+    print()  # Ensure the output ends with a newline
+    
+def text_effect(text, delay=0.03):
+    """
+    Create a slow typing effect to improve user experience,
+    """
+    for letter in text:
+        sys.stdout.write(letter)
+        sys.stdout.flush()
+        time.sleep(delay)
+    print()  # Ensure the output ends with a newline.
+
+def clear_terminal():
+    """
+    Clears the terminal.
+    https://stackoverflow.com/questions/2084508/clear-terminal-in-python
+    """
+    os.system("cls" if os.name == "nt" else "clear")
+
 def get_name():
     """
     Get user input of their name and prompts if invalid input is given.
     """
     while True:
-        name = input(Fore.BLUE + Style.BRIGHT + "\nPlease enter your name: \n").strip()  # Using strip() to remove any leading/trailing whitespaces
+        user_name = text_effect("\nPlease enter your name:")
+        name = input(" \n").capitalize()
         if name:
             return name
         else:
@@ -83,7 +118,8 @@ def get_day_input():
         '1': "yesterday", '2': "today", '3': "tomorrow"
     }
 
-    day_input = input(Fore.BLUE + Style.BRIGHT + "Input the number of the day: \n")
+    day_user = text_effect("Input the number of the day:")
+    day_input = input("\n")
     if validate_data_for_day(day_input):
         return day_dict[day_input]
     else:
@@ -233,6 +269,10 @@ def main():
 
     name = get_name()
 
+    clear_terminal()
+
+    print(Fore.BLUE + Style.BRIGHT + f"Hello {name}!")
+
     print('\nChoose the number of your zodiac sign from below list : \n',
         "\n1. Aries (Mar 21 - Apr 19) \n", "\n2. Taurus (Apr 20 - May 20) \n", 
         "\n3. Gemini (May 21 - Jun 20) \n", "\n4. Cancer (Jun 21 - Jul 22)\n", 
@@ -244,7 +284,8 @@ def main():
     zodiac_sign = None
     while zodiac_sign is None:
         # Loops if invalid data is entered for day.
-        zodiac_sign = input(Fore.BLUE + Style.BRIGHT + "\nInput your zodiac sign number: \n")
+        zodiac = text_effect("\nInput your zodiac sign number:")
+        zodiac_sign = input("\n")
 
         zodiac_1 = get_zodiac_1(zodiac_sign)
         if zodiac_1 is None:
@@ -252,6 +293,8 @@ def main():
         
     
     zodiac_2 = get_zodiac_2(zodiac_sign)
+
+    clear_terminal()
 
     print("\nOn which day you want to know your horoscope ?\n",
         "\n1. Yesterday\n", "\n2. Today\n", "\n3. Tomorrow\n")
@@ -261,6 +304,8 @@ def main():
         # Loops if invalid data is entered for day.
         day = get_day_input()
 
+    clear_terminal()
+
     print(Fore.GREEN + Style.BRIGHT + f"\nThank you {name.upper()} for your inputs.\n\nThe prediction for your zodiac sign {zodiac_2.upper()} for {day.upper()} is as follows.\n")
     zodiac_characteristics(zodiac_sign)
     horoscope_text = horoscope(zodiac_1, day)
@@ -269,6 +314,9 @@ def main():
     replay()
     
 
+"""
+This ensures that main() is only called when the script is executed directly.
+"""
 if __name__ == "__main__":
     main()
     
