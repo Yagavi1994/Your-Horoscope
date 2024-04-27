@@ -105,18 +105,21 @@ def validate_data_for_day(value):
 
 def replay():
 
-    replay = input(Fore.GREEN + "\nEnter 'Y' to play again and 'N' to exit: \n")
-    if replay.lower() == 'y':
-        main()
-        return
+    while True:
 
-    elif replay.lower() == 'n':
-        print(Fore.CYAN + Style.BRIGHT + "\nThank you for using 'Your Horoscope'. Hope you enjoyed.\n")
-        return
+        replay = input(Fore.GREEN + "\nEnter 'Y' to play again and 'N' to exit: \n")
+        if replay.lower() == 'y':
+            main()
+            return
 
-    else:
-        print(Fore.RED + Style.BRIGHT + "\nInvalid input: Please enter either 'Y' or 'N'")
-        replay()
+        elif replay.lower() == 'n':
+            print(Fore.CYAN + Style.BRIGHT + "\nThank you for using 'Your Horoscope'. Hope you enjoyed.\n")
+            return
+
+        else:
+            print(Fore.RED + Style.BRIGHT + "\nInvalid input: Please enter either 'Y' or 'N'")
+            
+        
         
 
 def main():
@@ -158,7 +161,10 @@ def main():
     horoscope_text = horoscope(zodiac_1, day)
     print(Fore.MAGENTA + Style.BRIGHT + horoscope_text)
 
-    replay()
+    while True:
+        user_wants_to_continue = replay()
+        if not user_wants_to_continue:
+            break 
     
 
 if __name__ == "__main__":
