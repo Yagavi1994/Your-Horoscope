@@ -211,13 +211,13 @@ def replay():
 
     while True:
 
-        replay = input(Fore.GREEN + Styel.BRIGHT + "\nEnter 'Y' to play again and 'N' to exit: \n")
+        replay = input(Fore.GREEN + Style.BRIGHT + "\nEnter 'Y' to play again and 'N' to exit: \n")
         if replay.lower() == 'y':
             main()
             return
 
         elif replay.lower() == 'n':
-            print(Fore.CYAN + Style.BRIGHT + "\nThank you for using 'Your Horoscope'. Hope you enjoyed.\n")
+            print(Fore.CYAN + Style.BRIGHT + '\nThank you for using "Your Horoscope". Hope you enjoyed.\n')
             return
 
         else:
