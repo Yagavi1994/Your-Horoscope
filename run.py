@@ -211,7 +211,7 @@ def replay():
 
     while True:
 
-        replay = input(Fore.GREEN + "\nEnter 'Y' to play again and 'N' to exit: \n")
+        replay = input(Fore.GREEN + Styel.BRIGHT + "\nEnter 'Y' to play again and 'N' to exit: \n")
         if replay.lower() == 'y':
             main()
             return
