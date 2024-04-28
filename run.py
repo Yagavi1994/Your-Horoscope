@@ -4,7 +4,6 @@ import requests
 from bs4 import BeautifulSoup
 import pyfiglet
 from colorama import init, Fore, Back, Style
-from termcolor import colored
 import sys
 import os 
 import time
@@ -112,6 +111,7 @@ def read_horoscope():
             print("\n")
             print (Fore.MAGENTA + Style.BRIGHT + "="*80)
             print(Fore.CYAN + Style.BRIGHT + '\n  Thank you for using "Your Horoscope". Hope you enjoyed and will visit again.\n')
+            print (Fore.MAGENTA + Style.BRIGHT + "="*80)
             print(Fore.YELLOW + "\n  Click Run Program to start again.\n")
             return False
 
@@ -330,6 +330,7 @@ def replay():
             print("\n")
             print ("="*80)
             print(Fore.GREEN + Style.BRIGHT + '\n  Thank you for using "Your Horoscope". Hope you enjoyed and will visit again.\n')
+            print ("="*80)
             print(Fore.BLUE + "\n  Click Run Program to start again.\n")
             return
 
@@ -399,10 +400,6 @@ def main():
     print ("="*80)
 
     replay()
-
-    clear_terminal()
-
-    aries()
     
 
 """
