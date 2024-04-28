@@ -8,8 +8,6 @@ from termcolor import colored
 import sys
 import os 
 import time
-import subprocess
-import platform
 # import tkinter as tk
 
 
@@ -56,10 +54,12 @@ def text_effect(text, delay=0.03):
     print()  # Ensure the output ends with a newline.
 
 def clear_terminal():
-    if platform.system() == "Windows":
-        subprocess.run(["cls"], shell=True, check=True)
-    else:
-        subprocess.run(["clear"], shell=True, check=True)
+    """
+    Clears the terminal.
+    https://stackoverflow.com/questions/2084508/clear-terminal-in-python
+    """
+    os.system("cls" if os.name == "nt" else "clear")
+
 
 def get_name():
     """
@@ -80,7 +80,14 @@ def read_horoscope():
         play_game = text_effect("\nDo you want to know your horoscope prediction: Y/N")
         play = input(Fore.BLUE + Style.BRIGHT + "\n")
         if play.lower() == 'y':
-            text_effect_fast("\nChoose the number of your zodiac sign from below list : \n\n1. Aries (Mar 21 - Apr 19) \n \n2. Taurus (Apr 20 - May 20) \n \n3. Gemini (May 21 - Jun 20) \n \n4. Cancer (Jun 21 - Jul 22)\n \n5. Leo (Jul 23 - Aug 22) \n \n6. Virgo (Aug 23 - Sep 22) \n \n7. Libra (Sep 23 - Oct 22) \n \n8. Scorpio (Oct 23 - Nov 21) \n \n9. Sagittarius (Nov 22 - Dec 21) \n \n10. Capricorn (Dec 22 - Jan 19) \n \n11. Aquarius (Jan 20 - Feb 18) \n \n12. Pisces (Feb 19 - Mar 20)\n") 
+            clear_terminal()
+            text_effect_fast("\nChoose the number of your zodiac sign from below list :\n")
+            text_effect_fast("\n1. Aries (Mar 21 - Apr 19)      2. Taurus (Apr 20 - May 20) \n") 
+            text_effect_fast("\n3. Gemini (May 21 - Jun 20)     4. Cancer (Jun 21 - Jul 22)\n") 
+            text_effect_fast("\n5. Leo (Jul 23 - Aug 22)        6. Virgo (Aug 23 - Sep 22) \n") 
+            text_effect_fast("\n7. Libra (Sep 23 - Oct 22)      8. Scorpio (Oct 23 - Nov 21) \n") 
+            text_effect_fast("\n9. Sagittarius (Nov 22 - Dec 21)10. Capricorn (Dec 22 - Jan 19) \n") 
+            text_effect_fast("\n11. Aquarius (Jan 20 - Feb 18)  12. Pisces (Feb 19 - Mar 20)\n") 
             return True
 
         elif play.lower() == 'n':
