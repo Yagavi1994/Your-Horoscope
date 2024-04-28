@@ -8,6 +8,8 @@ from termcolor import colored
 import sys
 import os 
 import time
+from zodiacs import *
+
 
 # Constant Variable for Happy Face.
 HAPPY_FACE = Fore.GREEN + "⊂(◉‿◉)つ".ljust(200) + Fore.RESET
@@ -27,23 +29,13 @@ def horoscope(zodiac_sign: int, day: str) -> str:
     soup = BeautifulSoup(requests.get(url).content, "html.parser")
     return soup.find("div", class_="main-horoscope").p.text 
 
-def start_count():
-    """
-    Starts a count down before the program starts.
-    """
-    text_effect_fast("\n  Starting in... \n")
-    print(Fore.BLUE + Style.BRIGHT + "  3 \n")
-    time.sleep(1)
-    print(Fore.GREEN + Style.BRIGHT + "  2 \n")
-    time.sleep(1)
-    print(Fore.YELLOW + Style.BRIGHT + "  1 \n")
-    time.sleep(1)
 
 def logo():
     """
     Applies stylings to the logo.
     """
-
+    # f= open ('heart.txt','r')
+    # print(Fore.RED + Style.BRIGHT + ''.join([line for line in f]))
     title = pyfiglet.figlet_format("Your Horoscope", font="slant")
     print(Fore.MAGENTA + Style.BRIGHT + title)
 
@@ -83,8 +75,7 @@ def get_name():
     """
     while True:
         print(HAPPY_FACE)
-        text_effect("  Press enter if you don't want to disclose your name.\n")
-        user_name = text_effect("  What is your name?\n")
+        user_name = text_effect("  What is your name? (Press enter if you don't want to disclose your name.)\n")
         name = input(Fore.BLUE + Style.BRIGHT + "  ").capitalize()
         if name:
             return name
@@ -99,20 +90,20 @@ def read_horoscope():
 
     while True:
 
-        play_game = text_effect("\n  Do you want to know your horoscope prediction: Y/N")
+        play_game = text_effect("\n  Are you excited to know your horoscope prediction: Y/N")
         play = input(Fore.BLUE + Style.BRIGHT + "  ")
         if play.lower() == 'y':
 
             clear_terminal()
 
-            text_effect_fast("\n  Choose the number of your zodiac sign from below list :\n")
+            text_effect_fast("\n  Choose the number of your zodiac sign from below list:\n")
             print (Fore.GREEN + "="*80)
-            text_effect_fast("\n  1. Aries (Mar 21 - Apr 19)          2. Taurus (Apr 20 - May 20)\n") 
-            text_effect_fast("  3. Gemini (May 21 - Jun 20)         4. Cancer (Jun 21 - Jul 22)\n") 
-            text_effect_fast("  5. Leo (Jul 23 - Aug 22)            6. Virgo (Aug 23 - Sep 22) \n") 
-            text_effect_fast("  7. Libra (Sep 23 - Oct 22)          8. Scorpio (Oct 23 - Nov 21) \n") 
-            text_effect_fast("  9. Sagittarius (Nov 22 - Dec 21)    10. Capricorn (Dec 22 - Jan 19) \n") 
-            text_effect_fast("  11. Aquarius (Jan 20 - Feb 18)      12. Pisces (Feb 19 - Mar 20)\n") 
+            text_effect_fast("\n  1. Aries (Mar 21 - Apr 19)      7. Libra (Sep 23 - Oct 22)\n") 
+            text_effect_fast("  2. Taurus (Apr 20 - May 20)     8. Scorpio (Oct 23 - Nov 21)\n") 
+            text_effect_fast("  3. Gemini (May 21 - Jun 20)     9. Sagittarius (Nov 22 - Dec 21) \n") 
+            text_effect_fast("  4. Cancer (Jun 21 - Jul 22)     10. Capricorn (Dec 22 - Jan 19) \n") 
+            text_effect_fast("  5. Leo (Jul 23 - Aug 22)        11. Aquarius (Jan 20 - Feb 18) \n") 
+            text_effect_fast("  6. Virgo (Aug 23 - Sep 22)      12. Pisces (Feb 19 - Mar 20)\n") 
 
             print (Fore.GREEN + "="*80)
             return True
@@ -121,6 +112,7 @@ def read_horoscope():
             print("\n")
             print (Fore.MAGENTA + Style.BRIGHT + "="*80)
             print(Fore.CYAN + Style.BRIGHT + '\n  Thank you for using "Your Horoscope". Hope you enjoyed and will visit again.\n')
+            print(Fore.YELLOW + "\n  Click Run Program to start again.\n")
             return False
 
         else:
@@ -176,7 +168,7 @@ def get_day_input():
         '1': "yesterday", '2': "today", '3': "tomorrow"
     }
 
-    day_user = text_effect("\n  Input the number of the day:")
+    day_user = text_effect("\n  Enter the number of the day:")
     day_input = input(Fore.BLUE + Style.BRIGHT + "  ")
 
     # Pass the input to find whether the input given is valid or invalid.
@@ -327,7 +319,7 @@ def replay():
 
     while True:
 
-        replay_enter = text_effect("\n  Enter 'Y' to play again and 'N' to exit:")
+        replay_enter = text_effect("\n  Enter 'Y' to start again and 'N' to exit:")
         replay = input(Fore.BLUE + Style.BRIGHT + "  ")
         if replay.lower() == 'y':
             clear_terminal()
@@ -338,25 +330,18 @@ def replay():
             print("\n")
             print ("="*80)
             print(Fore.GREEN + Style.BRIGHT + '\n  Thank you for using "Your Horoscope". Hope you enjoyed and will visit again.\n')
+            print(Fore.BLUE + "\n  Click Run Program to start again.\n")
             return
 
         else:
             print(Fore.RED + Style.BRIGHT + "\n  Invalid input: Please enter either 'Y' or 'N'")
-            
-        
-        
+                           
 
 def main():
     """
     Runs all functions
     """
     print("\n")
-
-    print(HAPPY_FACE)
-
-    start_count()
-
-    clear_terminal()
 
     logo()
 
@@ -377,7 +362,7 @@ def main():
     zodiac_sign = None
     while zodiac_sign is None:
         # Loops if invalid data is entered for zodiac_sign.
-        zodiac = text_effect("\n  Input your zodiac sign number:")
+        zodiac = text_effect("\n  Enter your zodiac sign number:")
         zodiac_sign = input(Fore.BLUE + Style.BRIGHT + "  ")
 
         zodiac_1 = get_zodiac_1(zodiac_sign)
@@ -389,7 +374,7 @@ def main():
 
     clear_terminal()
 
-    text_effect_fast("\n  On which day you want to know your horoscope?\n")
+    text_effect_fast("\n  For which day you want to know your horoscope?\n")
     print (Fore.GREEN + "="*80) 
     text_effect_fast("\n  1. Yesterday\n \n  2. Today\n \n  3. Tomorrow\n")
     print (Fore.GREEN + "="*80)
@@ -414,6 +399,10 @@ def main():
     print ("="*80)
 
     replay()
+
+    clear_terminal()
+
+    aries()
     
 
 """
