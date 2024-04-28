@@ -67,6 +67,7 @@ def get_name():
     Get user input of their name and prompts if invalid input is given.
     """
     while True:
+        print(HAPPY_FACE)
         user_name = text_effect("\nPlease enter your name:")
         name = input(Fore.BLUE + Style.BRIGHT + " \n").capitalize()
         if name:
@@ -82,8 +83,9 @@ def read_horoscope():
         play = input(Fore.BLUE + Style.BRIGHT + "\n")
         if play.lower() == 'y':
             clear_terminal()
+            print("\n")
             print(HAPPY_FACE)
-            text_effect_fast("\nChoose the number of your zodiac sign from below list :\n")
+            text_effect_fast("Choose the number of your zodiac sign from below list :\n")
             print (Fore.GREEN + "="*80)
             text_effect_fast("\n1. Aries (Mar 21 - Apr 19)      2. Taurus (Apr 20 - May 20)\n") 
             text_effect_fast("3. Gemini (May 21 - Jun 20)     4. Cancer (Jun 21 - Jul 22)\n") 
@@ -331,9 +333,9 @@ def main():
     zodiac_2 = get_zodiac_2(zodiac_sign)
 
     clear_terminal()
-
+    print("\n")
     print(HAPPY_FACE)
-    text_effect_fast("\nOn which day you want to know your horoscope ?\n")
+    text_effect_fast("On which day you want to know your horoscope ?\n")
     print (Fore.GREEN + "="*80) 
     text_effect_fast("\n1. Yesterday\n \n2. Today\n \n3. Tomorrow\n")
     print (Fore.GREEN + "="*80)
@@ -345,9 +347,9 @@ def main():
 
     clear_terminal()
 
+    print("\n")
     print(HAPPY_FACE_2)
-
-    print(Fore.GREEN + Style.BRIGHT + f"\nThank you {name.upper()} for your inputs.\n\nThe prediction for your zodiac sign {zodiac_2.upper()} for {day.upper()} is as follows.\n")
+    print(Fore.GREEN + Style.BRIGHT + f"Thank you {name.upper()} for your inputs.\n\nThe prediction for your zodiac sign {zodiac_2.upper()} for {day.upper()} is as follows.\n")
     zodiac_characteristics(zodiac_sign)
     horoscope_text = horoscope(zodiac_1, day)
     print(Fore.MAGENTA + Style.BRIGHT + horoscope_text)
