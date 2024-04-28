@@ -8,6 +8,9 @@ from termcolor import colored
 import sys
 import os 
 import time
+import subprocess
+import platform
+import tkinter as tk
 
 
 init(autoreset=True)  # Automatically reset the style to default after each print!
@@ -53,11 +56,10 @@ def text_effect(text, delay=0.03):
     print()  # Ensure the output ends with a newline.
 
 def clear_terminal():
-    """
-    Clears the terminal.
-    https://stackoverflow.com/questions/2084508/clear-terminal-in-python
-    """
-    os.system("cls" if os.name == "nt" else "clear")
+    if platform.system() == "Windows":
+        subprocess.run(["cls"], shell=True, check=True)
+    else:
+        subprocess.run(["clear"], shell=True, check=True)
 
 def get_name():
     """
@@ -65,7 +67,7 @@ def get_name():
     """
     while True:
         user_name = text_effect("\nPlease enter your name:")
-        name = input(" \n").capitalize()
+        name = input(Fore.BLUE + Style.BRIGHT + " \n").capitalize()
         if name:
             return name
         else:
@@ -76,7 +78,7 @@ def read_horoscope():
     while True:
 
         play_game = text_effect("\nDo you want to know your horoscope prediction: Y/N")
-        play = input("\n")
+        play = input(Fore.BLUE + Style.BRIGHT + "\n")
         if play.lower() == 'y':
             text_effect_fast("\nChoose the number of your zodiac sign from below list : \n\n1. Aries (Mar 21 - Apr 19) \n \n2. Taurus (Apr 20 - May 20) \n \n3. Gemini (May 21 - Jun 20) \n \n4. Cancer (Jun 21 - Jul 22)\n \n5. Leo (Jul 23 - Aug 22) \n \n6. Virgo (Aug 23 - Sep 22) \n \n7. Libra (Sep 23 - Oct 22) \n \n8. Scorpio (Oct 23 - Nov 21) \n \n9. Sagittarius (Nov 22 - Dec 21) \n \n10. Capricorn (Dec 22 - Jan 19) \n \n11. Aquarius (Jan 20 - Feb 18) \n \n12. Pisces (Feb 19 - Mar 20)\n") 
             return True
@@ -138,7 +140,7 @@ def get_day_input():
     }
 
     day_user = text_effect("Input the number of the day:")
-    day_input = input("\n")
+    day_input = input(Fore.BLUE + Style.BRIGHT + "\n")
     if validate_data_for_day(day_input):
         return day_dict[day_input]
     else:
@@ -266,8 +268,10 @@ def replay():
 
     while True:
 
-        replay = input("\nEnter 'Y' to play again and 'N' to exit: \n")
+        replay_enter = text_effect("\nEnter 'Y' to play again and 'N' to exit: \n")
+        replay = input(Fore.BLUE + Style.BRIGHT + "\n")
         if replay.lower() == 'y':
+            clear_terminal()
             main()
             return
 
@@ -303,7 +307,7 @@ def main():
     while zodiac_sign is None:
         # Loops if invalid data is entered for zodiac_sign.
         zodiac = text_effect("\nInput your zodiac sign number:")
-        zodiac_sign = input("\n")
+        zodiac_sign = input(Fore.BLUE + Style.BRIGHT + "\n")
 
         zodiac_1 = get_zodiac_1(zodiac_sign)
         if zodiac_1 is None:
@@ -314,8 +318,7 @@ def main():
 
     clear_terminal()
 
-    print("\nOn which day you want to know your horoscope ?\n",
-        "\n1. Yesterday\n", "\n2. Today\n", "\n3. Tomorrow\n")
+    text_effect_fast("\nOn which day you want to know your horoscope ?\n \n1. Yesterday\n \n2. Today\n \n3. Tomorrow\n")
 
     day = None
     while day is None:
