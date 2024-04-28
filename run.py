@@ -10,6 +10,8 @@ import os
 import time
 
 
+HAPPY_FACE = Fore.GREEN + "⊂(◉‿◉)つ".ljust(200) + Fore.RESET
+HAPPY_FACE_2 = Fore.BLUE + "⊂(◉‿◉)つ".ljust(200) + Fore.RESET
 init(autoreset=True)  # Automatically reset the style to default after each print!
 
 def horoscope(zodiac_sign: int, day: str) -> str:
@@ -80,8 +82,9 @@ def read_horoscope():
         play = input(Fore.BLUE + Style.BRIGHT + "\n")
         if play.lower() == 'y':
             clear_terminal()
+            print(HAPPY_FACE)
             text_effect_fast("\nChoose the number of your zodiac sign from below list :\n")
-            print (Fore.GREEN + "="*70)
+            print (Fore.GREEN + "="*80)
             text_effect_fast("\n1. Aries (Mar 21 - Apr 19)      2. Taurus (Apr 20 - May 20)\n") 
             text_effect_fast("3. Gemini (May 21 - Jun 20)     4. Cancer (Jun 21 - Jul 22)\n") 
             text_effect_fast("5. Leo (Jul 23 - Aug 22)        6. Virgo (Aug 23 - Sep 22) \n") 
@@ -306,6 +309,8 @@ def main():
 
     logo()
 
+    print(HAPPY_FACE)
+
     print(Fore.BLUE + Style.BRIGHT + f"Hello {name}!")
 
     if not read_horoscope():
@@ -327,10 +332,11 @@ def main():
 
     clear_terminal()
 
+    print(HAPPY_FACE)
     text_effect_fast("\nOn which day you want to know your horoscope ?\n")
-    print (Fore.GREEN + "="*70) 
+    print (Fore.GREEN + "="*80) 
     text_effect_fast("\n1. Yesterday\n \n2. Today\n \n3. Tomorrow\n")
-    print (Fore.GREEN + "="*70)
+    print (Fore.GREEN + "="*80)
 
     day = None
     while day is None:
@@ -339,14 +345,14 @@ def main():
 
     clear_terminal()
 
+    print(HAPPY_FACE_2)
+
     print(Fore.GREEN + Style.BRIGHT + f"\nThank you {name.upper()} for your inputs.\n\nThe prediction for your zodiac sign {zodiac_2.upper()} for {day.upper()} is as follows.\n")
-    print ("="*75)
-    print("\n")
     zodiac_characteristics(zodiac_sign)
     horoscope_text = horoscope(zodiac_1, day)
     print(Fore.MAGENTA + Style.BRIGHT + horoscope_text)
     print("\n")
-    print ("="*75)
+    print ("="*80)
 
     replay()
     
