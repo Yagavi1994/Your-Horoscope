@@ -89,14 +89,16 @@ def read_horoscope():
 
     while True:
 
-        play_game = text_effect("\n  Are you excited to know your horoscope prediction: Y/N")
+        play_game = text_effect("\n  Are you excited to know your zodiac's traits and horoscope? Y/N")
         play = input(Fore.BLUE + Style.BRIGHT + "  ")
         if play.lower() == 'y':
 
             clear_terminal()
 
             text_effect_fast("\n  Choose the number of your zodiac sign from below list:\n")
+
             print (Fore.GREEN + "="*80)
+
             text_effect_fast("\n  1. Aries (Mar 21 - Apr 19)      7. Libra (Sep 23 - Oct 22)\n") 
             text_effect_fast("  2. Taurus (Apr 20 - May 20)     8. Scorpio (Oct 23 - Nov 21)\n") 
             text_effect_fast("  3. Gemini (May 21 - Jun 20)     9. Sagittarius (Nov 22 - Dec 21) \n") 
@@ -355,6 +357,8 @@ def main():
     """
     Runs all functions
     """
+    clear_terminal()
+
     print("\n")
 
     logo()
@@ -388,7 +392,7 @@ def main():
 
     clear_terminal()
 
-    print(Fore.GREEN + f"\n  The traits of your zodiac sign {zodiac_2.upper()} is.\n")
+    print(Fore.GREEN + f"\n  The traits of your zodiac sign {zodiac_2.upper()} are.\n")
 
     print ("="*80)
 
@@ -398,11 +402,11 @@ def main():
     
     print("\n")
 
-    input(Fore.YELLOW + "Press Enter to Continue...\n")
+    input(Fore.YELLOW + "Press Enter to Continue..\n")
     
     clear_terminal()
 
-    text_effect_fast("\n  For which day you want to know your horoscope's prediction?\n")
+    text_effect_fast("\n  For which day you want to know your horoscope?\n")
     print (Fore.GREEN + "="*80) 
     text_effect_fast("\n  1. Yesterday\n \n  2. Today\n \n  3. Tomorrow\n")
     print (Fore.GREEN + "="*80)
@@ -414,7 +418,7 @@ def main():
 
     clear_terminal()
 
-    print(f"\n  The prediction for {day.upper()} for {zodiac_2.upper()} is as follows.\n")
+    print(f"\n  The horoscope for {day.upper()} for {zodiac_2.upper()} is as follows.\n")
 
     print ("="*80)
 
