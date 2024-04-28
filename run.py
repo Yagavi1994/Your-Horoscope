@@ -9,10 +9,11 @@ import sys
 import os 
 import time
 
-
+# Constant Variable for Happy Face.
 HAPPY_FACE = Fore.GREEN + "⊂(◉‿◉)つ".ljust(200) + Fore.RESET
 
-init(autoreset=True)  # Automatically reset the style to default after each print!
+# Automatically reset the style to default after each print!
+init(autoreset=True)  
 
 def horoscope(zodiac_sign: int, day: str) -> str:
 
@@ -27,6 +28,9 @@ def horoscope(zodiac_sign: int, day: str) -> str:
     return soup.find("div", class_="main-horoscope").p.text 
 
 def start_count():
+    """
+    Starts a count down before the program starts.
+    """
     text_effect_fast("\n  Starting in... \n")
     print(Fore.BLUE + Style.BRIGHT + "  3 \n")
     time.sleep(1)
@@ -36,13 +40,15 @@ def start_count():
     time.sleep(1)
 
 def logo():
+    """
+    Applies stylings to the logo.
+    """
 
     title = pyfiglet.figlet_format("Your Horoscope", font="slant")
     print(Fore.MAGENTA + Style.BRIGHT + title)
 
 def text_effect_fast(text):
     """
-
     Create a fast typing effect to improve user experience.
     """
     for letter in text:
@@ -85,6 +91,9 @@ def get_name():
             print(Fore.RED + Style.BRIGHT + '  Invalid input: "Name cannot be left blank. Please enter a valid name."\n')
 
 def read_horoscope():
+    """
+    Asks user for their input to read horoscope or not and runs a while loop based on the choice made.
+    """
 
     while True:
 
@@ -123,6 +132,7 @@ def get_zodiac_1(input):
         '7': 7, '8': 8, '9': 9, '10': 10, '11': 11, '12': 12
     }
 
+    # Pass the input to find whether the input given is valid or invalid.
     if validate_data_for_zodiac_1(input):
         return zodiac_dict[input]
     else:
@@ -164,6 +174,8 @@ def get_day_input():
 
     day_user = text_effect("\n  Input the number of the day:")
     day_input = input(Fore.BLUE + Style.BRIGHT + "  ")
+
+    # Pass the input to find whether the input given is valid or invalid.
     if validate_data_for_day(day_input):
         return day_dict[day_input]
     else:
@@ -304,6 +316,10 @@ def zodiac_characteristics(input):
 
 
 def replay():
+    """
+    Asks user whether they wanna play again and runs a while loop based on the input.
+    Validates whether the input is valid or not.
+    """
 
     while True:
 
@@ -380,10 +396,15 @@ def main():
     clear_terminal()
 
     print(Fore.GREEN + f"\n  Thank you {name.upper()} for your inputs.\n\n  The prediction for your zodiac sign {zodiac_2.upper()} for {day.upper()} is as follows.\n")
+
     zodiac_characteristics(zodiac_sign)
+
     horoscope_text = horoscope(zodiac_1, day)
+
     print(Fore.MAGENTA + Style.BRIGHT + horoscope_text)
+
     print("\n")
+    
     print ("="*80)
 
     replay()
