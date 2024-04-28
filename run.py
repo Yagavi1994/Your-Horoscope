@@ -10,7 +10,7 @@ import os
 import time
 import subprocess
 import platform
-import tkinter as tk
+# import tkinter as tk
 
 
 init(autoreset=True)  # Automatically reset the style to default after each print!
@@ -268,7 +268,7 @@ def replay():
 
     while True:
 
-        replay_enter = text_effect("\nEnter 'Y' to play again and 'N' to exit: \n")
+        replay_enter = text_effect("\nEnter 'Y' to play again and 'N' to exit:")
         replay = input(Fore.BLUE + Style.BRIGHT + "\n")
         if replay.lower() == 'y':
             clear_terminal()
