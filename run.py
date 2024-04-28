@@ -119,7 +119,7 @@ def read_horoscope():
 
         elif play.lower() == 'n':
             print("\n")
-            print (Fore.MAGENTA + "="*80)
+            print (Fore.MAGENTA + Style.BRIGHT + "="*80)
             print(Fore.CYAN + Style.BRIGHT + '\n  Thank you for using "Your Horoscope". Hope you enjoyed and will visit again.\n')
             return False
 
