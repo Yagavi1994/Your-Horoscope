@@ -8,7 +8,6 @@ from termcolor import colored
 import sys
 import os 
 import time
-# import tkinter as tk
 
 
 init(autoreset=True)  # Automatically reset the style to default after each print!
@@ -82,12 +81,15 @@ def read_horoscope():
         if play.lower() == 'y':
             clear_terminal()
             text_effect_fast("\nChoose the number of your zodiac sign from below list :\n")
-            text_effect_fast("1. Aries (Mar 21 - Apr 19)      2. Taurus (Apr 20 - May 20)\n") 
+            print (Fore.GREEN + "="*70)
+            text_effect_fast("\n1. Aries (Mar 21 - Apr 19)      2. Taurus (Apr 20 - May 20)\n") 
             text_effect_fast("3. Gemini (May 21 - Jun 20)     4. Cancer (Jun 21 - Jul 22)\n") 
             text_effect_fast("5. Leo (Jul 23 - Aug 22)        6. Virgo (Aug 23 - Sep 22) \n") 
             text_effect_fast("7. Libra (Sep 23 - Oct 22)      8. Scorpio (Oct 23 - Nov 21) \n") 
             text_effect_fast("9. Sagittarius (Nov 22 - Dec 21)10. Capricorn (Dec 22 - Jan 19) \n") 
             text_effect_fast("11. Aquarius (Jan 20 - Feb 18)  12. Pisces (Feb 19 - Mar 20)\n") 
+
+            print (Fore.GREEN + "="*70)
             return True
 
         elif play.lower() == 'n':
@@ -146,7 +148,7 @@ def get_day_input():
         '1': "yesterday", '2': "today", '3': "tomorrow"
     }
 
-    day_user = text_effect("Input the number of the day:")
+    day_user = text_effect("\nInput the number of the day:")
     day_input = input(Fore.BLUE + Style.BRIGHT + "\n")
     if validate_data_for_day(day_input):
         return day_dict[day_input]
@@ -325,7 +327,10 @@ def main():
 
     clear_terminal()
 
-    text_effect_fast("\nOn which day you want to know your horoscope ?\n \n1. Yesterday\n \n2. Today\n \n3. Tomorrow\n")
+    text_effect_fast("\nOn which day you want to know your horoscope ?\n")
+    print (Fore.GREEN + "="*70) 
+    text_effect_fast("\n1. Yesterday\n \n2. Today\n \n3. Tomorrow\n")
+    print (Fore.GREEN + "="*70)
 
     day = None
     while day is None:
@@ -335,9 +340,13 @@ def main():
     clear_terminal()
 
     print(Fore.GREEN + Style.BRIGHT + f"\nThank you {name.upper()} for your inputs.\n\nThe prediction for your zodiac sign {zodiac_2.upper()} for {day.upper()} is as follows.\n")
+    print ("="*143)
+    print("\n")
     zodiac_characteristics(zodiac_sign)
     horoscope_text = horoscope(zodiac_1, day)
     print(Fore.MAGENTA + Style.BRIGHT + horoscope_text)
+    print("\n")
+    print ("="*143)
 
     replay()
     
