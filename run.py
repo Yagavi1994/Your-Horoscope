@@ -82,12 +82,12 @@ def read_horoscope():
         if play.lower() == 'y':
             clear_terminal()
             text_effect_fast("\nChoose the number of your zodiac sign from below list :\n")
-            text_effect_fast("\n1. Aries (Mar 21 - Apr 19)      2. Taurus (Apr 20 - May 20) \n") 
-            text_effect_fast("\n3. Gemini (May 21 - Jun 20)     4. Cancer (Jun 21 - Jul 22)\n") 
-            text_effect_fast("\n5. Leo (Jul 23 - Aug 22)        6. Virgo (Aug 23 - Sep 22) \n") 
-            text_effect_fast("\n7. Libra (Sep 23 - Oct 22)      8. Scorpio (Oct 23 - Nov 21) \n") 
-            text_effect_fast("\n9. Sagittarius (Nov 22 - Dec 21)10. Capricorn (Dec 22 - Jan 19) \n") 
-            text_effect_fast("\n11. Aquarius (Jan 20 - Feb 18)  12. Pisces (Feb 19 - Mar 20)\n") 
+            text_effect_fast("1. Aries (Mar 21 - Apr 19)      2. Taurus (Apr 20 - May 20)\n") 
+            text_effect_fast("3. Gemini (May 21 - Jun 20)     4. Cancer (Jun 21 - Jul 22)\n") 
+            text_effect_fast("5. Leo (Jul 23 - Aug 22)        6. Virgo (Aug 23 - Sep 22) \n") 
+            text_effect_fast("7. Libra (Sep 23 - Oct 22)      8. Scorpio (Oct 23 - Nov 21) \n") 
+            text_effect_fast("9. Sagittarius (Nov 22 - Dec 21)10. Capricorn (Dec 22 - Jan 19) \n") 
+            text_effect_fast("11. Aquarius (Jan 20 - Feb 18)  12. Pisces (Feb 19 - Mar 20)\n") 
             return True
 
         elif play.lower() == 'n':
