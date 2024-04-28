@@ -11,7 +11,7 @@ import time
 
 
 HAPPY_FACE = Fore.GREEN + "⊂(◉‿◉)つ".ljust(200) + Fore.RESET
-HAPPY_FACE_2 = Fore.BLUE + "⊂(◉‿◉)つ".ljust(200) + Fore.RESET
+
 init(autoreset=True)  # Automatically reset the style to default after each print!
 
 def horoscope(zodiac_sign: int, day: str) -> str:
@@ -83,7 +83,6 @@ def read_horoscope():
         play = input(Fore.BLUE + Style.BRIGHT + "\n")
         if play.lower() == 'y':
             clear_terminal()
-            print("\n")
             print(HAPPY_FACE)
             text_effect_fast("Choose the number of your zodiac sign from below list :\n")
             print (Fore.GREEN + "="*80)
@@ -347,8 +346,6 @@ def main():
 
     clear_terminal()
 
-    print("\n")
-    print(HAPPY_FACE_2)
     print(Fore.GREEN + Style.BRIGHT + f"Thank you {name.upper()} for your inputs.\n\nThe prediction for your zodiac sign {zodiac_2.upper()} for {day.upper()} is as follows.\n")
     zodiac_characteristics(zodiac_sign)
     horoscope_text = horoscope(zodiac_1, day)
