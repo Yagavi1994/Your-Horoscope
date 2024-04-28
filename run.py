@@ -82,13 +82,15 @@ def get_name():
     Get user input of their name and prompts if invalid input is given.
     """
     while True:
-        print( HAPPY_FACE)
-        user_name = text_effect("  Please enter your name:\n")
+        print(HAPPY_FACE)
+        text_effect("  Press enter if you don't want to disclose your name.\n")
+        user_name = text_effect("  What is your name?\n")
         name = input(Fore.BLUE + Style.BRIGHT + "  ").capitalize()
         if name:
             return name
         else:
-            print(Fore.RED + Style.BRIGHT + '  Invalid input: "Name cannot be left blank. Please enter a valid name."\n')
+            name = "User"
+            return name
 
 def read_horoscope():
     """
@@ -116,7 +118,9 @@ def read_horoscope():
             return True
 
         elif play.lower() == 'n':
-            print(Fore.CYAN + Style.BRIGHT + '\n  Thank you for using "Your Horoscope". Hope you enjoyed.\n')
+            print("\n")
+            print (Fore.MAGENTA + "="*80)
+            print(Fore.CYAN + Style.BRIGHT + '\n  Thank you for using "Your Horoscope". Hope you enjoyed and will visit again.\n')
             return False
 
         else:
@@ -331,7 +335,9 @@ def replay():
             return
 
         elif replay.lower() == 'n':
-            print(Fore.GREEN + Style.BRIGHT + '\n  Thank you for using "Your Horoscope". Hope you enjoyed.\n')
+            print("\n")
+            print ("="*80)
+            print(Fore.GREEN + Style.BRIGHT + '\n  Thank you for using "Your Horoscope". Hope you enjoyed and will visit again.\n')
             return
 
         else:
@@ -404,7 +410,7 @@ def main():
     print(Fore.MAGENTA + Style.BRIGHT + horoscope_text)
 
     print("\n")
-    
+
     print ("="*80)
 
     replay()
