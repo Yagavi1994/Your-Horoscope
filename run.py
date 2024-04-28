@@ -24,8 +24,10 @@ def horoscope(zodiac_sign: int, day: str) -> str:
     soup = BeautifulSoup(requests.get(url).content, "html.parser")
     return soup.find("div", class_="main-horoscope").p.text 
 
-title = pyfiglet.figlet_format("Your Horoscope", font="slant")
-print(Fore.MAGENTA + Style.BRIGHT + title)
+def logo():
+
+    title = pyfiglet.figlet_format("Your Horoscope", font="slant")
+    print(Fore.MAGENTA + Style.BRIGHT + title)
 
 def text_effect_fast(text):
     """
@@ -76,13 +78,7 @@ def read_horoscope():
         play_game = text_effect("\nDo you want to know your horoscope prediction: Y/N")
         play = input("\n")
         if play.lower() == 'y':
-            print('\nChoose the number of your zodiac sign from below list : \n',
-        "\n1. Aries (Mar 21 - Apr 19) \n", "\n2. Taurus (Apr 20 - May 20) \n", 
-        "\n3. Gemini (May 21 - Jun 20) \n", "\n4. Cancer (Jun 21 - Jul 22)\n", 
-        "\n5. Leo (Jul 23 - Aug 22) \n", "\n6. Virgo (Aug 23 - Sep 22) \n", 
-        "\n7. Libra (Sep 23 - Oct 22) \n", "\n8. Scorpio (Oct 23 - Nov 21) \n", 
-        "\n9. Sagittarius (Nov 22 - Dec 21) \n", "\n10. Capricorn (Dec 22 - Jan 19) \n", 
-        "\n11. Aquarius (Jan 20 - Feb 18) \n", "\n12. Pisces (Feb 19 - Mar 20)\n") 
+            text_effect_fast("\nChoose the number of your zodiac sign from below list : \n\n1. Aries (Mar 21 - Apr 19) \n \n2. Taurus (Apr 20 - May 20) \n \n3. Gemini (May 21 - Jun 20) \n \n4. Cancer (Jun 21 - Jul 22)\n \n5. Leo (Jul 23 - Aug 22) \n \n6. Virgo (Aug 23 - Sep 22) \n \n7. Libra (Sep 23 - Oct 22) \n \n8. Scorpio (Oct 23 - Nov 21) \n \n9. Sagittarius (Nov 22 - Dec 21) \n \n10. Capricorn (Dec 22 - Jan 19) \n \n11. Aquarius (Jan 20 - Feb 18) \n \n12. Pisces (Feb 19 - Mar 20)\n") 
             return True
 
         elif play.lower() == 'n':
@@ -289,10 +285,13 @@ def main():
     """
     Runs all functions
     """
+    logo()
 
     name = get_name()
 
     clear_terminal()
+
+    logo()
 
     print(Fore.BLUE + Style.BRIGHT + f"Hello {name}!")
 
