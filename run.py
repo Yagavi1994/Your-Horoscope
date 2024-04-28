@@ -340,13 +340,13 @@ def main():
     clear_terminal()
 
     print(Fore.GREEN + Style.BRIGHT + f"\nThank you {name.upper()} for your inputs.\n\nThe prediction for your zodiac sign {zodiac_2.upper()} for {day.upper()} is as follows.\n")
-    print ("="*143)
+    print ("="*75)
     print("\n")
     zodiac_characteristics(zodiac_sign)
     horoscope_text = horoscope(zodiac_1, day)
     print(Fore.MAGENTA + Style.BRIGHT + horoscope_text)
     print("\n")
-    print ("="*143)
+    print ("="*75)
 
     replay()
     
