@@ -96,15 +96,14 @@ def read_horoscope():
 
             text_effect_fast("\n  Choose the number of your zodiac sign from below list :\n")
             print (Fore.GREEN + "="*80)
-            print("\n")
-            text_effect_fast("  1. Aries (Mar 21 - Apr 19)      2. Taurus (Apr 20 - May 20)\n") 
-            text_effect_fast("  3. Gemini (May 21 - Jun 20)     4. Cancer (Jun 21 - Jul 22)\n") 
-            text_effect_fast("  5. Leo (Jul 23 - Aug 22)        6. Virgo (Aug 23 - Sep 22) \n") 
-            text_effect_fast("  7. Libra (Sep 23 - Oct 22)      8. Scorpio (Oct 23 - Nov 21) \n") 
-            text_effect_fast("  9. Sagittarius (Nov 22 - Dec 21)10. Capricorn (Dec 22 - Jan 19) \n") 
-            text_effect_fast("  11. Aquarius (Jan 20 - Feb 18)  12. Pisces (Feb 19 - Mar 20)\n") 
+            text_effect_fast("\n  1. Aries (Mar 21 - Apr 19)          2. Taurus (Apr 20 - May 20)\n") 
+            text_effect_fast("  3. Gemini (May 21 - Jun 20)         4. Cancer (Jun 21 - Jul 22)\n") 
+            text_effect_fast("  5. Leo (Jul 23 - Aug 22)            6. Virgo (Aug 23 - Sep 22) \n") 
+            text_effect_fast("  7. Libra (Sep 23 - Oct 22)          8. Scorpio (Oct 23 - Nov 21) \n") 
+            text_effect_fast("  9. Sagittarius (Nov 22 - Dec 21)    10. Capricorn (Dec 22 - Jan 19) \n") 
+            text_effect_fast("  11. Aquarius (Jan 20 - Feb 18)      12. Pisces (Feb 19 - Mar 20)\n") 
 
-            print (Fore.GREEN + "="*70)
+            print (Fore.GREEN + "="*80)
             return True
 
         elif play.lower() == 'n':
@@ -380,7 +379,7 @@ def main():
 
     clear_terminal()
 
-    print(Fore.GREEN + Style.BRIGHT + f"  Thank you {name.upper()} for your inputs.\n\n  The prediction for your zodiac sign {zodiac_2.upper()} for {day.upper()} is as follows.\n")
+    print(Fore.GREEN + f"\n  Thank you {name.upper()} for your inputs.\n\n  The prediction for your zodiac sign {zodiac_2.upper()} for {day.upper()} is as follows.\n")
     zodiac_characteristics(zodiac_sign)
     horoscope_text = horoscope(zodiac_1, day)
     print(Fore.MAGENTA + Style.BRIGHT + horoscope_text)
