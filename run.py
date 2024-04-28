@@ -83,11 +83,11 @@ def read_horoscope():
         "\n7. Libra (Sep 23 - Oct 22) \n", "\n8. Scorpio (Oct 23 - Nov 21) \n", 
         "\n9. Sagittarius (Nov 22 - Dec 21) \n", "\n10. Capricorn (Dec 22 - Jan 19) \n", 
         "\n11. Aquarius (Jan 20 - Feb 18) \n", "\n12. Pisces (Feb 19 - Mar 20)\n") 
-        return
+            return True
 
         elif play.lower() == 'n':
             print(Fore.CYAN + Style.BRIGHT + '\nThank you for using "Your Horoscope". Hope you enjoyed.\n')
-            return
+            return False
 
         else:
             print(Fore.RED + Style.BRIGHT + "\nInvalid input: Please enter either 'Y' or 'N'")
@@ -270,13 +270,13 @@ def replay():
 
     while True:
 
-        replay = input(Fore.GREEN + Style.BRIGHT + "\nEnter 'Y' to play again and 'N' to exit: \n")
+        replay = input("\nEnter 'Y' to play again and 'N' to exit: \n")
         if replay.lower() == 'y':
             main()
             return
 
         elif replay.lower() == 'n':
-            print(Fore.CYAN + Style.BRIGHT + '\nThank you for using "Your Horoscope". Hope you enjoyed.\n')
+            print(Fore.GREEN + Style.BRIGHT + '\nThank you for using "Your Horoscope". Hope you enjoyed.\n')
             return
 
         else:
@@ -296,13 +296,13 @@ def main():
 
     print(Fore.BLUE + Style.BRIGHT + f"Hello {name}!")
 
-    read_horoscope()
-
-    clear_terminal()
+    if not read_horoscope():
+        # If read_horoscope() returns False, stop execution here
+        return
 
     zodiac_sign = None
     while zodiac_sign is None:
-        # Loops if invalid data is entered for day.
+        # Loops if invalid data is entered for zodiac_sign.
         zodiac = text_effect("\nInput your zodiac sign number:")
         zodiac_sign = input("\n")
 
