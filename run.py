@@ -199,6 +199,7 @@ def zodiac_characteristics(input):
     """
     zodiac_number = int(input)
     if zodiac_number == 1:
+        aries()
         print(Fore.CYAN + Style.BRIGHT + "  Aries are amazing! Their name says it all:\n"
                   "  A for assertive\n"
                   "  R for refreshing\n"
@@ -207,6 +208,7 @@ def zodiac_characteristics(input):
                   "  S for sexy\n")
         return
     elif zodiac_number == 2:
+        taurus()
         print(Fore.CYAN + Style.BRIGHT + "  Taurus are powerful! Their characteristics include:\n"
             "  T for trustworthy\n"
             "  A for artistic\n"
@@ -216,6 +218,7 @@ def zodiac_characteristics(input):
             "  S for sensual\n")
         return
     elif zodiac_number == 3:
+        gemini()
         print(Fore.CYAN + Style.BRIGHT + "  Gemini are great communicators! Their traits are:\n"
             "  G for gregarious\n"
             "  E for energetic\n"
@@ -225,6 +228,7 @@ def zodiac_characteristics(input):
             "  I for intelligent\n")
         return
     elif zodiac_number == 4:
+        cancer()
         print(Fore.CYAN + Style.BRIGHT + "  Cancer are caring! Their name reflects:\n"
             "  C for compassionate\n"
             "  A for adaptable\n"
@@ -234,12 +238,14 @@ def zodiac_characteristics(input):
             "  R for resilient\n")
         return
     elif zodiac_number == 5:
+        leo()
         print(Fore.CYAN + Style.BRIGHT + "  Leo are luminous! They shine with:\n"
             "  L for loyal\n"
             "  E for energetic\n"
             "  O for outgoing\n")
         return
     elif zodiac_number == 6:
+        virgo()
         print(Fore.CYAN + Style.BRIGHT + "  Virgo are virtuous! Their virtues include:\n"
             "  V for virtuous\n"
             "  I for intelligent\n"
@@ -248,6 +254,7 @@ def zodiac_characteristics(input):
             "  O for organized\n")
         return
     elif zodiac_number == 7:
+        libra()
         print(Fore.CYAN + Style.BRIGHT + "  Libra are balanced! They are known for:\n"
             "  L for lovable\n"
             "  I for idealistic\n"
@@ -256,6 +263,7 @@ def zodiac_characteristics(input):
             "  A for aesthetic\n")
         return
     elif zodiac_number == 8:
+        scorpio()
         print(Fore.CYAN + Style.BRIGHT + "  Scorpio are strong! Their strengths are:\n"
             "  S for strategic\n"
             "  C for charismatic\n"
@@ -264,6 +272,7 @@ def zodiac_characteristics(input):
             "  P for passionate\n")
         return
     elif zodiac_number == 9:
+        sagittarius()
         print(Fore.CYAN + Style.BRIGHT + "  Sagittarius are adventurous! Their traits are:\n"
             "  S for spontaneous\n"
             "  A for adventurous\n"
@@ -278,6 +287,7 @@ def zodiac_characteristics(input):
             "  S for sophisticated\n")
         return
     elif zodiac_number == 10:
+        capricorn()
         print(Fore.CYAN + Style.BRIGHT + "  Capricorn are capable! They excel in:\n"
             "  C for competent\n"
             "  A for ambitious\n"
@@ -290,6 +300,7 @@ def zodiac_characteristics(input):
             "  N neat\n")
         return
     elif zodiac_number == 11:
+        aqurius()
         print(Fore.CYAN + Style.BRIGHT + "  Aquarius are analytical! Known for:\n"
             "  A for analytical\n"
             "  Q for quirky\n"
@@ -301,6 +312,7 @@ def zodiac_characteristics(input):
             "  S for sincere\n")
         return
     elif zodiac_number == 12:
+        pisces()
         print(Fore.CYAN + Style.BRIGHT + "  Pisces are profound! They are:\n"
             "  P for passionate\n"
             "  I for intuitive\n"
@@ -319,7 +331,7 @@ def replay():
 
     while True:
 
-        replay_enter = text_effect("\n  Enter 'Y' to start again and 'N' to exit:")
+        replay_enter = print(Fore.YELLOW + "\n  Enter 'Y' to start again and 'N' to exit:")
         replay = input(Fore.BLUE + Style.BRIGHT + "  ")
         if replay.lower() == 'y':
             clear_terminal()
@@ -336,6 +348,7 @@ def replay():
 
         else:
             print(Fore.RED + Style.BRIGHT + "\n  Invalid input: Please enter either 'Y' or 'N'")
+            clear_terminal()
                            
 
 def main():
@@ -375,7 +388,21 @@ def main():
 
     clear_terminal()
 
-    text_effect_fast("\n  For which day you want to know your horoscope?\n")
+    print(Fore.GREEN + f"\n  The traits of your zodiac sign {zodiac_2.upper()} is.\n")
+
+    print ("="*80)
+
+    zodiac_characteristics(zodiac_sign)
+
+    print("="*80)
+    
+    print("\n")
+
+    input(Fore.YELLOW + "Press Enter to Continue...\n")
+    
+    clear_terminal()
+
+    text_effect_fast("\n  For which day you want to know your horoscope's prediction?\n")
     print (Fore.GREEN + "="*80) 
     text_effect_fast("\n  1. Yesterday\n \n  2. Today\n \n  3. Tomorrow\n")
     print (Fore.GREEN + "="*80)
@@ -387,9 +414,11 @@ def main():
 
     clear_terminal()
 
-    print(Fore.GREEN + f"\n  Thank you {name.upper()} for your inputs.\n\n  The prediction for your zodiac sign {zodiac_2.upper()} for {day.upper()} is as follows.\n")
+    print(f"\n  The prediction for {day.upper()} for {zodiac_2.upper()} is as follows.\n")
 
-    zodiac_characteristics(zodiac_sign)
+    print ("="*80)
+
+    print ("\n")
 
     horoscope_text = horoscope(zodiac_1, day)
 
