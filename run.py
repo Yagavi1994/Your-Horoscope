@@ -26,6 +26,15 @@ def horoscope(zodiac_sign: int, day: str) -> str:
     soup = BeautifulSoup(requests.get(url).content, "html.parser")
     return soup.find("div", class_="main-horoscope").p.text 
 
+def start_count():
+    text_effect_fast("\nStarting in... \n")
+    print(Fore.BLUE + Style.BRIGHT + "3 \n")
+    time.sleep(1)
+    print(Fore.GREEN + Style.BRIGHT + "2 \n")
+    time.sleep(1)
+    print(Fore.YELLOW + Style.BRIGHT + "1 \n")
+    time.sleep(1)
+
 def logo():
 
     title = pyfiglet.figlet_format("Your Horoscope", font="slant")
@@ -68,7 +77,7 @@ def get_name():
     """
     while True:
         print(HAPPY_FACE)
-        user_name = text_effect("\nPlease enter your name:")
+        user_name = text_effect("Please enter your name:")
         name = input(Fore.BLUE + Style.BRIGHT + " \n").capitalize()
         if name:
             return name
@@ -302,6 +311,14 @@ def main():
     """
     Runs all functions
     """
+    print("\n")
+
+    print(HAPPY_FACE)
+
+    start_count()
+
+    clear_terminal()
+
     logo()
 
     name = get_name()
