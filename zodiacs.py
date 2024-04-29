@@ -1,7 +1,6 @@
 from colorama import init, Fore, Back, Style
 import time
 import sys
-import os
 
 def aries():
     print (Fore.RED + Style.BRIGHT + r"""
@@ -364,41 +363,12 @@ def text_effect_fast(text):
             time.sleep(0.1)       
     print()  # Ensure the output ends with a newline
 
-def clear_terminal():
-    """
-    Clears the terminal.
-    https://stackoverflow.com/questions/2084508/clear-terminal-in-python
-    """
-    os.system("cls" if os.name == "nt" else "clear")
-
     
 def thank_you():
-  # print("\n")
-  # print("\n")
-  # print("\n")
-  # print("\n")
-  # print("\n")
-  # text_effect_fast(r"""
-  #                         ═✿✿✿═════✿✿═════✿✿═════✿✿✿═
-  #                     ════════════ ('\../') ═════════════
-  #                       ════════════ (◕.◕) ═════════════
-  #                     ════════════ (,,)(,,) ═════════════
-  #                     .▀█▀.█▄█.█▀█.█▄.█.█▄▀  █▄█.█▀█.█─█
-  #                     ─.█.─█▀█.█▀█.█.▀█.█▀▄  ─█.─█▄█.█▄█
-
-  #             """)
-  # print("\n")
-  # print("\n")
-  # print("\n")
-  # print("\n")
-  # print("\n")
-  # time.sleep(0.3)
-  # clear_terminal()
   print("\n")
   print("\n")
   text_effect_fast("="*80)
   text_effect_fast("="*80)
-  print("\n")
   print("\n")
   print(Fore.CYAN + r"""
                           ═✿✿✿═════✿✿═════✿✿═════✿✿✿═
@@ -409,11 +379,9 @@ def thank_you():
                       ─.█.─█▀█.█▀█.█.▀█.█▀▄  ─█.─█▄█.█▄█
 
               """)
-
-  print("\n")
   print("\n")
   text_effect_fast("="*80)
   text_effect_fast("="*80)
   print("\n")
   print(Fore.YELLOW + "  Click Run Program to start again.")
-  print("\n")
+  
