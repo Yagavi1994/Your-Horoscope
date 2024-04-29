@@ -242,7 +242,7 @@ Loading your result...
 """)
 
 def libra_1():
-    print (Fore.RED + r"""
+    print (Fore.RED + Style.BRIGHT + r"""
                                    __
                               ___.'  '.___   
                               ____________

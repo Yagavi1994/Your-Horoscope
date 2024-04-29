@@ -130,7 +130,7 @@ logo()
 
 print(HAPPY_FACE)
 
-text_effect("  Please Enter Your Name:\n \n  (OR)\n \n  Press enter if you don't want to disclose your name.\n")
+text_effect("  Please Enter Your Name Below.\n \n  (OR)\n \n  Press enter if you don't want to disclose your name.\n")
 
 user = input(Fore.BLUE + Style.BRIGHT + "  ").capitalize()
 
@@ -198,7 +198,7 @@ def get_day_input():
     }
 
     day_user = text_effect("\n  Enter the number of the day:")
-    day_input = input(Fore.BLUE + Style.BRIGHT + "  ")
+    day_input = input(Style.BRIGHT + "  ")
 
     # Pass the input to find whether the input given is valid or invalid.
     if validate_data(day_input):
@@ -391,13 +391,13 @@ def main_menu():
     print(Fore.BLUE + Style.BRIGHT + f"  Hello {name}!")
 
     play_game = text_effect("\n  Are you excited to know your zodiac's traits and horoscope?")
-    print(Fore.GREEN + "\n\n  Enter 1 to know your ZODIAC'S TRAITS.\n\n  Enter 2 to know your DAILY HOROSCOPE.\n\n  Enter 3 to EXIT. ")
+    print(Fore.GREEN + Style.BRIGHT + "\n\n  Enter '1' to know your ZODIAC'S TRAITS.\n\n  Enter '2' to know your DAILY HOROSCOPE.\n\n  Enter '3' to EXIT. ")
         
     def main_menu():
 
         while True:
 
-            play = input(Fore.BLUE + Style.BRIGHT + "  ")
+            play = input(Style.BRIGHT + "  ")
 
             if validate_data(play):
 
@@ -422,7 +422,7 @@ def main_menu():
                     while zodiac_sign is None:
                         # Loops if invalid data is entered for zodiac_sign.
                         zodiac = text_effect("\n  Enter your zodiac sign number:")
-                        zodiac_sign = input(Fore.BLUE + Style.BRIGHT + "  ")
+                        zodiac_sign = input(Style.BRIGHT + "  ")
                         zodiac_1 = get_zodiac_1(zodiac_sign)   
                         if zodiac_1 is None:
                             zodiac_sign = None
