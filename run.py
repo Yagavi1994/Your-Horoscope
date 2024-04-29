@@ -223,7 +223,7 @@ def read_horoscope():
                     print ("="*80)
                     print(Fore.CYAN + Style.BRIGHT + '\n  Thank you for using "Your Horoscope". Hope you enjoyed and will visit again.\n')
                     print ("="*80)
-                    print(Fore.YELLOW + "  Click Run Program to start again.\n")
+                    print(Fore.YELLOW + "  Click Run Program to start again.")
 
                     return False
 
