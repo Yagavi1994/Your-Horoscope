@@ -143,7 +143,7 @@ def aries_1():
 
 
 
-Loading your result.                            
+  Loading your result.                            
 
 
 
@@ -161,7 +161,7 @@ def taurus_1():
                                 `.___.'
 
 
-Loading your result..                            
+  Loading your result..                            
 
 
 
@@ -179,7 +179,7 @@ def gemini_1():
 
 
 
-Loading your result...                            
+  Loading your result...                            
 
 
 
@@ -197,7 +197,7 @@ def cancer_1():
 
 
 
-Loading your result.                            
+  Loading your result.                            
 
 
 
@@ -215,7 +215,7 @@ def leo_1():
 
 
 
-Loading your result..                            
+  Loading your result..                            
 
 
 
@@ -234,7 +234,7 @@ def virgo_1():
                                       (J
 
 
-Loading your result...                            
+  Loading your result...                            
 
 
 
@@ -252,7 +252,7 @@ def libra_1():
 
 
 
-Loading your result.                            
+  Loading your result.                            
 
 
 
@@ -270,7 +270,7 @@ def scorpio_1():
                                       `---':
 
 
-Loading your result..                            
+  Loading your result..                            
 
 
 
@@ -288,7 +288,7 @@ def sagittarius_1():
 
 
 
-Loading your result...                            
+  Loading your result...                            
 
 
 
@@ -306,7 +306,7 @@ def capricorn_1():
 
 
 
-Loading your result.                             
+  Loading your result.                             
 
 
 
@@ -325,7 +325,7 @@ def aqurius_1():
 
 
 
-Loading your result..                             
+  Loading your result..                             
 
 
 
@@ -343,7 +343,7 @@ def pisces_1():
                                  .-'    `-.
 
 
-Loading your result...                              
+  Loading your result...                              
 
 
 
