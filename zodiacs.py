@@ -228,6 +228,8 @@ def aqurius_1():
     print (Fore.RED + Style.BRIGHT + r"""
                               .-"-._.-"-._.-       
                               .-"-._.-"-._.-
+                             
+                             
                              """)
 
 def pisces_1():
