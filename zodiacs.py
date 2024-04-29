@@ -1,4 +1,5 @@
 from colorama import init, Fore, Back, Style
+import time
 
 def aries():
     print (Fore.RED + Style.BRIGHT + r"""
@@ -130,3 +131,150 @@ def logo():
     /_/\____/\__,_/_/     /_/ /_/\____/_/   \____/____/\___/\____/ .___/\___/ 
                                                                 /_/           
 """)
+
+def aries_1():
+  print (Fore.RED + Style.BRIGHT + r"""
+                              .-.   .-.
+                              (_  \ /  _)
+                                  |
+                                  |
+                            """)
+
+def taurus_1():
+  print (Fore.RED + Style.BRIGHT + r"""
+                                .     .
+                                '.___.'     
+                                .'   `.
+                               :       :
+                               :       :
+                                `.___.'
+                            """)
+
+def gemini_1():
+  print (Fore.RED + Style.BRIGHT + r"""
+                                ._____.
+                                  | |        
+                                  | |
+                                 _|_|_
+                                '     '
+                            """)
+
+def cancer_1():
+  print(Fore.RED + Style.BRIGHT + r"""
+                                  .--.
+                                 /   _`.     
+                                 (_) ( )
+                               '.     /
+                                  `--'
+                            """)
+
+def leo_1():
+  print (Fore.RED + Style.BRIGHT + r"""
+                                  .--.
+                                 (    )       
+                                (_)  /
+                                    (_,
+                            """)
+
+
+def virgo_1():
+    print (Fore.RED + Style.BRIGHT + r"""
+                               _
+                              ' `:--.--.
+                                |  |  |_    
+                                |  |  | )
+                                |  |  |/
+                                      (J
+                            """)
+
+def libra_1():
+    print (Fore.RED + r"""
+                                   __
+                              ___.'  '.___   
+                              ____________
+
+                            """)
+
+def scorpio_1():
+    print (Fore.RED + Style.BRIGHT + r"""
+                               _
+                              ' `:--.--.
+                                |  |  |           
+                                |  |  |
+                                |  |  |  ..,
+                                      `---':
+                            """)
+
+def sagittarius_1():
+    print (Fore.RED + Style.BRIGHT + r"""
+                                      ...
+                                      .':    
+                                    .'
+                                `..'
+                               .'`.
+                            """)
+
+def capricorn_1():
+    print (Fore.RED + Style.BRIGHT + r"""
+                                        _
+                                \      /_)    
+                                 \    /`.
+                                  \  /   ;
+                                   \/ __.'
+                            """)
+
+
+def aqurius_1():
+    print (Fore.RED + Style.BRIGHT + r"""
+                              .-"-._.-"-._.-       
+                              .-"-._.-"-._.-
+                              """)
+
+def pisces_1():
+    print (Fore.RED + Style.BRIGHT + r"""
+
+                                `-.    .-'   
+                                    :  :
+                                  --:--:--
+                                    :  :
+                                 .-'    `-.
+                            """)
+
+    
+# def thank_you():
+#   aries_1()
+#   time.sleep(0.3)
+#   clear_terminal
+#   taurus_1()
+#   time.sleep(0.3)
+#   clear_terminal
+#   gemini_1()
+#   time.sleep(0.3)
+#   clear_terminal
+#   cancer_1()
+#   time.sleep(0.3)
+#   clear_terminal
+#   leo_1()
+#   time.sleep(0.3)
+#   clear_terminal
+#   virgo_1()
+#   time.sleep(0.3)
+#   clear_terminal
+#   libra_1()
+#   time.sleep(0.3)
+#   clear_terminal
+#   scorpio_1()
+#   time.sleep(0.3)
+#   clear_terminal
+#   sagittarius_1()
+#   time.sleep(0.3)
+#   clear_terminal
+#   capricorn_1()
+#   time.sleep(0.3)
+#   clear_terminal
+#   aqurius_1()
+#   time.sleep(0.3)
+#   clear_terminal
+#   pisces_1()
+#   time.sleep(0.3)
+#   clear_terminal

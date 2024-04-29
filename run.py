@@ -59,7 +59,47 @@ def clear_terminal():
     """
     os.system("cls" if os.name == "nt" else "clear")
 
+def thank_you():
+  aries_1()
+  time.sleep(0.3)
+  clear_terminal()
+  taurus_1()
+  time.sleep(0.3)
+  clear_terminal()
+  gemini_1()
+  time.sleep(0.3)
+  clear_terminal()
+  cancer_1()
+  time.sleep(0.3)
+  clear_terminal()
+  leo_1()
+  time.sleep(0.3)
+  clear_terminal()
+  virgo_1()
+  time.sleep(0.3)
+  clear_terminal()
+  libra_1()
+  time.sleep(0.3)
+  clear_terminal()
+  scorpio_1()
+  time.sleep(0.3)
+  clear_terminal()
+  sagittarius_1()
+  time.sleep(0.3)
+  clear_terminal()
+  capricorn_1()
+  time.sleep(0.3)
+  clear_terminal()
+  aqurius_1()
+  time.sleep(0.3)
+  clear_terminal()
+  pisces_1()
+  time.sleep(0.3)
+  clear_terminal()
+
 clear_terminal()
+
+thank_you()
 
 print("\n")
 
@@ -317,6 +357,8 @@ def replay():
 
         else:
             print(Fore.RED + Style.BRIGHT + "\n  Invalid input: Please enter either 'Y' or 'N'")
+
+
 
 def main_menu():
     """
