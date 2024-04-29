@@ -60,46 +60,69 @@ def clear_terminal():
     os.system("cls" if os.name == "nt" else "clear")
 
 def thank_you():
+  clear_terminal()
+  print("\n")
+  logo()
   aries_1()
   time.sleep(0.3)
   clear_terminal()
+  print("\n")
+  logo()
   taurus_1()
   time.sleep(0.3)
   clear_terminal()
+  print("\n")
+  logo()
   gemini_1()
   time.sleep(0.3)
   clear_terminal()
+  print("\n")
+  logo()
   cancer_1()
   time.sleep(0.3)
   clear_terminal()
+  print("\n")
+  logo()
   leo_1()
   time.sleep(0.3)
   clear_terminal()
+  print("\n")
+  logo()
   virgo_1()
   time.sleep(0.3)
   clear_terminal()
+  print("\n")
+  logo()
   libra_1()
   time.sleep(0.3)
   clear_terminal()
+  print("\n")
+  logo()
   scorpio_1()
   time.sleep(0.3)
   clear_terminal()
+  print("\n")
+  logo()
   sagittarius_1()
   time.sleep(0.3)
   clear_terminal()
+  print("\n")
+  logo()
   capricorn_1()
   time.sleep(0.3)
   clear_terminal()
+  print("\n")
+  logo()
   aqurius_1()
   time.sleep(0.3)
   clear_terminal()
+  print("\n")
+  logo()
   pisces_1()
   time.sleep(0.3)
   clear_terminal()
 
 clear_terminal()
-
-thank_you()
 
 print("\n")
 
@@ -341,7 +364,7 @@ def replay():
         replay = input(Fore.BLUE + Style.BRIGHT + "  ")
         if replay.lower() == 'y':
             clear_terminal()
-            read_horoscope()
+            main_menu()
             return
 
         elif replay.lower() == 'n':
@@ -413,6 +436,8 @@ def main_menu():
 
                     zodiac_2 = get_zodiac_2(zodiac_sign)
 
+                    thank_you()
+
                     clear_terminal()
 
                     print(Fore.GREEN + f"\n  The traits of your zodiac sign {zodiac_2.upper()} are:\n")
@@ -467,9 +492,11 @@ def main_menu():
                         # Loops if invalid data is entered for day.
                         day = get_day_input()
 
+                    thank_you()
+
                     clear_terminal()
 
-                    print(f"\n  The horoscope for {day.upper()} for {zodiac_2.upper()} is as follows:\n")
+                    print(Fore.GREEN + Style.BRIGHT + f"\n  The horoscope for {day.upper()} for {zodiac_2.upper()} is as follows:\n")
 
                     print ("="*80)
 
