@@ -364,8 +364,7 @@ def text_effect_fast(text):
     print()  # Ensure the output ends with a newline
 
     
-def thank_you_msg():
-  print("\n")
+def thank_you():
   print("\n")
   print("\n")
   print(Fore.CYAN + "="*80)
