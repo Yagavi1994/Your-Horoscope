@@ -245,10 +245,9 @@ def thank_you_msg():
   print("\n")
   print("\n")
   print("\n")
-  print("\n")
   print("="*80)
   print("\n")
-  print(Fore.CYAN + Style.BRIGHT + r"""
+  print(Fore.RED + Style.BRIGHT + r"""
                             ═✿✿✿═════✿✿═════✿✿═════✿✿✿═
                         ════════════ ('\../') ═════════════
                           ════════════ (◕.◕) ═════════════
