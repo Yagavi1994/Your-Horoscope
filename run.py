@@ -130,7 +130,7 @@ logo()
 
 print(HAPPY_FACE)
 
-text_effect("  What is your name? (OR) Press enter if you don't want to disclose your name.\n")
+text_effect("  Please Enter Your Name: (OR) Press enter if you don't want to disclose your name.\n")
 
 user = input(Fore.BLUE + Style.BRIGHT + "  ").capitalize()
 
@@ -490,7 +490,7 @@ def main_menu():
 
                     clear_terminal()
 
-                    print(Fore.GREEN + Style.BRIGHT + f"\n  The horoscope for {day.upper()} for {zodiac_2.upper()} is as follows:\n")
+                    print(Fore.GREEN + Style.BRIGHT + f"\n  The horoscope for {day.upper()}, for {zodiac_2.upper()} is as follows:\n")
 
                     print ("="*80)
 
@@ -509,14 +509,7 @@ def main_menu():
                     return True
 
                 elif int(play) == 3:
-                    # clear_terminal()
-                    # logo()
-                    # print ("="*80)
-                    # heart()
-                    # print ("="*80)
-                    # print(Fore.CYAN + Style.BRIGHT + '\n  Thank you for using "Your Horoscope". Hope you liked it and will visit again.\n')
-                    # print ("="*80)
-                    # print(Fore.YELLOW + "  Click Run Program to start again.")
+                
                     clear_terminal()
                     thank_you_msg()
 

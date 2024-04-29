@@ -138,7 +138,17 @@ def aries_1():
                               (_  \ /  _)
                                   |
                                   |
-                            """)
+
+
+
+
+Loading your result.                            
+
+
+
+
+
+""")
 
 def taurus_1():
   print (Fore.RED + Style.BRIGHT + r"""
@@ -148,7 +158,15 @@ def taurus_1():
                                :       :
                                :       :
                                 `.___.'
-                            """)
+
+
+Loading your result..                            
+
+
+
+
+
+""")
 
 def gemini_1():
   print (Fore.RED + Style.BRIGHT + r"""
@@ -157,7 +175,16 @@ def gemini_1():
                                   | |
                                  _|_|_
                                 '     '
-                            """)
+
+
+
+Loading your result...                            
+
+
+
+
+
+""")
 
 def cancer_1():
   print(Fore.RED + Style.BRIGHT + r"""
@@ -166,7 +193,16 @@ def cancer_1():
                                  (_) ( )
                                '.     /
                                   `--'
-                            """)
+
+
+
+Loading your result.                            
+
+
+
+
+
+""")
 
 def leo_1():
   print (Fore.RED + Style.BRIGHT + r"""
@@ -174,7 +210,17 @@ def leo_1():
                                  (    )       
                                 (_)  /
                                     (_,
-                            """)
+
+
+
+
+Loading your result..                            
+
+
+
+
+
+""")
 
 
 def virgo_1():
@@ -185,7 +231,15 @@ def virgo_1():
                                 |  |  | )
                                 |  |  |/
                                       (J
-                            """)
+
+
+Loading your result...                            
+
+
+
+
+
+""")
 
 def libra_1():
     print (Fore.RED + r"""
@@ -193,7 +247,17 @@ def libra_1():
                               ___.'  '.___   
                               ____________
 
-                            """)
+
+
+
+
+Loading your result.                            
+
+
+
+
+
+""")
 
 def scorpio_1():
     print (Fore.RED + Style.BRIGHT + r"""
@@ -203,7 +267,15 @@ def scorpio_1():
                                 |  |  |
                                 |  |  |  ..,
                                       `---':
-                            """)
+
+
+Loading your result..                            
+
+
+
+
+
+""")
 
 def sagittarius_1():
     print (Fore.RED + Style.BRIGHT + r"""
@@ -212,7 +284,16 @@ def sagittarius_1():
                                     .'
                                 `..'
                                .'`.
-                            """)
+
+
+
+Loading your result...                            
+
+
+
+
+
+""")
 
 def capricorn_1():
     print (Fore.RED + Style.BRIGHT + r"""
@@ -221,7 +302,16 @@ def capricorn_1():
                                  \    /`.
                                   \  /   ;
                                    \/ __.'
-                             """)
+
+
+
+Loading your result.                             
+
+
+
+
+
+""")
 
 
 def aqurius_1():
@@ -230,7 +320,17 @@ def aqurius_1():
                               .-"-._.-"-._.-
                              
                              
-                             """)
+
+
+
+
+Loading your result..                             
+
+
+
+
+
+""")
 
 def pisces_1():
     print (Fore.RED + Style.BRIGHT + r"""
@@ -240,7 +340,15 @@ def pisces_1():
                                   --:--:--
                                     :  :
                                  .-'    `-.
-                              """)
+
+
+Loading your result...                              
+
+
+
+
+
+""")
 
     
 def thank_you_msg():
