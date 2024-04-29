@@ -94,14 +94,14 @@ def capricorn():
 
 def aqurius():
     print (Fore.RED + Style.BRIGHT + r"""
- .-"-._.-"-._.-   Aquarius.     
+ .-"-._.-"-._.-   Aquarius     
  .-"-._.-"-._.-
 """)
 
 def pisces():
     print (Fore.RED + Style.BRIGHT + r"""
 
-     `-.    .-'   Pisces-  The Fishes
+     `-.    .-'   Pisces
         :  :
       --:--:--
         :  :
