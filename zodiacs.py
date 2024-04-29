@@ -1,7 +1,7 @@
 from colorama import init, Fore, Back, Style
 
 def aries():
-    print (Fore.CYAN + r"""
+    print (Fore.RED + r"""
    .-.   .-.
   (_  \ /  _)  Aries 
        |
@@ -9,7 +9,7 @@ def aries():
 """)
 
 def taurus():
-    print (Fore.CYAN + r"""
+    print (Fore.RED + r"""
     .     .
     '.___.'      Taurus
     .'   `.
@@ -19,7 +19,7 @@ def taurus():
 """)
 
 def gemini():
-    print (Fore.CYAN + r"""
+    print (Fore.RED + r"""
     ._____.
       | |        Gemini
       | |
@@ -28,7 +28,7 @@ def gemini():
 """)
 
 def cancer():
-    print(Fore.CYAN + r"""
+    print(Fore.RED + r"""
       .--.
      /   _`.     Cancer
     (_) ( )
@@ -37,7 +37,7 @@ def cancer():
 """)
 
 def leo():
-    print (Fore.CYAN + r"""
+    print (Fore.RED + r"""
       .--.
      (    )       Leo
     (_)  /
@@ -46,7 +46,7 @@ def leo():
 
 
 def virgo():
-    print (Fore.CYAN + r"""
+    print (Fore.RED + r"""
    _
   ' `:--.--.
      |  |  |_     Virgo
@@ -56,7 +56,7 @@ def virgo():
 """)
 
 def libra():
-    print (Fore.CYAN + r"""
+    print (Fore.RED + r"""
         __
    ___.'  '.___   Libra
    ____________
@@ -64,7 +64,7 @@ def libra():
 """)
 
 def scorpio():
-    print (Fore.CYAN + r"""
+    print (Fore.RED + r"""
    _
   ' `:--.--.
      |  |  |      Scorpio      
@@ -74,7 +74,7 @@ def scorpio():
 """)
 
 def sagittarius():
-    print (Fore.CYAN + r"""
+    print (Fore.RED + r"""
           ...
           .':     Sagittarius
         .'
@@ -83,7 +83,7 @@ def sagittarius():
 """)
 
 def capricorn():
-    print (Fore.CYAN + r"""
+    print (Fore.RED + r"""
             _
     \      /_)    Capricorn
      \    /`.
@@ -93,13 +93,13 @@ def capricorn():
 
 
 def aqurius():
-    print (Fore.CYAN + r"""
+    print (Fore.RED + r"""
  .-"-._.-"-._.-   Aquarius.     
  .-"-._.-"-._.-
 """)
 
 def pisces():
-    print (Fore.CYAN + r"""
+    print (Fore.RED + r"""
 
      `-.    .-'   Pisces-  The Fishes
         :  :
@@ -117,18 +117,3 @@ def heart():
 ⠀⠀⠀⠀⠀⠙⠿⣿⣿⠿⠋⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠈⠁⠀⠀⠀
 """)
-
-# Constant variables
-ARIES = aries()
-TAURUS = taurus()
-GEMINI = gemini()
-CANCER = cancer()
-LEO = leo()
-VIRGO = virgo()
-LIBRA = libra()
-SCORPIO = scorpio()
-SAGITTARIUS = sagittarius()
-CAPRICORN = capricorn()
-AQUARIUS = aqurius()
-PISCES = pisces()
-HEART = heart()
