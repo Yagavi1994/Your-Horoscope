@@ -224,11 +224,15 @@ def read_horoscope():
                     return True
 
                 elif int(play) == 3:
+                    clear_terminal()
                     print("\n")
-                    print (Fore.MAGENTA + Style.BRIGHT + "="*80)
-                    print(Fore.CYAN + Style.BRIGHT + '\n  Thank you for using "Your Horoscope". Hope you enjoyed and will visit again.\n')
-                    print (Fore.MAGENTA + Style.BRIGHT + "="*80)
-                    print(Fore.YELLOW + "\n  Click Run Program to start again.\n")
+                    logo()
+                    print ("="*80)
+                    heart()
+                    print ("="*80)
+                    print(Fore.GREEN + Style.BRIGHT + '\n  Thank you for using "Your Horoscope". Hope you enjoyed and will visit again.\n')
+                    print ("="*80)
+                    print(Fore.BLUE + "\n  Click Run Program to start again.\n")
 
                     return False
 
@@ -459,7 +463,11 @@ def replay():
             return
 
         elif replay.lower() == 'n':
+            clear_terminal()
             print("\n")
+            logo()
+            print("="*80)
+            heart()
             print ("="*80)
             print(Fore.GREEN + Style.BRIGHT + '\n  Thank you for using "Your Horoscope". Hope you enjoyed and will visit again.\n')
             print ("="*80)
