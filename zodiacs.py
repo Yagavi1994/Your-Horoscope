@@ -1,7 +1,7 @@
 from colorama import init, Fore, Back, Style
 
 def aries():
-    print (Fore.RED + r"""
+    print (Fore.RED + Style.BRIGHT + r"""
    .-.   .-.
   (_  \ /  _)  Aries 
        |
@@ -9,7 +9,7 @@ def aries():
 """)
 
 def taurus():
-    print (Fore.RED + r"""
+    print (Fore.RED + Style.BRIGHT + r"""
     .     .
     '.___.'      Taurus
     .'   `.
@@ -19,7 +19,7 @@ def taurus():
 """)
 
 def gemini():
-    print (Fore.RED + r"""
+    print (Fore.RED + Style.BRIGHT + r"""
     ._____.
       | |        Gemini
       | |
@@ -28,7 +28,7 @@ def gemini():
 """)
 
 def cancer():
-    print(Fore.RED + r"""
+    print(Fore.RED + Style.BRIGHT + r"""
       .--.
      /   _`.     Cancer
     (_) ( )
@@ -37,7 +37,7 @@ def cancer():
 """)
 
 def leo():
-    print (Fore.RED + r"""
+    print (Fore.RED + Style.BRIGHT + r"""
       .--.
      (    )       Leo
     (_)  /
@@ -46,7 +46,7 @@ def leo():
 
 
 def virgo():
-    print (Fore.RED + r"""
+    print (Fore.RED + Style.BRIGHT + r"""
    _
   ' `:--.--.
      |  |  |_     Virgo
@@ -64,7 +64,7 @@ def libra():
 """)
 
 def scorpio():
-    print (Fore.RED + r"""
+    print (Fore.RED + Style.BRIGHT + r"""
    _
   ' `:--.--.
      |  |  |      Scorpio      
@@ -74,7 +74,7 @@ def scorpio():
 """)
 
 def sagittarius():
-    print (Fore.RED + r"""
+    print (Fore.RED + Style.BRIGHT + r"""
           ...
           .':     Sagittarius
         .'
@@ -83,7 +83,7 @@ def sagittarius():
 """)
 
 def capricorn():
-    print (Fore.RED + r"""
+    print (Fore.RED + Style.BRIGHT + r"""
             _
     \      /_)    Capricorn
      \    /`.
@@ -93,13 +93,13 @@ def capricorn():
 
 
 def aqurius():
-    print (Fore.RED + r"""
+    print (Fore.RED + Style.BRIGHT + r"""
  .-"-._.-"-._.-   Aquarius.     
  .-"-._.-"-._.-
 """)
 
 def pisces():
-    print (Fore.RED + r"""
+    print (Fore.RED + Style.BRIGHT + r"""
 
      `-.    .-'   Pisces-  The Fishes
         :  :

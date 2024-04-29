@@ -392,7 +392,7 @@ def main():
 
     clear_terminal()
 
-    print(Fore.GREEN + f"\n  The traits of your zodiac sign {zodiac_2.upper()} are\n")
+    print(Fore.GREEN + f"\n  The traits of your zodiac sign {zodiac_2.upper()} are:\n")
 
     print ("="*80)
 
@@ -418,7 +418,7 @@ def main():
 
     clear_terminal()
 
-    print(f"\n  The horoscope for {day.upper()} for {zodiac_2.upper()} is as follows\n")
+    print(f"\n  The horoscope for {day.upper()} for {zodiac_2.upper()} is as follows:\n")
 
     print ("="*80)
 
