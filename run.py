@@ -108,7 +108,7 @@ def read_horoscope():
     print(Fore.BLUE + Style.BRIGHT + f"  Hello {name}!")
 
     play_game = text_effect("\n  Are you excited to know your zodiac's traits and horoscope?")
-    print(Fore.GREEN + "\n\n  Enter 1 to know your PERSONALITY TRAITS.\n\n  Enter 2 to know your DAILY HOROSCOPE.\n\n  Enter 3 to EXIT. ")
+    print(Fore.GREEN + "\n\n  Enter 1 to know your ZODIAC'S TRAITS.\n\n  Enter 2 to know your DAILY HOROSCOPE.\n\n  Enter 3 to EXIT. ")
         
     def main_menu():
 
@@ -225,14 +225,13 @@ def read_horoscope():
 
                 elif int(play) == 3:
                     clear_terminal()
-                    print("\n")
                     logo()
                     print ("="*80)
                     heart()
                     print ("="*80)
-                    print(Fore.GREEN + Style.BRIGHT + '\n  Thank you for using "Your Horoscope". Hope you enjoyed and will visit again.\n')
+                    print(Fore.CYAN + Style.BRIGHT + '\n  Thank you for using "Your Horoscope". Hope you enjoyed and will visit again.\n')
                     print ("="*80)
-                    print(Fore.BLUE + "\n  Click Run Program to start again.\n")
+                    print(Fore.YELLOW + "  Click Run Program to start again.\n")
 
                     return False
 
@@ -464,14 +463,13 @@ def replay():
 
         elif replay.lower() == 'n':
             clear_terminal()
-            print("\n")
             logo()
             print("="*80)
             heart()
             print ("="*80)
             print(Fore.GREEN + Style.BRIGHT + '\n  Thank you for using "Your Horoscope". Hope you enjoyed and will visit again.\n')
             print ("="*80)
-            print(Fore.BLUE + "\n  Click Run Program to start again.\n")
+            print(Fore.BLUE + "  Click Run Program to start again.")
             return
 
         else:
