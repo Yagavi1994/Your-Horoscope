@@ -30,14 +30,6 @@ def horoscope(zodiac_sign: int, day: str) -> str:
     return soup.find("div", class_="main-horoscope").p.text 
 
 
-def logo():
-    """
-    Applies stylings to the logo.
-    """
-   
-    title = pyfiglet.figlet_format("Your Horoscope", font="slant")
-    print(Fore.MAGENTA + Style.BRIGHT + title)
-
 def text_effect_fast(text):
     """
     Create a fast typing effect to improve user experience.
