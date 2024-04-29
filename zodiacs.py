@@ -221,14 +221,14 @@ def capricorn_1():
                                  \    /`.
                                   \  /   ;
                                    \/ __.'
-                            """)
+                             """)
 
 
 def aqurius_1():
     print (Fore.RED + Style.BRIGHT + r"""
                               .-"-._.-"-._.-       
                               .-"-._.-"-._.-
-                              """)
+                             """)
 
 def pisces_1():
     print (Fore.RED + Style.BRIGHT + r"""
@@ -238,7 +238,7 @@ def pisces_1():
                                   --:--:--
                                     :  :
                                  .-'    `-.
-                            """)
+                              """)
 
     
 def thank_you_msg():
@@ -246,8 +246,9 @@ def thank_you_msg():
   print("\n")
   print("\n")
   print("="*80)
+  print("="*80)
   print("\n")
-  print(Fore.RED + Style.BRIGHT + r"""
+  print(Fore.CYAN + r"""
                           ═✿✿✿═════✿✿═════✿✿═════✿✿✿═
                       ════════════ ('\../') ═════════════
                         ════════════ (◕.◕) ═════════════
@@ -257,6 +258,7 @@ def thank_you_msg():
 
               """)
   print("\n")
+  print("="*80)
   print("="*80)
   print("\n")
   print(Fore.YELLOW + "  Click Run Program to start again.")
