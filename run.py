@@ -426,8 +426,7 @@ def main_menu():
                         # Loops if invalid data is entered for zodiac_sign.
                         zodiac = text_effect("\n  Enter your zodiac sign number:")
                         zodiac_sign = input(Style.BRIGHT + "  ")
-                        zodiac_1 = get_zodiac_1(zodiac_sign)
-                        zodiac = int(zodiac_1)   
+                        zodiac_1 = get_zodiac_1(zodiac_sign) 
                         if zodiac_1 is None:
                             zodiac_sign = None
 
@@ -473,7 +472,6 @@ def main_menu():
                         zodiac = text_effect("\n  Enter your zodiac sign number:")
                         zodiac_sign = input(Style.BRIGHT + "  ")
                         zodiac_1 = get_zodiac_1(zodiac_sign)
-                        zodiac = int(zodiac_1)
                         if zodiac_1 is None:
                             zodiac_sign = None
                     
@@ -501,7 +499,7 @@ def main_menu():
 
                     print ("\n")
 
-                    horoscope_text = horoscope(zodiac, day)
+                    horoscope_text = horoscope(zodiac_1, day)
 
                     print(Fore.MAGENTA + Style.BRIGHT + horoscope_text)
 
