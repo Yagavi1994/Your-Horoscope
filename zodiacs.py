@@ -366,7 +366,6 @@ def text_effect_fast(text):
     
 def thank_you():
   print("\n")
-  print("\n")
   text_effect_fast("="*80)
   text_effect_fast("="*80)
   print("\n")
