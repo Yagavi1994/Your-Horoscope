@@ -241,40 +241,23 @@ def pisces_1():
                             """)
 
     
-# def thank_you():
-#   aries_1()
-#   time.sleep(0.3)
-#   clear_terminal
-#   taurus_1()
-#   time.sleep(0.3)
-#   clear_terminal
-#   gemini_1()
-#   time.sleep(0.3)
-#   clear_terminal
-#   cancer_1()
-#   time.sleep(0.3)
-#   clear_terminal
-#   leo_1()
-#   time.sleep(0.3)
-#   clear_terminal
-#   virgo_1()
-#   time.sleep(0.3)
-#   clear_terminal
-#   libra_1()
-#   time.sleep(0.3)
-#   clear_terminal
-#   scorpio_1()
-#   time.sleep(0.3)
-#   clear_terminal
-#   sagittarius_1()
-#   time.sleep(0.3)
-#   clear_terminal
-#   capricorn_1()
-#   time.sleep(0.3)
-#   clear_terminal
-#   aqurius_1()
-#   time.sleep(0.3)
-#   clear_terminal
-#   pisces_1()
-#   time.sleep(0.3)
-#   clear_terminal
+def thank_you_msg():
+  print("\n")
+  print("\n")
+  print("\n")
+  print("\n")
+  print("="*80)
+  print("\n")
+  print(Fore.CYAN + Style.BRIGHT + r"""
+                            ═✿✿✿═════✿✿═════✿✿═════✿✿✿═
+                        ════════════ ('\../') ═════════════
+                          ════════════ (◕.◕) ═════════════
+                        ════════════ (,,)(,,) ═════════════
+                        .▀█▀.█▄█.█▀█.█▄.█.█▄▀  █▄█.█▀█.█─█
+                        ─.█.─█▀█.█▀█.█.▀█.█▀▄  ─█.─█▄█.█▄█
+
+              """)
+  print("\n")
+  print("="*80)
+  print("\n")
+  print(Fore.YELLOW + "  Click Run Program to start again.")

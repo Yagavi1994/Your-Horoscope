@@ -369,13 +369,7 @@ def replay():
 
         elif replay.lower() == 'n':
             clear_terminal()
-            logo()
-            print("="*80)
-            heart()
-            print ("="*80)
-            print(Fore.GREEN + Style.BRIGHT + '\n  Thank you for using "Your Horoscope". Hope you liked it and will visit again.\n')
-            print ("="*80)
-            print(Fore.BLUE + "  Click Run Program to start again.")
+            thank_you_msg()
             return
 
         else:
@@ -515,14 +509,16 @@ def main_menu():
                     return True
 
                 elif int(play) == 3:
+                    # clear_terminal()
+                    # logo()
+                    # print ("="*80)
+                    # heart()
+                    # print ("="*80)
+                    # print(Fore.CYAN + Style.BRIGHT + '\n  Thank you for using "Your Horoscope". Hope you liked it and will visit again.\n')
+                    # print ("="*80)
+                    # print(Fore.YELLOW + "  Click Run Program to start again.")
                     clear_terminal()
-                    logo()
-                    print ("="*80)
-                    heart()
-                    print ("="*80)
-                    print(Fore.CYAN + Style.BRIGHT + '\n  Thank you for using "Your Horoscope". Hope you liked it and will visit again.\n')
-                    print ("="*80)
-                    print(Fore.YELLOW + "  Click Run Program to start again.")
+                    thank_you_msg()
 
                     return False
 
