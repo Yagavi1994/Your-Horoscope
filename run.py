@@ -130,7 +130,7 @@ logo()
 
 print(HAPPY_FACE)
 
-text_effect("  Please Enter Your Name: (OR) Press enter if you don't want to disclose your name.\n")
+text_effect("  Please Enter Your Name:\n \n  (OR)\n \n  Press enter if you don't want to disclose your name.\n")
 
 user = input(Fore.BLUE + Style.BRIGHT + "  ").capitalize()
 
