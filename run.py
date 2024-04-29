@@ -178,7 +178,7 @@ def validate_data_for_zodiac_1(value):
             return True
         else:
             raise ValueError
-    except ValueError:
+    except (ValueError):
         print(Fore.RED + Style.BRIGHT + f'\n  Invalid data: "Please enter a number between 1 and 12."')
         return None
 
@@ -426,7 +426,8 @@ def main_menu():
                         # Loops if invalid data is entered for zodiac_sign.
                         zodiac = text_effect("\n  Enter your zodiac sign number:")
                         zodiac_sign = input(Style.BRIGHT + "  ")
-                        zodiac_1 = get_zodiac_1(zodiac_sign)   
+                        zodiac_1 = get_zodiac_1(zodiac_sign)
+                        zodiac = int(zodiac_1)   
                         if zodiac_1 is None:
                             zodiac_sign = None
 
@@ -470,8 +471,9 @@ def main_menu():
                     while zodiac_sign is None:
                         # Loops if invalid data is entered for zodiac_sign.
                         zodiac = text_effect("\n  Enter your zodiac sign number:")
-                        zodiac_sign = input(Fore.BLUE + Style.BRIGHT + "  ")
+                        zodiac_sign = input(Style.BRIGHT + "  ")
                         zodiac_1 = get_zodiac_1(zodiac_sign)
+                        zodiac = int(zodiac_1)
                         if zodiac_1 is None:
                             zodiac_sign = None
                     
@@ -499,7 +501,7 @@ def main_menu():
 
                     print ("\n")
 
-                    horoscope_text = horoscope(zodiac_1, day)
+                    horoscope_text = horoscope(zodiac, day)
 
                     print(Fore.MAGENTA + Style.BRIGHT + horoscope_text)
 
