@@ -1,5 +1,6 @@
 from colorama import init, Fore, Back, Style
 import time
+import sys
 
 def aries():
     print (Fore.RED + Style.BRIGHT + r"""
@@ -350,15 +351,27 @@ Loading your result...
 
 """)
 
+def text_effect_fast(text):
+    """
+    Create a fast typing effect to improve user experience.
+    """
+    for letter in text:
+        sys.stdout.write(letter)  
+        sys.stdout.flush()        
+        time.sleep(0.01)         
+        if letter == "\n":
+            time.sleep(0.1)       
+    print()  # Ensure the output ends with a newline
+
     
 def thank_you_msg():
   print("\n")
   print("\n")
   print("\n")
-  print("="*80)
-  print("="*80)
+  print(Fore.CYAN + "="*80)
+  print(Fore.CYAN + "="*80)
   print("\n")
-  print(Fore.CYAN + r"""
+  text_effect_fast(r"""
                           ═✿✿✿═════✿✿═════✿✿═════✿✿✿═
                       ════════════ ('\../') ═════════════
                         ════════════ (◕.◕) ═════════════
@@ -368,7 +381,7 @@ def thank_you_msg():
 
               """)
   print("\n")
-  print("="*80)
-  print("="*80)
+  print(Fore.CYAN + "="*80)
+  print(Fore.CYAN + "="*80)
   print("\n")
   print(Fore.YELLOW + "  Click Run Program to start again.")
