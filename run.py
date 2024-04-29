@@ -310,7 +310,7 @@ def replay():
             print("="*80)
             heart()
             print ("="*80)
-            print(Fore.GREEN + Style.BRIGHT + '\n  Thank you for using "Your Horoscope". Hope you enjoyed and will visit again.\n')
+            print(Fore.GREEN + Style.BRIGHT + '\n  Thank you for using "Your Horoscope". Hope you liked it and will visit again.\n')
             print ("="*80)
             print(Fore.BLUE + "  Click Run Program to start again.")
             return
@@ -451,7 +451,7 @@ def main_menu():
                     print ("="*80)
                     heart()
                     print ("="*80)
-                    print(Fore.CYAN + Style.BRIGHT + '\n  Thank you for using "Your Horoscope". Hope you enjoyed and will visit again.\n')
+                    print(Fore.CYAN + Style.BRIGHT + '\n  Thank you for using "Your Horoscope". Hope you liked it and will visit again.\n')
                     print ("="*80)
                     print(Fore.YELLOW + "  Click Run Program to start again.")
 
