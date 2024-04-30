@@ -2,16 +2,18 @@ from colorama import init, Fore, Back, Style
 import time
 import sys
 
+
 def aries():
-    print (Fore.RED + Style.BRIGHT + r"""
+    print(Fore.RED + Style.BRIGHT + r"""
    .-.   .-.
   (_  \ /  _)  Aries
        |
        |
 """)
 
+
 def taurus():
-    print (Fore.RED + Style.BRIGHT + r"""
+    print(Fore.RED + Style.BRIGHT + r"""
     .     .
     '.___.'      Taurus
     .'   `.
@@ -20,14 +22,16 @@ def taurus():
     `.___.'
 """)
 
+
 def gemini():
-    print (Fore.RED + Style.BRIGHT + r"""
+    print(Fore.RED + Style.BRIGHT + r"""
     ._____.
       | |        Gemini
       | |
      _|_|_
     '     '
 """)
+
 
 def cancer():
     print(Fore.RED + Style.BRIGHT + r"""
@@ -38,8 +42,9 @@ def cancer():
      `--'
 """)
 
+
 def leo():
-    print (Fore.RED + Style.BRIGHT + r"""
+    print(Fore.RED + Style.BRIGHT + r"""
       .--.
      (    )       Leo
     (_)  /
@@ -48,7 +53,7 @@ def leo():
 
 
 def virgo():
-    print (Fore.RED + Style.BRIGHT + r"""
+    print(Fore.RED + Style.BRIGHT + r"""
    _
   ' `:--.--.
      |  |  |_     Virgo
@@ -57,16 +62,18 @@ def virgo():
           (J
 """)
 
+
 def libra():
-    print (Fore.RED + r"""
+    print(Fore.RED + r"""
         __
    ___.'  '.___   Libra
    ____________
 
 """)
 
+
 def scorpio():
-    print (Fore.RED + Style.BRIGHT + r"""
+    print(Fore.RED + Style.BRIGHT + r"""
    _
   ' `:--.--.
      |  |  |      Scorpio
@@ -75,8 +82,9 @@ def scorpio():
            `---':
 """)
 
+
 def sagittarius():
-    print (Fore.RED + Style.BRIGHT + r"""
+    print(Fore.RED + Style.BRIGHT + r"""
           ...
           .':     Sagittarius
         .'
@@ -84,8 +92,9 @@ def sagittarius():
     .'`.
 """)
 
+
 def capricorn():
-    print (Fore.RED + Style.BRIGHT + r"""
+    print(Fore.RED + Style.BRIGHT + r"""
             _
     \      /_)    Capricorn
      \    /`.
@@ -95,13 +104,14 @@ def capricorn():
 
 
 def aqurius():
-    print (Fore.RED + Style.BRIGHT + r"""
+    print(Fore.RED + Style.BRIGHT + r"""
  .-"-._.-"-._.-   Aquarius
  .-"-._.-"-._.-
 """)
 
+
 def pisces():
-    print (Fore.RED + Style.BRIGHT + r"""
+    print(Fore.RED + Style.BRIGHT + r"""
 
      `-.    .-'   Pisces
         :  :
@@ -110,8 +120,9 @@ def pisces():
      .-'    `-.
 """)
 
+
 def heart():
-  print(Fore.RED + Style.BRIGHT + r"""
+    print(Fore.RED + Style.BRIGHT + r"""
                                .-.     .-.
                               .****. .****.
                               .*****.*****.
@@ -122,9 +133,10 @@ def heart():
                                     *
 """)
 
+
 def logo():
 
-  print(Fore.MAGENTA + Style.BRIGHT + r"""
+    print(Fore.MAGENTA + Style.BRIGHT + r"""
     __  __                    __  __
     \ \/ /___  __  _______   / / / /___  _________  ______________  ____  ___
      \  / __ \/ / / / ___/  / /_/ / __ \/ ___/ __ \/ ___/ ___/ __ \/ __ \/ _ \
@@ -133,8 +145,9 @@ def logo():
                                                                 /_/
 """)
 
+
 def aries_1():
-  print (Fore.RED + Style.BRIGHT + r"""
+    print(Fore.RED + Style.BRIGHT + r"""
                               .-.   .-.
                               (_  \ /  _)
                                   |
@@ -151,8 +164,9 @@ def aries_1():
 
 """)
 
+
 def taurus_1():
-  print (Fore.RED + Style.BRIGHT + r"""
+    print(Fore.RED + Style.BRIGHT + r"""
                                 .     .
                                 '.___.'
                                 .'   `.
@@ -169,8 +183,9 @@ def taurus_1():
 
 """)
 
+
 def gemini_1():
-  print (Fore.RED + Style.BRIGHT + r"""
+    print(Fore.RED + Style.BRIGHT + r"""
                                 ._____.
                                   | |
                                   | |
@@ -187,8 +202,9 @@ def gemini_1():
 
 """)
 
+
 def cancer_1():
-  print(Fore.RED + Style.BRIGHT + r"""
+    print(Fore.RED + Style.BRIGHT + r"""
                                   .--.
                                  /   _`.
                                  (_) ( )
@@ -205,8 +221,9 @@ def cancer_1():
 
 """)
 
+
 def leo_1():
-  print (Fore.RED + Style.BRIGHT + r"""
+    print(Fore.RED + Style.BRIGHT + r"""
                                   .--.
                                  (    )
                                 (_)  /
@@ -225,7 +242,7 @@ def leo_1():
 
 
 def virgo_1():
-    print (Fore.RED + Style.BRIGHT + r"""
+    print(Fore.RED + Style.BRIGHT + r"""
                                _
                               ' `:--.--.
                                 |  |  |_
@@ -242,8 +259,9 @@ def virgo_1():
 
 """)
 
+
 def libra_1():
-    print (Fore.RED + Style.BRIGHT + r"""
+    print(Fore.RED + Style.BRIGHT + r"""
                                    __
                               ___.'  '.___
                               ____________
@@ -260,8 +278,9 @@ def libra_1():
 
 """)
 
+
 def scorpio_1():
-    print (Fore.RED + Style.BRIGHT + r"""
+    print(Fore.RED + Style.BRIGHT + r"""
                                _
                               ' `:--.--.
                                 |  |  |
@@ -278,8 +297,9 @@ def scorpio_1():
 
 """)
 
+
 def sagittarius_1():
-    print (Fore.RED + Style.BRIGHT + r"""
+    print(Fore.RED + Style.BRIGHT + r"""
                                       ...
                                       .':
                                     .'
@@ -296,8 +316,9 @@ def sagittarius_1():
 
 """)
 
+
 def capricorn_1():
-    print (Fore.RED + Style.BRIGHT + r"""
+    print(Fore.RED + Style.BRIGHT + r"""
                                         _
                                 \      /_)
                                  \    /`.
@@ -316,7 +337,7 @@ def capricorn_1():
 
 
 def aqurius_1():
-    print (Fore.RED + Style.BRIGHT + r"""
+    print(Fore.RED + Style.BRIGHT + r"""
                               .-"-._.-"-._.-
                               .-"-._.-"-._.-
 
@@ -333,8 +354,9 @@ def aqurius_1():
 
 """)
 
+
 def pisces_1():
-    print (Fore.RED + Style.BRIGHT + r"""
+    print(Fore.RED + Style.BRIGHT + r"""
 
                                 `-.    .-'
                                     :  :
@@ -351,6 +373,7 @@ def pisces_1():
 
 """)
 
+
 def text_effect_fast(text):
     """
     Create a fast typing effect to improve user experience.
@@ -365,11 +388,11 @@ def text_effect_fast(text):
 
 
 def thank_you():
-  print("\n")
-  text_effect_fast("="*80)
-  text_effect_fast("="*80)
-  print("\n")
-  print(Fore.CYAN + r"""
+    print("\n")
+    text_effect_fast("="*80)
+    text_effect_fast("="*80)
+    print("\n")
+    print(Fore.CYAN + r"""
                           ═✿✿✿═════✿✿═════✿✿═════✿✿✿═
                       ════════════ ('\../') ═════════════
                         ════════════ (◕.◕) ═════════════
@@ -378,8 +401,8 @@ def thank_you():
                       ─.█.─█▀█.█▀█.█.▀█.█▀▄  ─█.─█▄█.█▄█
 
               """)
-  print("\n")
-  text_effect_fast("="*80)
-  text_effect_fast("="*80)
-  print("\n")
-  print(Fore.YELLOW + "  Click Run Program to start again.")
+    print("\n")
+    text_effect_fast("="*80)
+    text_effect_fast("="*80)
+    print("\n")
+    print(Fore.YELLOW + "  Click Run Program to start again.")
