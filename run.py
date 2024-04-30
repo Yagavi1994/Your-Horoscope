@@ -405,7 +405,7 @@ def replay():
     while True:
 
         replay_enter = print(Fore.YELLOW +
-                             "\n  Enter 'Y' to go back to MAIN MENU and 'N' to EXIT:")
+                             "\n  Enter 'Y' to go back to MAIN MENU and 'N' to EXIT:")  # noqa: E501
         replay = input(Fore.BLUE + Style.BRIGHT + "  ")
 
         if replay.lower() == 'y':
@@ -437,7 +437,7 @@ def main_menu():
 
     print(Fore.BLUE + Style.BRIGHT + f"  Hello {name}!")
 
-    play_game = text_effect("\n  Are you excited to know your zodiac's traits and horoscope?")
+    play_game = text_effect("\n  Are you excited to know your zodiac's traits and horoscope?")  # noqa: E501
 
     print(Fore.GREEN + Style.BRIGHT +
           "\n\n  Enter '1' to know your 'ZODIAC'S TRAITS'."
@@ -456,23 +456,23 @@ def main_menu():
 
                     clear_terminal()
 
-                    text_effect_fast("\n  Choose the number of your zodiac sign from below list:\n")
+                    text_effect_fast("\n  Choose the number of your zodiac sign from below list:\n")  # noqa: E501
 
                     print(Fore.GREEN + "="*80)
 
-                    text_effect_fast("\n  1. Aries (Mar 21 - Apr 19)      7. Libra (Sep 23 - Oct 22)\n")
-                    text_effect_fast("  2. Taurus (Apr 20 - May 20)     8. Scorpio (Oct 23 - Nov 21)\n")
-                    text_effect_fast("  3. Gemini (May 21 - Jun 20)     9. Sagittarius (Nov 22 - Dec 21) \n")
-                    text_effect_fast("  4. Cancer (Jun 21 - Jul 22)     10. Capricorn (Dec 22 - Jan 19) \n")
-                    text_effect_fast("  5. Leo (Jul 23 - Aug 22)        11. Aquarius (Jan 20 - Feb 18) \n")
-                    text_effect_fast("  6. Virgo (Aug 23 - Sep 22)      12. Pisces (Feb 19 - Mar 20)\n")
+                    text_effect_fast("\n  1. Aries (Mar 21 - Apr 19)      7. Libra (Sep 23 - Oct 22)\n")  # noqa: E501
+                    text_effect_fast("  2. Taurus (Apr 20 - May 20)     8. Scorpio (Oct 23 - Nov 21)\n")  # noqa: E501
+                    text_effect_fast("  3. Gemini (May 21 - Jun 20)     9. Sagittarius (Nov 22 - Dec 21) \n")  # noqa: E501
+                    text_effect_fast("  4. Cancer (Jun 21 - Jul 22)     10. Capricorn (Dec 22 - Jan 19) \n")  # noqa: E501
+                    text_effect_fast("  5. Leo (Jul 23 - Aug 22)        11. Aquarius (Jan 20 - Feb 18) \n")  # noqa: E501
+                    text_effect_fast("  6. Virgo (Aug 23 - Sep 22)      12. Pisces (Feb 19 - Mar 20)\n")  # noqa: E501
 
                     print(Fore.GREEN + "="*80)
 
                     zodiac_sign = None
                     while zodiac_sign is None:
                         # Loops if invalid data is entered for zodiac_sign.
-                        zodiac = text_effect("\n  Enter your zodiac sign number:")
+                        zodiac = text_effect("\n  Enter your zodiac sign number:")  # noqa: E501
                         zodiac_sign = input(Style.BRIGHT + "  ")
                         zodiac_1 = get_zodiac_1(zodiac_sign)
                         if zodiac_1 is None:
@@ -484,7 +484,7 @@ def main_menu():
 
                     clear_terminal()
 
-                    print(Fore.GREEN + Style.BRIGHT + f"\n  The traits of your zodiac sign {zodiac_2.upper()} are:\n")
+                    print(Fore.GREEN + Style.BRIGHT + f"\n  The traits of your zodiac sign {zodiac_2.upper()} are:\n")  # noqa: E501
 
                     print("="*80)
 
@@ -500,23 +500,23 @@ def main_menu():
 
                     clear_terminal()
 
-                    text_effect_fast("\n  Choose the number of your zodiac sign from below list:\n")
+                    text_effect_fast("\n  Choose the number of your zodiac sign from below list:\n")  # noqa: E501
 
                     print(Fore.GREEN + "="*80)
 
-                    text_effect_fast("\n  1. Aries (Mar 21 - Apr 19)      7. Libra (Sep 23 - Oct 22)\n")
-                    text_effect_fast("  2. Taurus (Apr 20 - May 20)     8. Scorpio (Oct 23 - Nov 21)\n")
-                    text_effect_fast("  3. Gemini (May 21 - Jun 20)     9. Sagittarius (Nov 22 - Dec 21) \n")
-                    text_effect_fast("  4. Cancer (Jun 21 - Jul 22)     10. Capricorn (Dec 22 - Jan 19) \n")
-                    text_effect_fast("  5. Leo (Jul 23 - Aug 22)        11. Aquarius (Jan 20 - Feb 18) \n")
-                    text_effect_fast("  6. Virgo (Aug 23 - Sep 22)      12. Pisces (Feb 19 - Mar 20)\n")
+                    text_effect_fast("\n  1. Aries (Mar 21 - Apr 19)      7. Libra (Sep 23 - Oct 22)\n")  # noqa: E501
+                    text_effect_fast("  2. Taurus (Apr 20 - May 20)     8. Scorpio (Oct 23 - Nov 21)\n")  # noqa: E501
+                    text_effect_fast("  3. Gemini (May 21 - Jun 20)     9. Sagittarius (Nov 22 - Dec 21) \n")  # noqa: E501
+                    text_effect_fast("  4. Cancer (Jun 21 - Jul 22)     10. Capricorn (Dec 22 - Jan 19) \n")  # noqa: E501
+                    text_effect_fast("  5. Leo (Jul 23 - Aug 22)        11. Aquarius (Jan 20 - Feb 18) \n")  # noqa: E501
+                    text_effect_fast("  6. Virgo (Aug 23 - Sep 22)      12. Pisces (Feb 19 - Mar 20)\n")  # noqa: E501
 
                     print(Fore.GREEN + "="*80)
 
                     zodiac_sign = None
                     while zodiac_sign is None:
                         # Loops if invalid data is entered for zodiac_sign.
-                        zodiac = text_effect("\n  Enter your zodiac sign number:")
+                        zodiac = text_effect("\n  Enter your zodiac sign number:")  # noqa: E501
                         zodiac_sign = input(Style.BRIGHT + "  ")
                         zodiac_1 = get_zodiac_1(zodiac_sign)
                         if zodiac_1 is None:
@@ -526,11 +526,11 @@ def main_menu():
 
                     clear_terminal()
 
-                    text_effect_fast("\n  For which day you want to know your horoscope?\n")
+                    text_effect_fast("\n  For which day you want to know your horoscope?\n")  # noqa: E501
 
                     print(Fore.GREEN + "="*80)
 
-                    text_effect_fast("\n  1. Yesterday\n \n  2. Today\n \n  3. Tomorrow\n")
+                    text_effect_fast("\n  1. Yesterday\n \n  2. Today\n \n  3. Tomorrow\n")  # noqa: E501
 
                     print(Fore.GREEN + "="*80)
 
@@ -543,7 +543,7 @@ def main_menu():
 
                     clear_terminal()
 
-                    print(Fore.GREEN + Style.BRIGHT + f"\n  The {zodiac_2.upper()}'s horoscope for {day.upper()} is as follows:\n")
+                    print(Fore.GREEN + Style.BRIGHT + f"\n  The {zodiac_2.upper()}'s horoscope for {day.upper()} is as follows:\n")  # noqa: E501
 
                     print("="*80)
 
@@ -570,7 +570,7 @@ def main_menu():
                     return False
 
                 else:
-                    print(Fore.RED + Style.BRIGHT + "\nInvalid input: Please enter a number between 1 and 3.\n")
+                    print(Fore.RED + Style.BRIGHT + "\nInvalid input: Please enter a number between 1 and 3.\n")  # noqa: E501
 
                     main_menu()
 
@@ -585,7 +585,7 @@ logo()
 
 print(HAPPY_FACE)
 
-text_effect("  Please Enter Your Name Below.\n \n  (OR)\n \n  Press enter if you don't want to disclose your name.\n")
+text_effect("  Please Enter Your Name Below.\n \n  (OR)\n \n  Press enter if you don't want to disclose your name.\n")  # noqa: E501
 
 user = input(Fore.BLUE + Style.BRIGHT + "  ").capitalize()
 
