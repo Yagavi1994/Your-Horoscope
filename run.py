@@ -585,6 +585,10 @@ logo()
 
 print(HAPPY_FACE)
 
+print(Fore.BLUE + Style.BRIGHT + "  Welcome to YOUR HOROSCOPE")
+
+print("\n")
+
 text_effect("  Please Enter Your Name Below.\n \n  (OR)\n \n  Press enter if you don't want to disclose your name.\n")  # noqa: E501
 
 user = input(Fore.BLUE + Style.BRIGHT + "  ").capitalize()
