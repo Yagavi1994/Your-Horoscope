@@ -1,14 +1,14 @@
 """
-The basic concept of the code is learnt from 
+The basic concept of the code is learnt from
 "https://www.geeksforgeeks.org/how-to-check-horoscope-using-python/"
 """
 #Import necessary modules
-import requests 
+import requests
 from bs4 import BeautifulSoup
 import pyfiglet
 from colorama import init, Fore, Back, Style
 import sys
-import os 
+import os
 import time
 from zodiacs import *
 
@@ -16,20 +16,20 @@ from zodiacs import *
 HAPPY_FACE = Fore.GREEN + "⊂(◉‿◉)つ".ljust(200) + Fore.RESET
 
 # Automatically reset the style to default after each print!
-init(autoreset=True)  
+init(autoreset=True)
 
 
 def horoscope(zodiac_sign: int, day: str) -> str:
 
     """
     Pass the user input variables to the website.
-    """ 
-    url = ( 
+    """
+    url = (
         "https://www.horoscope.com/us/horoscopes/general/"
         f"horoscope-general-daily-{day}.aspx?sign={zodiac_sign}"
     )
     soup = BeautifulSoup(requests.get(url).content, "html.parser")
-    return soup.find("div", class_="main-horoscope").p.text 
+    return soup.find("div", class_="main-horoscope").p.text
 
 
 def text_effect_fast(text):
@@ -37,13 +37,13 @@ def text_effect_fast(text):
     Create a fast typing effect to improve user experience.
     """
     for letter in text:
-        sys.stdout.write(letter)  
-        sys.stdout.flush()        
-        time.sleep(0.01)         
+        sys.stdout.write(letter)
+        sys.stdout.flush()
+        time.sleep(0.01)
         if letter == "\n":
-            time.sleep(0.1)       
+            time.sleep(0.1)
     print()  # Ensure the output ends with a newline
-    
+
 def text_effect(text, delay=0.03):
     """
     Create a slow typing effect to improve user experience,
@@ -157,7 +157,7 @@ def get_zodiac_1(input):
 
     # Zodiac dictionary to get zodiac_sign input to pass in horoscope function.
     zodiac_dict = {
-         1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 
+         1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6,
         7: 7, 8: 8, 9: 9, 10: 10, 11: 11, 12: 12
     }
 
@@ -190,8 +190,8 @@ def get_zodiac_2(input):
 
     # Zodiac dictionary to use for string literals
     zodiac_dict_2 = {
-        1: 'Aries', 2: 'Taurus', 3: 'Gemini', 4: 'Cancer', 5: 'Leo', 
-        6: 'Virgo', 7: 'Libra', 8: 'Scorpio', 9: 'Sagittarius', 
+        1: 'Aries', 2: 'Taurus', 3: 'Gemini', 4: 'Cancer', 5: 'Leo',
+        6: 'Virgo', 7: 'Libra', 8: 'Scorpio', 9: 'Sagittarius',
         10: 'Capricorn', 11: 'Aquarius', 12: 'Pisces'
     }
     int_input = int(input)
@@ -200,7 +200,7 @@ def get_zodiac_2(input):
 
 def get_day_input():
     """
-    Gets user input of day 
+    Gets user input of day
     """
     day_dict = {
         1: "yesterday", 2: "today", 3: "tomorrow"
@@ -417,7 +417,7 @@ def main_menu():
     play_game = text_effect("\n  Are you excited to know your zodiac's traits and horoscope?")
 
     print(Fore.GREEN + Style.BRIGHT + "\n\n  Enter '1' to know your 'ZODIAC'S TRAITS'.\n\n  Enter '2' to know your 'DAILY HOROSCOPE'.\n\n  Enter '3' to 'EXIT'. ")
-        
+
     def main_menu():
 
         while True:
@@ -434,12 +434,12 @@ def main_menu():
 
                     print (Fore.GREEN + "="*80)
 
-                    text_effect_fast("\n  1. Aries (Mar 21 - Apr 19)      7. Libra (Sep 23 - Oct 22)\n") 
-                    text_effect_fast("  2. Taurus (Apr 20 - May 20)     8. Scorpio (Oct 23 - Nov 21)\n") 
-                    text_effect_fast("  3. Gemini (May 21 - Jun 20)     9. Sagittarius (Nov 22 - Dec 21) \n") 
-                    text_effect_fast("  4. Cancer (Jun 21 - Jul 22)     10. Capricorn (Dec 22 - Jan 19) \n") 
-                    text_effect_fast("  5. Leo (Jul 23 - Aug 22)        11. Aquarius (Jan 20 - Feb 18) \n") 
-                    text_effect_fast("  6. Virgo (Aug 23 - Sep 22)      12. Pisces (Feb 19 - Mar 20)\n") 
+                    text_effect_fast("\n  1. Aries (Mar 21 - Apr 19)      7. Libra (Sep 23 - Oct 22)\n")
+                    text_effect_fast("  2. Taurus (Apr 20 - May 20)     8. Scorpio (Oct 23 - Nov 21)\n")
+                    text_effect_fast("  3. Gemini (May 21 - Jun 20)     9. Sagittarius (Nov 22 - Dec 21) \n")
+                    text_effect_fast("  4. Cancer (Jun 21 - Jul 22)     10. Capricorn (Dec 22 - Jan 19) \n")
+                    text_effect_fast("  5. Leo (Jul 23 - Aug 22)        11. Aquarius (Jan 20 - Feb 18) \n")
+                    text_effect_fast("  6. Virgo (Aug 23 - Sep 22)      12. Pisces (Feb 19 - Mar 20)\n")
 
                     print (Fore.GREEN + "="*80)
 
@@ -448,7 +448,7 @@ def main_menu():
                         # Loops if invalid data is entered for zodiac_sign.
                         zodiac = text_effect("\n  Enter your zodiac sign number:")
                         zodiac_sign = input(Style.BRIGHT + "  ")
-                        zodiac_1 = get_zodiac_1(zodiac_sign) 
+                        zodiac_1 = get_zodiac_1(zodiac_sign)
                         if zodiac_1 is None:
                             zodiac_sign = None
 
@@ -470,7 +470,7 @@ def main_menu():
                     replay()
 
                     return True
-                
+
                 elif int(play) == 2:
 
                     clear_terminal()
@@ -479,12 +479,12 @@ def main_menu():
 
                     print (Fore.GREEN + "="*80)
 
-                    text_effect_fast("\n  1. Aries (Mar 21 - Apr 19)      7. Libra (Sep 23 - Oct 22)\n") 
-                    text_effect_fast("  2. Taurus (Apr 20 - May 20)     8. Scorpio (Oct 23 - Nov 21)\n") 
-                    text_effect_fast("  3. Gemini (May 21 - Jun 20)     9. Sagittarius (Nov 22 - Dec 21) \n") 
-                    text_effect_fast("  4. Cancer (Jun 21 - Jul 22)     10. Capricorn (Dec 22 - Jan 19) \n") 
-                    text_effect_fast("  5. Leo (Jul 23 - Aug 22)        11. Aquarius (Jan 20 - Feb 18) \n") 
-                    text_effect_fast("  6. Virgo (Aug 23 - Sep 22)      12. Pisces (Feb 19 - Mar 20)\n") 
+                    text_effect_fast("\n  1. Aries (Mar 21 - Apr 19)      7. Libra (Sep 23 - Oct 22)\n")
+                    text_effect_fast("  2. Taurus (Apr 20 - May 20)     8. Scorpio (Oct 23 - Nov 21)\n")
+                    text_effect_fast("  3. Gemini (May 21 - Jun 20)     9. Sagittarius (Nov 22 - Dec 21) \n")
+                    text_effect_fast("  4. Cancer (Jun 21 - Jul 22)     10. Capricorn (Dec 22 - Jan 19) \n")
+                    text_effect_fast("  5. Leo (Jul 23 - Aug 22)        11. Aquarius (Jan 20 - Feb 18) \n")
+                    text_effect_fast("  6. Virgo (Aug 23 - Sep 22)      12. Pisces (Feb 19 - Mar 20)\n")
 
                     print (Fore.GREEN + "="*80)
 
@@ -496,14 +496,14 @@ def main_menu():
                         zodiac_1 = get_zodiac_1(zodiac_sign)
                         if zodiac_1 is None:
                             zodiac_sign = None
-                    
+
                     zodiac_2 = get_zodiac_2(zodiac_sign)
 
                     clear_terminal()
 
                     text_effect_fast("\n  For which day you want to know your horoscope?\n")
 
-                    print (Fore.GREEN + "="*80) 
+                    print (Fore.GREEN + "="*80)
 
                     text_effect_fast("\n  1. Yesterday\n \n  2. Today\n \n  3. Tomorrow\n")
 
@@ -537,7 +537,7 @@ def main_menu():
                     return True
 
                 elif int(play) == 3:
-                
+
                     clear_terminal()
 
                     thank_you()
@@ -548,7 +548,7 @@ def main_menu():
                     print(Fore.RED + Style.BRIGHT + "\nInvalid input: Please enter a number between 1 and 3.\n")
 
                     main_menu()
-                        
+
 
     main_menu()
 
@@ -562,7 +562,7 @@ print(HAPPY_FACE)
 
 text_effect("  Please Enter Your Name Below.\n \n  (OR)\n \n  Press enter if you don't want to disclose your name.\n")
 
-user = input(Fore.BLUE + Style.BRIGHT + "  ").capitalize()                          
+user = input(Fore.BLUE + Style.BRIGHT + "  ").capitalize()
 
 def main():
     """
@@ -574,13 +574,13 @@ def main():
     clear_terminal()
 
     main_menu()
-    
-    
+
+
 
 """
 This ensures that main() is only called when the script is executed directly.
 """
 if __name__ == "__main__":
     main()
-    
+
 
