@@ -439,7 +439,7 @@ def main_menu():
 
     play_game = text_effect("\n  Are you excited to know your zodiac's traits and horoscope?")  # noqa: E501
 
-    print(Fore.GREEN + Style.BRIGHT +
+    print(Fore.GREEN +
           "\n\n  Enter '1' to know your 'ZODIAC'S TRAITS'."
           "\n\n  Enter '2' to know your 'DAILY HOROSCOPE'."
           "\n\n  Enter '3' to 'EXIT'. ")
