@@ -134,7 +134,7 @@ def loading():
     logo()
     pisces_1()
     time.sleep(0.3)
-    
+
     clear_terminal()
 
 
@@ -155,13 +155,14 @@ def get_zodiac_1(input):
 
     # Zodiac dictionary to get zodiac_sign input to pass in horoscope function.
     zodiac_dict = {
-        '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, 
-        '7': 7, '8': 8, '9': 9, '10': 10, '11': 11, '12': 12
+         1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 
+        7: 7, 8: 8, 9: 9, 10: 10, 11: 11, 12: 12
     }
 
     # Pass the input to find whether the input given is valid or invalid.
     if validate_data_for_zodiac_1(input):
-        return zodiac_dict[input]
+        int_input = int(input)
+        return zodiac_dict[int_input]
     else:
         return None
 
@@ -187,11 +188,12 @@ def get_zodiac_2(input):
 
     # Zodiac dictionary to use for string literals
     zodiac_dict_2 = {
-        '1': 'Aries', '2': 'Taurus', '3': 'Gemini', '4': 'Cancer', '5': 'Leo', 
-        '6': 'Virgo', '7': 'Libra', '8': 'Scorpio', '9': 'Sagittarius', 
-        '10': 'Capricorn', '11': 'Aquarius', '12': 'Pisces'
+        1: 'Aries', 2: 'Taurus', 3: 'Gemini', 4: 'Cancer', 5: 'Leo', 
+        6: 'Virgo', 7: 'Libra', 8: 'Scorpio', 9: 'Sagittarius', 
+        10: 'Capricorn', 11: 'Aquarius', 12: 'Pisces'
     }
-    return zodiac_dict_2.get(input, "Invalid zodiac sign")
+    int_input = int(input)
+    return zodiac_dict_2.get(int_input, "Invalid zodiac sign")
 
 
 def get_day_input():
@@ -199,7 +201,7 @@ def get_day_input():
     Gets user input of day 
     """
     day_dict = {
-        '1': "yesterday", '2': "today", '3': "tomorrow"
+        1: "yesterday", 2: "today", 3: "tomorrow"
     }
 
     day_user = text_effect("\n  Enter the number of the day:")
@@ -207,7 +209,8 @@ def get_day_input():
 
     # Pass the input to find whether the input given is valid or invalid.
     if validate_data(day_input):
-        return day_dict[day_input]
+        int_input = int(day_input)
+        return day_dict[int_input]
     else:
         return None
 
