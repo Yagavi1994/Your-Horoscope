@@ -2,7 +2,7 @@
 The basic concept of the code is learnt from
 "https://www.geeksforgeeks.org/how-to-check-horoscope-using-python/"
 """
-#Import necessary modules
+# Import necessary modules
 import requests
 from bs4 import BeautifulSoup
 import pyfiglet
@@ -44,6 +44,7 @@ def text_effect_fast(text):
             time.sleep(0.1)
     print()  # Ensure the output ends with a newline
 
+
 def text_effect(text, delay=0.03):
     """
     Create a slow typing effect to improve user experience,
@@ -54,12 +55,14 @@ def text_effect(text, delay=0.03):
         time.sleep(delay)
     print()  # Ensure the output ends with a newline.
 
+
 def clear_terminal():
     """
     Clears the terminal.
     https://stackoverflow.com/questions/2084508/clear-terminal-in-python
     """
     os.system("cls" if os.name == "nt" else "clear")
+
 
 def loading():
     """
@@ -157,7 +160,7 @@ def get_zodiac_1(input):
 
     # Zodiac dictionary to get zodiac_sign input to pass in horoscope function.
     zodiac_dict = {
-         1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6,
+        1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6,
         7: 7, 8: 8, 9: 9, 10: 10, 11: 11, 12: 12
     }
 
@@ -182,7 +185,8 @@ def validate_data_for_zodiac_1(value):
         else:
             raise ValueError
     except (ValueError):
-        print(Fore.RED + Style.BRIGHT + f'\n  Invalid data: "Please enter a number between 1 and 12."')
+        print(Fore.RED + Style.BRIGHT +
+              f'\n  Invalid data: "Please enter a number between 1 and 12."')
         return None
 
 
@@ -230,7 +234,8 @@ def validate_data(value):
         else:
             raise ValueError
     except ValueError:
-        print(Fore.RED + Style.BRIGHT + f'\n  Invalid data: "Please enter a number between 1 and 3."\n')
+        print(Fore.RED + Style.BRIGHT +
+              f'\n  Invalid data: "Please enter a number between 1 and 3."\n')
         return False
 
 
@@ -242,149 +247,165 @@ def zodiac_characteristics(input):
 
     if zodiac_number == 1:
         aries()
-        print(Fore.CYAN + Style.BRIGHT + "  Aries are amazing! Their name says it all:\n"
-                  "  A for assertive\n"
-                  "  R for refreshing\n"
-                  "  I for independent\n"
-                  "  E for energetic\n"
-                  "  S for sexy\n")
+        print(Fore.CYAN + Style.BRIGHT +
+              "  Aries are amazing! Their name says it all:\n"
+              "  A for assertive\n"
+              "  R for refreshing\n"
+              "  I for independent\n"
+              "  E for energetic\n"
+              "  S for sexy\n")
         return
 
     elif zodiac_number == 2:
         taurus()
-        print(Fore.CYAN + Style.BRIGHT + "  Taurus are powerful! Their characteristics include:\n"
-            "  T for trustworthy\n"
-            "  A for artistic\n"
-            "  U for unyielding\n"
-            "  R for reliable\n"
-            "  U for Understanding"
-            "  S for sensual\n")
+        print(Fore.CYAN + Style.BRIGHT +
+              "  Taurus are powerful! Their characteristics include:\n"
+              "  T for trustworthy\n"
+              "  A for artistic\n"
+              "  U for unyielding\n"
+              "  R for reliable\n"
+              "  U for Understanding"
+              "  S for sensual\n")
         return
 
     elif zodiac_number == 3:
         gemini()
-        print(Fore.CYAN + Style.BRIGHT + "  Gemini are great communicators! Their traits are:\n"
-            "  G for gregarious\n"
-            "  E for energetic\n"
-            "  M for mentally active\n"
-            "  I for imaginative\n"
-            "  N for nonconformist\n"
-            "  I for intelligent\n")
+        print(Fore.CYAN + Style.BRIGHT +
+              "  Gemini are great communicators! Their traits are:\n"
+              "  G for gregarious\n"
+              "  E for energetic\n"
+              "  M for mentally active\n"
+              "  I for imaginative\n"
+              "  N for nonconformist\n"
+              "  I for intelligent\n")
         return
 
     elif zodiac_number == 4:
         cancer()
-        print(Fore.CYAN + Style.BRIGHT + "  Cancer are caring! Their name reflects:\n"
-            "  C for compassionate\n"
-            "  A for adaptable\n"
-            "  N for nurturing\n"
-            "  C for cautious\n"
-            "  E for empathetic\n"
-            "  R for resilient\n")
+        print(Fore.CYAN + Style.BRIGHT +
+              "  Cancer are caring! Their name reflects:\n"
+              "  C for compassionate\n"
+              "  A for adaptable\n"
+              "  N for nurturing\n"
+              "  C for cautious\n"
+              "  E for empathetic\n"
+              "  R for resilient\n")
         return
 
     elif zodiac_number == 5:
         leo()
-        print(Fore.CYAN + Style.BRIGHT + "  Leo are luminous! They shine with:\n"
-            "  L for loyal\n"
-            "  E for energetic\n"
-            "  O for outgoing\n")
+        print(Fore.CYAN + Style.BRIGHT +
+              "  Leo are luminous! They shine with:\n"
+              "  L for loyal\n"
+              "  E for energetic\n"
+              "  O for outgoing\n")
         return
 
     elif zodiac_number == 6:
         virgo()
-        print(Fore.CYAN + Style.BRIGHT + "  Virgo are virtuous! Their virtues include:\n"
-            "  V for virtuous\n"
-            "  I for intelligent\n"
-            "  R for realistic\n"
-            "  G for grounded\n"
-            "  O for organized\n")
+        print(Fore.CYAN + Style.BRIGHT +
+              "  Virgo are virtuous! Their virtues include:\n"
+              "  V for virtuous\n"
+              "  I for intelligent\n"
+              "  R for realistic\n"
+              "  G for grounded\n"
+              "  O for organized\n")
         return
 
     elif zodiac_number == 7:
         libra()
-        print(Fore.CYAN + Style.BRIGHT + "  Libra are balanced! They are known for:\n"
-            "  L for lovable\n"
-            "  I for idealistic\n"
-            "  B for balanced\n"
-            "  R for reasonable\n"
-            "  A for aesthetic\n")
+        print(Fore.CYAN + Style.BRIGHT +
+              "  Libra are balanced! They are known for:\n"
+              "  L for lovable\n"
+              "  I for idealistic\n"
+              "  B for balanced\n"
+              "  R for reasonable\n"
+              "  A for aesthetic\n")
         return
 
     elif zodiac_number == 8:
         scorpio()
-        print(Fore.CYAN + Style.BRIGHT + "  Scorpio are strong! Their strengths are:\n"
-            "  S for strategic\n"
-            "  C for charismatic\n"
-            "  O for observant\n"
-            "  R for resilient\n"
-            "  P for passionate\n")
+        print(Fore.CYAN + Style.BRIGHT +
+              "  Scorpio are strong! Their strengths are:\n"
+              "  S for strategic\n"
+              "  C for charismatic\n"
+              "  O for observant\n"
+              "  R for resilient\n"
+              "  P for passionate\n"
+              "  I for inquisitive\n"
+              "  O for optimistic\n")
         return
 
     elif zodiac_number == 9:
         sagittarius()
-        print(Fore.CYAN + Style.BRIGHT + "  Sagittarius are adventurous! Their traits are:\n"
-            "  S for spontaneous\n"
-            "  A for adventurous\n"
-            "  G for generous\n"
-            "  I for inspirational\n"
-            "  T for truthful\n"
-            "  T for tenacious adept\n"
-            "  A for admirable\n"
-            "  R for responsible\n"
-            "  I for idealistic\n"
-            "  U for unique\n"
-            "  S for sophisticated\n")
+        print(Fore.CYAN + Style.BRIGHT +
+              "  Sagittarius are adventurous! Their traits are:\n"
+              "  S for spontaneous\n"
+              "  A for adventurous\n"
+              "  G for generous\n"
+              "  I for inspirational\n"
+              "  T for truthful\n"
+              "  T for tenacious adept\n"
+              "  A for admirable\n"
+              "  R for responsible\n"
+              "  I for idealistic\n"
+              "  U for unique\n"
+              "  S for sophisticated\n")
         return
 
     elif zodiac_number == 10:
         capricorn()
-        print(Fore.CYAN + Style.BRIGHT + "  Capricorn are capable! They excel in:\n"
-            "  C for competent\n"
-            "  A for ambitious\n"
-            "  P for practical\n"
-            "  R for resilient\n"
-            "  I for intelligent\n"
-            "  C for caring\n"
-            "  O for organized\n"
-            "  R for realistic\n"
-            "  N for neat\n")
+        print(Fore.CYAN + Style.BRIGHT +
+              "  Capricorn are capable! They excel in:\n"
+              "  C for competent\n"
+              "  A for ambitious\n"
+              "  P for practical\n"
+              "  R for resilient\n"
+              "  I for intelligent\n"
+              "  C for caring\n"
+              "  O for organized\n"
+              "  R for realistic\n"
+              "  N for neat\n")
         return
 
     elif zodiac_number == 11:
         aqurius()
-        print(Fore.CYAN + Style.BRIGHT + "  Aquarius are analytical! Known for:\n"
-            "  A for analytical\n"
-            "  Q for quirky\n"
-            "  U for unorthodox\n"
-            "  A for assertive\n"
-            "  R for revolutionary\n"
-            "  I for intereting"
-            "  U for understanding\n"
-            "  S for sincere\n")
+        print(Fore.CYAN + Style.BRIGHT +
+              "  Aquarius are analytical! Known for:\n"
+              "  A for analytical\n"
+              "  Q for quirky\n"
+              "  U for unorthodox\n"
+              "  A for assertive\n"
+              "  R for revolutionary\n"
+              "  I for intereting"
+              "  U for understanding\n"
+              "  S for sincere\n")
         return
 
     elif zodiac_number == 12:
         pisces()
-        print(Fore.CYAN + Style.BRIGHT + "  Pisces are profound! They are:\n"
-            "  P for passionate\n"
-            "  I for intuitive\n"
-            "  S for spiritual\n"
-            "  C for compassionate\n"
-            "  E for empathetic\n"
-            "  S for sensitive\n")
+        print(Fore.CYAN + Style.BRIGHT +
+              "  Pisces are profound! They are:\n"
+              "  P for passionate\n"
+              "  I for intuitive\n"
+              "  S for spiritual\n"
+              "  C for compassionate\n"
+              "  E for empathetic\n"
+              "  S for sensitive\n")
         return
 
 
 def replay():
     """
-    Asks user whether they wanna play again and runs a while loop based on the input.
+    Asks user whether they wanna play again
+    and runs a while loop based on the input.
     Validates whether the input is valid or not.
     """
 
     while True:
 
-        replay_enter = print(Fore.YELLOW + "\n  Enter 'Y' to go back to MAIN MENU and 'N' to EXIT:")
+        replay_enter = print(Fore.YELLOW +
+                             "\n  Enter 'Y' to go back to MAIN MENU and 'N' to EXIT:")
         replay = input(Fore.BLUE + Style.BRIGHT + "  ")
 
         if replay.lower() == 'y':
@@ -398,12 +419,14 @@ def replay():
             return
 
         else:
-            print(Fore.RED + Style.BRIGHT + "\n  Invalid input: Please enter either 'Y' or 'N'")
+            print(Fore.RED + Style.BRIGHT +
+                  "\n  Invalid input: Please enter either 'Y' or 'N'")
 
 
 def main_menu():
     """
-    Asks user for their input to read horoscope or not and runs a while loop based on the choice made.
+    Asks user for their input to read horoscope or not
+    and runs a while loop based on the choice made.
     """
 
     logo()
@@ -416,7 +439,10 @@ def main_menu():
 
     play_game = text_effect("\n  Are you excited to know your zodiac's traits and horoscope?")
 
-    print(Fore.GREEN + Style.BRIGHT + "\n\n  Enter '1' to know your 'ZODIAC'S TRAITS'.\n\n  Enter '2' to know your 'DAILY HOROSCOPE'.\n\n  Enter '3' to 'EXIT'. ")
+    print(Fore.GREEN + Style.BRIGHT +
+          "\n\n  Enter '1' to know your 'ZODIAC'S TRAITS'."
+          "\n\n  Enter '2' to know your 'DAILY HOROSCOPE'."
+          "\n\n  Enter '3' to 'EXIT'. ")
 
     def main_menu():
 
@@ -432,7 +458,7 @@ def main_menu():
 
                     text_effect_fast("\n  Choose the number of your zodiac sign from below list:\n")
 
-                    print (Fore.GREEN + "="*80)
+                    print(Fore.GREEN + "="*80)
 
                     text_effect_fast("\n  1. Aries (Mar 21 - Apr 19)      7. Libra (Sep 23 - Oct 22)\n")
                     text_effect_fast("  2. Taurus (Apr 20 - May 20)     8. Scorpio (Oct 23 - Nov 21)\n")
@@ -441,7 +467,7 @@ def main_menu():
                     text_effect_fast("  5. Leo (Jul 23 - Aug 22)        11. Aquarius (Jan 20 - Feb 18) \n")
                     text_effect_fast("  6. Virgo (Aug 23 - Sep 22)      12. Pisces (Feb 19 - Mar 20)\n")
 
-                    print (Fore.GREEN + "="*80)
+                    print(Fore.GREEN + "="*80)
 
                     zodiac_sign = None
                     while zodiac_sign is None:
@@ -452,7 +478,6 @@ def main_menu():
                         if zodiac_1 is None:
                             zodiac_sign = None
 
-
                     zodiac_2 = get_zodiac_2(zodiac_sign)
 
                     loading()
@@ -461,7 +486,7 @@ def main_menu():
 
                     print(Fore.GREEN + Style.BRIGHT + f"\n  The traits of your zodiac sign {zodiac_2.upper()} are:\n")
 
-                    print ("="*80)
+                    print("="*80)
 
                     zodiac_characteristics(zodiac_sign)
 
@@ -477,7 +502,7 @@ def main_menu():
 
                     text_effect_fast("\n  Choose the number of your zodiac sign from below list:\n")
 
-                    print (Fore.GREEN + "="*80)
+                    print(Fore.GREEN + "="*80)
 
                     text_effect_fast("\n  1. Aries (Mar 21 - Apr 19)      7. Libra (Sep 23 - Oct 22)\n")
                     text_effect_fast("  2. Taurus (Apr 20 - May 20)     8. Scorpio (Oct 23 - Nov 21)\n")
@@ -486,7 +511,7 @@ def main_menu():
                     text_effect_fast("  5. Leo (Jul 23 - Aug 22)        11. Aquarius (Jan 20 - Feb 18) \n")
                     text_effect_fast("  6. Virgo (Aug 23 - Sep 22)      12. Pisces (Feb 19 - Mar 20)\n")
 
-                    print (Fore.GREEN + "="*80)
+                    print(Fore.GREEN + "="*80)
 
                     zodiac_sign = None
                     while zodiac_sign is None:
@@ -503,11 +528,11 @@ def main_menu():
 
                     text_effect_fast("\n  For which day you want to know your horoscope?\n")
 
-                    print (Fore.GREEN + "="*80)
+                    print(Fore.GREEN + "="*80)
 
                     text_effect_fast("\n  1. Yesterday\n \n  2. Today\n \n  3. Tomorrow\n")
 
-                    print (Fore.GREEN + "="*80)
+                    print(Fore.GREEN + "="*80)
 
                     day = None
                     while day is None:
@@ -520,9 +545,9 @@ def main_menu():
 
                     print(Fore.GREEN + Style.BRIGHT + f"\n  The {zodiac_2.upper()}'s horoscope for {day.upper()} is as follows:\n")
 
-                    print ("="*80)
+                    print("="*80)
 
-                    print ("\n")
+                    print("\n")
 
                     horoscope_text = horoscope(zodiac_1, day)
 
@@ -530,7 +555,7 @@ def main_menu():
 
                     print("\n")
 
-                    print ("="*80)
+                    print("="*80)
 
                     replay()
 
@@ -549,8 +574,8 @@ def main_menu():
 
                     main_menu()
 
-
     main_menu()
+
 
 clear_terminal()
 
@@ -564,6 +589,7 @@ text_effect("  Please Enter Your Name Below.\n \n  (OR)\n \n  Press enter if you
 
 user = input(Fore.BLUE + Style.BRIGHT + "  ").capitalize()
 
+
 def main():
     """
     Runs main functions
@@ -576,11 +602,8 @@ def main():
     main_menu()
 
 
-
 """
 This ensures that main() is only called when the script is executed directly.
 """
 if __name__ == "__main__":
     main()
-
-
