@@ -61,81 +61,81 @@ def clear_terminal():
 
 def loading():
     """
-    Animation of zodiac signs when the result is loading
+    Animates zodiac signs when the result is loading.
     """
     clear_terminal()
     print("\n")
     logo()
     aries_1()
     time.sleep(0.3)
+
     clear_terminal()
     print("\n")
     logo()
     taurus_1()
     time.sleep(0.3)
+
     clear_terminal()
     print("\n")
     logo()
     gemini_1()
     time.sleep(0.3)
+
     clear_terminal()
     print("\n")
     logo()
     cancer_1()
     time.sleep(0.3)
+
     clear_terminal()
     print("\n")
     logo()
     leo_1()
     time.sleep(0.3)
+
     clear_terminal()
     print("\n")
     logo()
     virgo_1()
     time.sleep(0.3)
+
     clear_terminal()
     print("\n")
     logo()
     libra_1()
     time.sleep(0.3)
+
     clear_terminal()
     print("\n")
     logo()
     scorpio_1()
     time.sleep(0.3)
+
     clear_terminal()
     print("\n")
     logo()
     sagittarius_1()
     time.sleep(0.3)
+
     clear_terminal()
     print("\n")
     logo()
     capricorn_1()
     time.sleep(0.3)
+
     clear_terminal()
     print("\n")
     logo()
     aqurius_1()
     time.sleep(0.3)
+
     clear_terminal()
     print("\n")
     logo()
     pisces_1()
     time.sleep(0.3)
+    
     clear_terminal()
-
-clear_terminal()
-
-print("\n")
-
-logo()
-
-print(HAPPY_FACE)
-
-text_effect("  Please Enter Your Name Below.\n \n  (OR)\n \n  Press enter if you don't want to disclose your name.\n")
-
-user = input(Fore.BLUE + Style.BRIGHT + "  ").capitalize()
 
 
 def get_name(input):
@@ -143,7 +143,6 @@ def get_name(input):
     Get user input of their name and prompts if invalid input is given.
     """
     while True:
-
         name = input
         if name:
             return name
@@ -166,6 +165,7 @@ def get_zodiac_1(input):
     else:
         return None
 
+
 def validate_data_for_zodiac_1(value):
     """
     Inside the try, checks whether the value is integer.
@@ -182,6 +182,7 @@ def validate_data_for_zodiac_1(value):
         print(Fore.RED + Style.BRIGHT + f'\n  Invalid data: "Please enter a number between 1 and 12."')
         return None
 
+
 def get_zodiac_2(input):
 
     # Zodiac dictionary to use for string literals
@@ -191,6 +192,7 @@ def get_zodiac_2(input):
         '10': 'Capricorn', '11': 'Aquarius', '12': 'Pisces'
     }
     return zodiac_dict_2.get(input, "Invalid zodiac sign")
+
 
 def get_day_input():
     """
@@ -209,6 +211,7 @@ def get_day_input():
     else:
         return None
 
+
 def validate_data(value):
     """
     Inside the try, checks whether the value is integer.
@@ -225,11 +228,13 @@ def validate_data(value):
         print(Fore.RED + Style.BRIGHT + f'\n  Invalid data: "Please enter a number between 1 and 3."\n')
         return False
 
+
 def zodiac_characteristics(input):
     """
     Function to print zodiac's characteristics above prediction.
     """
     zodiac_number = int(input)
+
     if zodiac_number == 1:
         aries()
         print(Fore.CYAN + Style.BRIGHT + "  Aries are amazing! Their name says it all:\n"
@@ -239,6 +244,7 @@ def zodiac_characteristics(input):
                   "  E for energetic\n"
                   "  S for sexy\n")
         return
+
     elif zodiac_number == 2:
         taurus()
         print(Fore.CYAN + Style.BRIGHT + "  Taurus are powerful! Their characteristics include:\n"
@@ -249,6 +255,7 @@ def zodiac_characteristics(input):
             "  U for Understanding"
             "  S for sensual\n")
         return
+
     elif zodiac_number == 3:
         gemini()
         print(Fore.CYAN + Style.BRIGHT + "  Gemini are great communicators! Their traits are:\n"
@@ -259,6 +266,7 @@ def zodiac_characteristics(input):
             "  N for nonconformist\n"
             "  I for intelligent\n")
         return
+
     elif zodiac_number == 4:
         cancer()
         print(Fore.CYAN + Style.BRIGHT + "  Cancer are caring! Their name reflects:\n"
@@ -269,6 +277,7 @@ def zodiac_characteristics(input):
             "  E for empathetic\n"
             "  R for resilient\n")
         return
+
     elif zodiac_number == 5:
         leo()
         print(Fore.CYAN + Style.BRIGHT + "  Leo are luminous! They shine with:\n"
@@ -276,6 +285,7 @@ def zodiac_characteristics(input):
             "  E for energetic\n"
             "  O for outgoing\n")
         return
+
     elif zodiac_number == 6:
         virgo()
         print(Fore.CYAN + Style.BRIGHT + "  Virgo are virtuous! Their virtues include:\n"
@@ -285,6 +295,7 @@ def zodiac_characteristics(input):
             "  G for grounded\n"
             "  O for organized\n")
         return
+
     elif zodiac_number == 7:
         libra()
         print(Fore.CYAN + Style.BRIGHT + "  Libra are balanced! They are known for:\n"
@@ -294,6 +305,7 @@ def zodiac_characteristics(input):
             "  R for reasonable\n"
             "  A for aesthetic\n")
         return
+
     elif zodiac_number == 8:
         scorpio()
         print(Fore.CYAN + Style.BRIGHT + "  Scorpio are strong! Their strengths are:\n"
@@ -303,6 +315,7 @@ def zodiac_characteristics(input):
             "  R for resilient\n"
             "  P for passionate\n")
         return
+
     elif zodiac_number == 9:
         sagittarius()
         print(Fore.CYAN + Style.BRIGHT + "  Sagittarius are adventurous! Their traits are:\n"
@@ -318,6 +331,7 @@ def zodiac_characteristics(input):
             "  U for unique\n"
             "  S for sophisticated\n")
         return
+
     elif zodiac_number == 10:
         capricorn()
         print(Fore.CYAN + Style.BRIGHT + "  Capricorn are capable! They excel in:\n"
@@ -331,6 +345,7 @@ def zodiac_characteristics(input):
             "  R for realistic\n"
             "  N for neat\n")
         return
+
     elif zodiac_number == 11:
         aqurius()
         print(Fore.CYAN + Style.BRIGHT + "  Aquarius are analytical! Known for:\n"
@@ -343,6 +358,7 @@ def zodiac_characteristics(input):
             "  U for understanding\n"
             "  S for sincere\n")
         return
+
     elif zodiac_number == 12:
         pisces()
         print(Fore.CYAN + Style.BRIGHT + "  Pisces are profound! They are:\n"
@@ -365,6 +381,7 @@ def replay():
 
         replay_enter = print(Fore.YELLOW + "\n  Enter 'Y' to go back to MAIN MENU and 'N' to EXIT:")
         replay = input(Fore.BLUE + Style.BRIGHT + "  ")
+
         if replay.lower() == 'y':
             clear_terminal()
             main_menu()
@@ -377,7 +394,6 @@ def replay():
 
         else:
             print(Fore.RED + Style.BRIGHT + "\n  Invalid input: Please enter either 'Y' or 'N'")
-
 
 
 def main_menu():
@@ -394,7 +410,8 @@ def main_menu():
     print(Fore.BLUE + Style.BRIGHT + f"  Hello {name}!")
 
     play_game = text_effect("\n  Are you excited to know your zodiac's traits and horoscope?")
-    print(Fore.GREEN + Style.BRIGHT + "\n\n  Enter '1' to know your ZODIAC'S TRAITS.\n\n  Enter '2' to know your DAILY HOROSCOPE.\n\n  Enter '3' to EXIT. ")
+
+    print(Fore.GREEN + Style.BRIGHT + "\n\n  Enter '1' to know your 'ZODIAC'S TRAITS'.\n\n  Enter '2' to know your 'DAILY HOROSCOPE'.\n\n  Enter '3' to 'EXIT'. ")
         
     def main_menu():
 
@@ -480,8 +497,11 @@ def main_menu():
                     clear_terminal()
 
                     text_effect_fast("\n  For which day you want to know your horoscope?\n")
+
                     print (Fore.GREEN + "="*80) 
+
                     text_effect_fast("\n  1. Yesterday\n \n  2. Today\n \n  3. Tomorrow\n")
+
                     print (Fore.GREEN + "="*80)
 
                     day = None
@@ -514,18 +534,30 @@ def main_menu():
                 elif int(play) == 3:
                 
                     clear_terminal()
+
                     thank_you()
 
                     return False
 
                 else:
                     print(Fore.RED + Style.BRIGHT + "\nInvalid input: Please enter a number between 1 and 3.\n")
+
                     main_menu()
                         
 
     main_menu()
 
-                           
+clear_terminal()
+
+print("\n")
+
+logo()
+
+print(HAPPY_FACE)
+
+text_effect("  Please Enter Your Name Below.\n \n  (OR)\n \n  Press enter if you don't want to disclose your name.\n")
+
+user = input(Fore.BLUE + Style.BRIGHT + "  ").capitalize()                          
 
 def main():
     """
@@ -536,9 +568,8 @@ def main():
 
     clear_terminal()
 
-    if not main_menu():
-        # If read_horoscope() returns False, stop execution here
-        return
+    main_menu()
+    
     
 
 """
