@@ -13,7 +13,7 @@ import time
 from zodiacs import *
 
 # Constant Variable for Happy Face.
-HAPPY_FACE = Fore.GREEN + "⊂(◉‿◉)つ".ljust(200) + Fore.RESET
+HAPPY_FACE = Fore.GREEN + Style.BRIGHT + "⊂(◉‿◉)つ".ljust(200) + Fore.RESET
 
 # Automatically reset the style to default after each print!
 init(autoreset=True)
