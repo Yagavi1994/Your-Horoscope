@@ -1,5 +1,8 @@
-# #Import necessary modules
-# #The basic concept of the code is learnt from "https://www.geeksforgeeks.org/how-to-check-horoscope-using-python/"
+"""
+The basic concept of the code is learnt from 
+"https://www.geeksforgeeks.org/how-to-check-horoscope-using-python/"
+"""
+#Import necessary modules
 import requests 
 from bs4 import BeautifulSoup
 import pyfiglet
@@ -8,7 +11,6 @@ import sys
 import os 
 import time
 from zodiacs import *
-
 
 # Constant Variable for Happy Face.
 HAPPY_FACE = Fore.GREEN + "⊂(◉‿◉)つ".ljust(200) + Fore.RESET
