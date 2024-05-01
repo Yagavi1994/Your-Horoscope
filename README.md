@@ -363,6 +363,8 @@ Provide clear, immediate feedback when user input is invalid or outside the expe
 - [Beautiful Soup](https://pypi.org/project/beautifulsoup4/): It is a Python package used for parsing HTML documents in the application.
 - [Requests](https://pypi.org/project/requests/): It is a library used for making HTTP requests from [Horoscope.com](https://www.horoscope.com/us/index.aspx) to provide result for Daily horoscope.
 - [Horoscope](https://www.horoscope.com/us/index.aspx): It is a website from which updated horoscope results were fetched for the application. 
+- [ASCII Art](https://ascii.co.uk/art/zodiac): The Ascii art for the zodiac symbols where taken from this website.
+- [Ascii Generator](https://ascii-generator.site/): The Ascii art for the logo was generated from this website.
 
 ## Deployment
 
@@ -417,3 +419,4 @@ Login (or signup) to Heroku and Github
 
 #### Code
 - I would like to credit [Geeks for Greeks](https://www.geeksforgeeks.org/how-to-check-horoscope-using-python/) website, from which I learnt the code for the main function of the game.
+- I would like to credit [Horoscope.com](https://www.horoscope.com/us/index.aspx) from which the result for each zodiac signs' daily horoscopes are fetched. 
