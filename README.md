@@ -345,6 +345,7 @@ Provide clear, immediate feedback when user input is invalid or outside the expe
 
 
 ### Bugs:
+- There was a bug raising key error when input was entered by adding a zero in front of it like 01, 02. Resolved it by converting the input into int before passing it to the dictionary.
 
 ### Unfixed Bugs:
 - There is no unfixed bugs to my knowledge.
@@ -354,67 +355,65 @@ Provide clear, immediate feedback when user input is invalid or outside the expe
 - Python
 
 ### Frameworks, Libraries & Programs:
-- GitPod: Used to create my html files, stylesheet and javascript before pushing the project to Github.
-- GitHub: Used to store my repository for submission.
-- Heroku: Used to deploy the live project.
-- Python Tutor: Used to see how my code functions and debug errors.
-- Colorama: A Python library utilized for adding colored text and styling to the console output, enhancing the visual appeal of the application.
-- Beautiful Soup: It is a Python package used for parsing HTML documents in the application.
-- Requests - It is a library used for making HTTP requests from [Horoscope.com](https://www.horoscope.com/us/index.aspx) to provide result for Daily horoscope.
-- [Horoscope.com](https://www.horoscope.com/us/index.aspx): It is a website from which updated horoscope results were fetched for the application. 
+- [GitPod](https://www.gitpod.io/): Used to create my html files, stylesheet and javascript before pushing the project to Github.
+- [GitHub](https://github.com/): Used to store my repository for submission.
+- [Heroku](https://dashboard.heroku.com/apps): Used to deploy the live project.
+- [Python Tutor](https://pythontutor.com/): Used to see how my code functions and debug errors.
+- [Colorama](https://pypi.org/project/colorama/): A Python library utilized for adding colored text and styling to the console output, enhancing the visual appeal of the application.
+- [Beautiful Soup](https://pypi.org/project/beautifulsoup4/): It is a Python package used for parsing HTML documents in the application.
+- [Requests](https://pypi.org/project/requests/): It is a library used for making HTTP requests from [Horoscope.com](https://www.horoscope.com/us/index.aspx) to provide result for Daily horoscope.
+- [Horoscope](https://www.horoscope.com/us/index.aspx): It is a website from which updated horoscope results were fetched for the application. 
 
 ## Deployment
 
 The app was deployed through Heroku. The steps are as following:
 
-1. Login (or signup) to Heroku and Github
+Login (or signup) to Heroku and Github
 
-Heroku
-After creating a Heroku account, click "New" to create a new app from the dashboard.
+### Heroku
 
-Enter a unique app name, select your region and click "Create app".
+1. After creating a Heroku account, click "New" to create a new app from the dashboard.
 
-Navigate to settings tab and scroll down to view the Config Vars section and click "Reveal Config Vars".
+2. Enter a unique app name, select your region and click "Create app".
 
-Enter port into the Key box and 8000 into the Value box and click the Add button.
+3. Navigate to settings tab and scroll down to view the Config Vars section and click "Reveal Config Vars".
 
-Navigate to Buildpacks and click "Add buildpack".
+4. Enter port into the Key box and 8000 into the Value box and click the Add button.
 
-First add Python, then add NodeJS into Buildpacks. (Ensure that it is in order!)
+5. Navigate to Buildpacks and click "Add buildpack".
 
-heroku
+6. First add Python, then add NodeJS into Buildpacks. (Ensure that it is in order!)
 
-Navigate to Deply tab (same navigationbar as settings).
+![Heroku](assets/readme_images/heroku.png)
 
-Choose GitHub as the Deployment method.
+7. Navigate to Deploy tab (same navigation bar as settings).
 
-Search for the repository name, select the branch that you would like to build from, and connect it via the "Connect" button.
+8. Choose GitHub as the Deployment method.
 
-Choose from "Automatic" or "Manual" deployment options, I went for automatic. Click "Deploy Branch".
+9. Search for the repository name, select the branch that you would like to build from, and connect it via the "Connect" button.
 
-When the build is finished, click "View" link to bring you to your deployed site. You can also find the link via Settings -> Domains.
+10. Choose from "Automatic" or "Manual" deployment options, I went for automatic. Click "Deploy Branch".
+
+11. When the build is finished, click "View" link to bring you to your deployed site. You can also find the link via Settings -> Domains.
 
 
 ### How to Fork:
 - Log in (or sign up) to [Github](https://github.com/).
-- Go to respository for this project [Wordle](https://github.com/Yagavi1994/Wordle).
+- Go to respository for this project [Your Horoscope](https://github.com/Yagavi1994/Your-Horoscope).
 - Click the fork button in the top right corner.
 
 ### How to Clone:
 - Log in (or sign up) to [Github](https://github.com/).
-- Go to respository for this project [Wordle](https://github.com/Yagavi1994/Wordle).
+- Go to respository for this project [Your Horoscope](https://github.com/Yagavi1994/Your-Horoscope).
 - Click on the code button, select whether you would like to clone with HTTPS, SSH, GitHub CLI and copy the link shown.
 - Open the terminal in your code editor and change the current working directory to the location you want to use for the clone directory.
 - Type 'git clone' into terminal and then paste the link you copied in step 3.
 - Press enter.
 
 ## Credits
-- I would like to credit the [Wordle](https://www.nytimes.com/games/wordle/index.html) game, which served as inspiration for this project. Wordle has been a favorite pastime for me, and its gameplay mechanics influenced the development of this project.
-- I extend my gratitude to my mentor, Martina Terlevic, for her invaluable guidance and support throughout the project. Her encouragement and feedback played a significant role in shaping the project and boosting my confidence.
-- Special thanks to my husband, who is a game designer, for his constructive criticism and attention to detail in the UI and UX aspects of the project. His insights greatly contributed to the refinement of the project.
-- I would like to credit my cousin who is a developer, for his assistance in resolving some JavaScript bugs and adding the confetti animation to the game.
-- I appreciate the valuable inputs provided by a fellow student  Dajana Isbaner in the peer code review. 
+
+- I extend my gratitude to my mentor, Martina Terlevic, for her invaluable guidance and support throughout the project.
+- Special thanks to my husband, who is a game designer, for his constructive criticism and attention to detail in the UI and UX aspects of the project. 
 
 #### Code
-- I would like to credit [Web Dev Simplified](https://www.youtube.com/watch?v=Wak7iN4JZzU) for their helpful tutorial, which provided guidance and assistance in writing the code for the main function of the game.
-
+- I would like to credit [Geeks for Greeks](https://www.geeksforgeeks.org/how-to-check-horoscope-using-python/) website, from which I learnt the code for the main function of the game.
