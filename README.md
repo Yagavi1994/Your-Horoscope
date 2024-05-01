@@ -20,13 +20,14 @@ The link to the live version of the project can be found [HERE](https://your-hor
 
 - As a first-time user, I want to be able to determine my zodiac sign based on my month of birth. So that I can engage with content that is relevant to me without prior knowledge of astrology. 
 - As a first-time user, I want to choose my zodiac sign from a list. So that I can see specific insights related to my sign.
-- As a first-time user, I want the app to be colorful, have images and engaging. So that my experience learning about my zodiac traits is fun and visually appealing.
+- As a first-time user, I want the app to be colorful, have images, animations and engaging. So that my experience learning about my zodiac traits is fun and visually appealing.
 - As a first-time user, I want to choose the day for which I want to know my horoscope. So that I can get insights for specific days, past, present or future.
 - As a first-time user, I want easy options to navigate back or exit the app. So that I can have a smooth user experience without feeling stuck in any part of the app.
 - As a first-time user, I want to see an attractive logo when I open the app. So that I can easily recognize and remember the app.
 - As a first-times user, I would like a personalized feel of my name being used inside the application.
 - As a first-times user, I would like a simple and clear options to enhance usability and reduce confusion.
 - As a first time user, I would like to see some confirmation if I have successfully exited out of the application.
+- As a first time user I would like clear instructions and feedback to rectify if I make any mistake.
 
 ### Frequent Player:
 
@@ -144,7 +145,7 @@ Display detailed traits of the selected zodiac sign in an engaging and visually 
 - The user can take their time to read through the traits, which are designed to be both informative and enjoyable.
 - After reviewing the traits, users find navigation options at the bottom of the page, allowing them to choose their next action.
 
-> - As a first-time user, I want the app to be colorful, have images and engaging. So that my experience learning about my zodiac traits is fun and visually appealing.
+> - As a first-time user, I want the app to be colorful, have images, animations and engaging. So that my experience learning about my zodiac traits is fun and visually appealing.
 > - As a first-time user, I want easy options to navigate back or exit the app. So that I can have a smooth user experience without feeling stuck in any part of the app.
 > - As a frequent user, I want the process of selecting zodiac signs and fetching results to be quick and simple. So that I can enjoy a seamless experience without unnecessary delays.
 
@@ -194,7 +195,7 @@ Display a personalized horoscope for the user based on their zodiac sign and the
 - After reviewing their horoscope, users decide whether to return to the main menu for more activities or to exit the application.
 
 > - As a first-time user, I want easy options to navigate back or exit the app. So that I can have a smooth user experience without feeling stuck in any part of the app.
-> - As a first-time user, I want the app to be colorful, have images and engaging. So that my experience learning about my zodiac traits is fun and visually appealing.
+> - As a first-time user, I want the app to be colorful, have images, animations and engaging. So that my experience learning about my zodiac traits is fun and visually appealing.
 > - As a frequent user, I want the horoscopes to be updated daily. So that I can rely on the app for fresh and relevant astrological insights every day.
 > - As a frequent user, I want to check not only my horoscope but also those of my friends and family without restrictions. So that I can share and discuss these insights with them.
 > - As a frequent user, I want the process of selecting zodiac signs and fetching results to be quick and simple. So that I can enjoy a seamless experience without unnecessary delays.
@@ -249,13 +250,45 @@ Provide an engaging and visually appealing experience during data processing tim
 
 #### Typing Animation:
 
+##### Objective: 
+Enhance the visual appeal and engagement of textual content by using a typing animation effect, making the display of text more dynamic and engaging.
 
-![Typing Animation](documentation/flip.gif)
+##### Design Elements:
+
+- Typing Animation: The application employs a typing animation where text appears character by character, simulating the effect of someone typing the text in real time. This animation is used primarily for displaying key information to the user, adding an element of interactivity and visual interest.
+
+##### User Flow:
+
+- Whenever text needs to be displayed prompting for user input, the typing animation begins.
+- The user watches as the text gradually appears on the screen, enhancing their reading experience and maintaining their attention.
+- Once the animation completes, the text remains on the screen for the user to read at their leisure and give their input.
+
+> - As a first-time user, I want the app to be colorful, have images, animations and engaging. So that my experience learning about my zodiac traits is fun and visually appealing.
+
+![Typing Animation](assets/readme_images/typing_animation.gif)
 
 #### Error Messages:
 
+##### Objective: 
 
-![Error Messages](documentation/shake.gif)
+Provide clear, immediate feedback when user input is invalid or outside the expected range, guiding them to correct their entries effectively.
+
+##### Design Elements:
+
+- Color-Coded Messages: Error messages are displayed in red, a common color that is universally understood to denote warnings or errors. This helps to immediately draw the user's attention to the issue.
+- Specific Instructions: The error message specifies exactly what the user needs to do to correct their input, such as "Please Enter a number between 1 to 3" or "Please Enter a number between 1 to 12." This specificity helps prevent user frustration and guides them towards successful interaction.
+
+##### User Flow:
+
+- The user enters a response when prompted by the application.
+- If the input is invalid—such as being out of the expected numerical range, empty, an alphabet, or containing symbols—an error message in red is displayed.
+- The user reads the error message, understands the mistake, and is guided to re-enter a valid input based on the provided instructions.
+
+> - As a first time user I would like clear instructions and feedback to rectify if I make any mistake.
+
+![Error Message 1](assets/readme_images/error_1.png)
+![Error Message 2](assets/readme_images/error_2.png)
+![Error Message 3](assets/readme_images/error_3.png)
 
 
 <!-- ### Future Features:
