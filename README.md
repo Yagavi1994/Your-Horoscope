@@ -327,83 +327,73 @@ Provide clear, immediate feedback when user input is invalid or outside the expe
   - Confirmed that the application mechanics and features work as expected without any errors.
 
 ##### Validation:
-  - Tested whether the error messages are prompted correctly when invalid data is entered.
+  - Tested whether the error messages are prompted.
+  - Confirmed appropriate error messages are prompted when any kind off invalid data is entered.
   
 ##### Conclusion:
   - Overall, the testing confirms that Your Horoscope functions smoothly, providing an enjoyable, colorful and error-free experience across different browsers.
 
 ### Validator Testing:
-- HTML files pass through the [W3C validator](https://validator.w3.org/) with no issues found.
+- run.py and zodiacs.py files pass through the [CI Python Linter](https://pep8ci.herokuapp.com/) with no issues found.
+  - Added # noqa: 501 comment at the end of some code lines in run.py which has more than 80 characters and cannot be reduced too to pass throught validator without showing error.
 
-   - Result for index.html
-   ![index.html](documentation/html-validator.png)
+   - Result for run.py
+   ![index.html](assets/readme_images/run_validator_result.png)
 
-- CSS files pass through the [Jigsaw validator](https://jigsaw.w3.org/css-validator/) with no issues found.
+   - Result for zodiacs.py
+   ![CSS](assets/readme_images/zodiacs_validator_result.png)
 
-   - Result for CSS.
-   ![CSS](documentation/css-validator.png)
-
-- The Javascript files passed through the [Javascript validator](https://jshint.com/) testing.
-
-   - Result for Javascript.
-   ![Javascript](documentation/javascript-validator.png)
-
-- All pages has a good Accessibility rating in Lighthouse.
-
-   - Result for Lighthouse testing.
-      ##### Light Mode:
-      ![Light Mode Lighthouse](documentation/lighthouse-lightmode.png)
-
-      ##### Dark Mode:
-      ![Dark Mode Lighthouse](documentation/lighthouse-darkmode.png)
 
 ### Bugs:
-##### Tile Color Change Bug: 
-Initially, the tiles were not changing colors after flipping when different themes were set. Upon investigation, it was discovered that the respective color theme classes were not added to the tiles in the CSS. Adding these classes resolved the issue.
-
-##### Overlay Effect Disappearance: 
-The overlay effect applied to the "How to Play" and "Statistics" modals disappeared when clicking anywhere inside the modals. Assigning different overlay classes to each modal solved this problem, ensuring the overlay effect remained intact.
-
-##### Close Button Dysfunctionality: 
-On smaller screens, the close button in the "How to Play" modal was not functioning properly. Increasing the z-index of the modal resolved this issue, allowing users to close the modal seamlessly.
-
-##### Unintended Modal Opening: 
-While the themes menu was open, users could click on other icons and open additional modals without closing the themes menu. To address this bug, a transparent overlay was created to block access to other icons when the themes menu is open, ensuring proper behavior.
-
-##### Theme and Mode Reset Bug: 
-Themes and modes were reverting to default settings upon page reset. Implementing local storage to save theme and mode selections ensured that these preferences persisted across page resets.
-
-##### Flash of White Background: 
-When the reset icon was pressed in dark mode, there was a brief flash of white background. This issue was debugged by moving the theme reset code to the top of the HTML, eliminating the flash of white background upon reset.
-
-These bug fixes and debugging efforts contribute to a smoother and more seamless user experience, ensuring that the game functions as intended across different scenarios and interactions.
 
 ### Unfixed Bugs:
 - There is no unfixed bugs to my knowledge.
 
 ## Technologies Used
 ### Main Languages Used:
-- HTML5
-- CSS3
-- Javascript
+- Python
 
-### Frameworks, Libraries & Programs Used:
-- Font Awesome - To add icons to the nav bar and close button in themes menu and statistics modal.
-- GitPod - To create my html files, stylesheet and javascript before pushing the project to Github.
-- GitHub - To store my repository for submission.
-- Figma - To create wireframe for project.
-- Coolors - To pick color for the website.
-- Vistaprint - To create logo for the website.
-- Am I responsive - To see the responsiveness of the screen.
+### Frameworks, Libraries & Programs:
+- GitPod: Used to create my html files, stylesheet and javascript before pushing the project to Github.
+- GitHub: Used to store my repository for submission.
+- Heroku: Used to deploy the live project.
+- Python Tutor: Used to see how my code functions and debug errors.
+- Colorama: A Python library utilized for adding colored text and styling to the console output, enhancing the visual appeal of the application.
+- Beautiful Soup: It is a Python package used for parsing HTML documents in the application.
+- Requests - It is a library used for making HTTP requests from [Horoscope.com](https://www.horoscope.com/us/index.aspx) to provide result for Daily horoscope.
+- [Horoscope.com](https://www.horoscope.com/us/index.aspx): It is a website from which updated horoscope results were fetched for the application. 
 
 ## Deployment
-1. In the GitHub repositories, navigate your way to the settings tab
-2. From there on your left hand side find the 'Pages' tab, click on it.
-3. In the build and deployment section, select 'source' and then 'deploy from a branch'
-4. Then underneath that select 'main' and 'root' 
-5. Click save
-6. Your page should refresh automatically or manually with a link to your deployed website. 
-7. The link can be found here: [Wordle](https://yagavi1994.github.io/Wordle/)
+
+The app was deployed through Heroku. The steps are as following:
+
+1. Login (or signup) to Heroku and Github
+
+Heroku
+After creating a Heroku account, click "New" to create a new app from the dashboard.
+
+Enter a unique app name, select your region and click "Create app".
+
+Navigate to settings tab and scroll down to view the Config Vars section and click "Reveal Config Vars".
+
+Enter port into the Key box and 8000 into the Value box and click the Add button.
+
+Navigate to Buildpacks and click "Add buildpack".
+
+First add Python, then add NodeJS into Buildpacks. (Ensure that it is in order!)
+
+heroku
+
+Navigate to Deply tab (same navigationbar as settings).
+
+Choose GitHub as the Deployment method.
+
+Search for the repository name, select the branch that you would like to build from, and connect it via the "Connect" button.
+
+Choose from "Automatic" or "Manual" deployment options, I went for automatic. Click "Deploy Branch".
+
+When the build is finished, click "View" link to bring you to your deployed site. You can also find the link via Settings -> Domains.
+
 
 ### How to Fork:
 - Log in (or sign up) to [Github](https://github.com/).

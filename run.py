@@ -5,7 +5,6 @@ The basic concept of the code is learnt from
 # Import necessary modules
 import requests
 from bs4 import BeautifulSoup
-import pyfiglet
 from colorama import init, Fore, Back, Style
 import sys
 import os
