@@ -406,14 +406,14 @@ def replay():
 
         replay_enter = print(Fore.YELLOW +
                              "\n  Enter 'Y' to go back to MAIN MENU and 'N' to EXIT:")  # noqa: E501
-        replay = input(Fore.BLUE + Style.BRIGHT + "  ")
+        replay = input(Fore.BLUE + Style.BRIGHT + "  ").lower().strip()
 
-        if replay.lower() == 'y':
+        if replay == 'y':
             clear_terminal()
             main_menu()
             return
 
-        elif replay.lower() == 'n':
+        elif replay == 'n':
             clear_terminal()
             thank_you()
             return

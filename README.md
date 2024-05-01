@@ -291,55 +291,46 @@ Provide clear, immediate feedback when user input is invalid or outside the expe
 ![Error Message 3](assets/readme_images/error_3.png)
 
 
-<!-- ### Future Features:
-##### Sound Effects: 
-Implementing sound effects to enhance the gaming experience, making it more enjoyable and immersive for users.
+### Future Features:
 
-##### Difficulty Modes: 
-Introducing easy and hard modes to cater to varying skill levels and preferences among players. This allows users to adjust the game's difficulty according to their proficiency and desired level of challenge.
+#### Social Sharing Capabilities:
 
-##### Guess Distribution Graph: 
-Adding a graphical representation of guess distribution in the statistics section, similar to the original Wordle version. This feature provides insights into the user's guessing patterns and performance over time.
+- Allow users to share their daily horoscope and zodiac traits on social media platforms directly from the app.
 
-##### Login Feature: 
-Incorporating a login feature to enable users to save their game statistics and progress to their account. This allows users to access their data from different devices and continue their gameplay seamlessly.
+> - As a frequent user, I want to check not only my horoscope but also those of my friends and family without restrictions. So that I can share and discuss these insights with them.
 
-##### Expanded Theme Selection: 
-Adding more themes with vibrant colors and diverse designs to enhance the visual appeal of the gameplay. Offering a variety of themes allows users to customize their gaming experience according to their preferences and mood.
+#### User Accounts and Personalization:
+
+- Implement user registration and login functionalities. Allow users to create profiles to save their zodiac signs, track horoscope history, and personalize their experience.
+> - As a frequent user, I want to create a profile where I can save my zodiac sign and view past results. So that I can have a personalized experience and easily access historical datas.
+
+#### Multilingual Support:
+
+- Offer the application in multiple languages to cater to a global audience.
+
+#### Interactive Zodiac Learning Module:
+
+- Include educational content about astrology, including how horoscopes are determined, the history of astrology, and detailed explanations of each zodiac sign.
+
+#### Notification System:
+
+- Implement a notification system that alerts users when their daily horoscope is updated or when special astrological events occur.
 
 ## Testing:
+
 ##### Browser Compatibility:
   - Tested playing the game in Chrome, Firefox, and Safari browsers.
   - Confirmed that the game functions smoothly across different browsers without any issues.
-##### Responsive Design:
-  - Played the game on various devices including mobile phones, laptops, and desktop computers.
-  - Ensured that the game is responsive and adapts well to different screen sizes.
-#### Accessibility:
-  - Ran Lighthouse tests to evaluate the accessibility of the website.
-  - Verified that the website has a high accessibility rating, ensuring inclusivity for all users.
-##### Gameplay Features:
-  - Tested all the features of the gameplay, including entering guesses, resetting the game, and changing themes.
-  - Confirmed that the gameplay mechanics work as expected without any errors.
-##### Theme Compatibility:
-  - Played the game multiple times with different themes to ensure compatibility.
-  - Verified that the gameplay flows smoothly with all theme options without encountering any issues.
-##### Modal and Menu Functionality:
-  - Verified that modals and menus open and close properly when clicking the respective icons.
-  - Ensured that all modal content and menu options are displayed correctly.
-##### Animations and Alert Messages:
-  - Confirmed that animations, alert messages, and tile colors change appropriately during gameplay interactions.
-##### Game Controls:
-  - Tested the functionality of the reset button, mode toggle button, and keyboard keys.
-  - Ensured that the page reloads when clicking the reset button and toggles between light and dark modes when clicking the mode button.
-  - Verified that all keyboard keys function correctly and change colors according to tile statuses.
-##### Theme Consistency:
-  - Checked that the color of the tiles and background of the "How to Play" modal change accordingly based on the selected theme.
-  - Confirmed that theme changes are reflected consistently throughout the gameplay interface.
-##### Statistics Update:
-  - Checked that the statistics are updated accurately in the statistics menu after each gameplay session.
-  - Verified that statistics such as win percentage are displayed correctly and reflect the user's progress.
+
+##### Application Features:
+  - Tested all the features of the application, including entering reuired inputs.
+  - Confirmed that the application mechanics and features work as expected without any errors.
+
+##### Validation:
+  - Tested whether the error messages are prompted correctly when invalid data is entered.
+  
 ##### Conclusion:
-  - Overall, the testing confirms that Wordle functions smoothly, providing an enjoyable, colorful and error-free gaming experience across different browsers, devices, and themes.
+  - Overall, the testing confirms that Your Horoscope functions smoothly, providing an enjoyable, colorful and error-free experience across different browsers.
 
 ### Validator Testing:
 - HTML files pass through the [W3C validator](https://validator.w3.org/) with no issues found.
@@ -436,4 +427,4 @@ These bug fixes and debugging efforts contribute to a smoother and more seamless
 
 #### Code
 - I would like to credit [Web Dev Simplified](https://www.youtube.com/watch?v=Wak7iN4JZzU) for their helpful tutorial, which provided guidance and assistance in writing the code for the main function of the game.
- -->
+
