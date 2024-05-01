@@ -111,7 +111,7 @@ Assist users in identifying their zodiac sign based on their birth date.
 ##### User Flow:
 
 - User is presented with a list of zodiac signs and corresponding date ranges.
-- User identifies and selects their zodiac sign based on their birth date.
+- User identifies and enters the number corresponded to their zodiac sign based on their birth date.
 - Depending on their previous menu selection:
   - If option 1 was selected, the user is directed to a page detailing the traits of their chosen zodiac sign.
   - If option 2 was selected, the user is directed to a page where the user has to select for which day they want to know thier horoscope.
@@ -135,7 +135,7 @@ Display detailed traits of the selected zodiac sign in an engaging and visually 
 - Zodiac Name: The name of the zodiac sign is displayed next to the image, serving as a clear identifier and header for the information that follows.
 - Traits List: Traits of the zodiac sign are presented in a list format. The traits begin with the starting letter of the zodiac's name, adding a creative and thematic touch to the content presentation.
 - Colorful Design: The page uses colors that are associated with or complement the zodiac sign, enhancing visual engagement and making the information more appealing.
-- Navigation Options: At the bottom of the page, users are provided with options to navigate back to the menu or exit the application. The options are clearly labeled "Enter Y to return to the menu" and "Enter N to exit the game."
+- Navigation Options: At the bottom of the page, users are provided with options to navigate back to the menu or exit the application. The options are clearly labeled "Enter Y to return to the menu" and "Enter N to exit."
 
 ##### User Flow:
 
@@ -164,7 +164,7 @@ Provide users with the ability to select a specific day for which they want to v
 
 ##### User Flow:
 
-- Upon choosing to view their horoscope (option 2 on the Menu Page), and selecting their zodiac sign, users are directed to the Day List Page.
+- Upon choosing to view their horoscope (option 2 on the Menu Page), and selecting their zodiac sign, users are directed to the Day Page.
 - Users see a list of days—yesterday, today, tomorrow—each assigned a number (1, 2, 3).
 - Users are prompted to enter the number for the day they are interested in.
 - After inputting their choice, users are directed to the Horoscope Result Page where they can view the horoscope for the selected day.
@@ -323,11 +323,11 @@ Provide clear, immediate feedback when user input is invalid or outside the expe
   - Confirmed that the game functions smoothly across different browsers without any issues.
 
 ##### Application Features:
-  - Tested all the features of the application, including entering reuired inputs.
+  - Tested all the features of the application, including entering required inputs.
   - Confirmed that the application mechanics and features work as expected without any errors.
 
 ##### Validation:
-  - Tested whether the error messages are prompted.
+  - Tested whether the error messages are prompted appropriately and timely.
   - Confirmed appropriate error messages are prompted when any kind off invalid data is entered.
   
 ##### Conclusion:
@@ -355,13 +355,13 @@ Provide clear, immediate feedback when user input is invalid or outside the expe
 - Python
 
 ### Frameworks, Libraries & Programs:
-- [GitPod](https://www.gitpod.io/): Used to create my html files, stylesheet and javascript before pushing the project to Github.
+- [GitPod](https://www.gitpod.io/): Used as a workspace to write codes before pushing the project to Github.
 - [GitHub](https://github.com/): Used to store my repository for submission.
 - [Heroku](https://dashboard.heroku.com/apps): Used to deploy the live project.
 - [Python Tutor](https://pythontutor.com/): Used to see how my code functions and debug errors.
 - [Colorama](https://pypi.org/project/colorama/): A Python library utilized for adding colored text and styling to the console output, enhancing the visual appeal of the application.
 - [Beautiful Soup](https://pypi.org/project/beautifulsoup4/): It is a Python package used for parsing HTML documents in the application.
-- [Requests](https://pypi.org/project/requests/): It is a library used for making HTTP requests from [Horoscope.com](https://www.horoscope.com/us/index.aspx) to provide result for Daily horoscope.
+- [Requests](https://pypi.org/project/requests/): It is a library used for making HTTP requests from [Horoscope.com](https://www.horoscope.com/us/index.aspx) to provide result for daily horoscope.
 - [Horoscope](https://www.horoscope.com/us/index.aspx): It is a website from which updated horoscope results were fetched for the application. 
 - [ASCII Art](https://ascii.co.uk/art/zodiac): The Ascii art for the zodiac symbols where taken from this website.
 - [Ascii Generator](https://ascii-generator.site/): The Ascii art for the logo was generated from this website.
