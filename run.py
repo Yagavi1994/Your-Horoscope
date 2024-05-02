@@ -240,7 +240,7 @@ def validate_data(value):
 
 def zodiac_characteristics(input):
     """
-    Function to print zodiac's characteristics above prediction.
+    Function to print zodiac's characteristics.
     """
     zodiac_number = int(input)
 
@@ -424,7 +424,7 @@ def replay():
 
 def main_menu():
     """
-    Asks user for their input to read horoscope or not
+    Asks user for their input to read traits or horoscope or exit
     and runs a while loop based on the choice made.
     """
 
