@@ -318,9 +318,9 @@ Provide clear, immediate feedback when user input is invalid or outside the expe
 
 ## Testing:
 
-##### Browser Compatibility:
-  - Tested playing the game in Chrome, Firefox, and Safari browsers.
-  - Confirmed that the game functions smoothly across different browsers without any issues.
+##### Terminal Compatibility:
+  - I have extensively tested the code numerous times, both locally in the Gitpod terminal and on the deployed site's terminal. 
+  - Confirmed that the application functions smoothly across different terminals without any issues.
 
 ##### Application Features:
   - Tested all the features of the application, including entering required inputs.
@@ -335,7 +335,7 @@ Provide clear, immediate feedback when user input is invalid or outside the expe
 
 ### Validator Testing:
 - run.py and zodiacs.py files pass through the [CI Python Linter](https://pep8ci.herokuapp.com/) with no issues found.
-  - Added # noqa: 501 comment at the end of some code lines in run.py which has more than 80 characters and cannot be reduced too to pass throught validator without showing error.
+  - Added # noqa: 501 comment at the end of some code lines in run.py which has more than 80 characters and cannot be reduced below it to pass through validator.
 
    - Result for run.py
    ![index.html](assets/readme_images/run_validator_result.png)
@@ -346,6 +346,7 @@ Provide clear, immediate feedback when user input is invalid or outside the expe
 
 ### Bugs:
 - There was a bug raising key error when input was entered by adding a zero in front of it like 01, 02. Resolved it by converting the input into int before passing it to the dictionary.
+- An error was shown when input is given by having space in front of them like "   y" or "   n". Resolved this bug by adding the function .strip() after input.
 
 ### Unfixed Bugs:
 - There is no unfixed bugs to my knowledge.
