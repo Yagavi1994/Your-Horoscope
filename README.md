@@ -416,7 +416,7 @@ Login (or signup) to Heroku and Github
 ## Credits
 
 - I extend my gratitude to my mentor, Martina Terlevic, for her invaluable guidance and support throughout the project.
-- Special thanks to my husband, who is a game designer, for his constructive criticism and attention to detail in the UI and UX aspects of the project. 
+- Special thanks to my husband, who is a game designer, for his constructive criticism and attention to detail in the project. 
 
 #### Code
 - I would like to credit [Geeks for Greeks](https://www.geeksforgeeks.org/how-to-check-horoscope-using-python/) website, from which I learnt the code for the main function of the game.
